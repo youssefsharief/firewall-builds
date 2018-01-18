@@ -56,17 +56,29 @@
 
     <ng-container matColumnDef="build">
       <mat-header-cell *matHeaderCellDef> build </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.build}} </mat-cell>
+      <mat-cell *matCellDef="let element">
+          <div class="progress-back">
+              <div *ngIf="element.metrics===true" class="progress-bar" [ngStyle]="{'background-color':'green', 'width': '100%'}"> </div>
+          </div>
+      </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="unitTest">
       <mat-header-cell *matHeaderCellDef> unitTest </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.unitTest}} </mat-cell>
+      <mat-cell *matCellDef="let element">
+          <div class="progress-back">
+              <div *ngIf="element.metrics===true" class="progress-bar" [ngStyle]="{'background-color':'green', 'width': '100%'}"> </div>
+          </div>
+      </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="functionalTest">
       <mat-header-cell *matHeaderCellDef> functionalTest </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.functionalTest}} </mat-cell>
+      <mat-cell *matCellDef="let element">
+          <div class="progress-back">
+              <div *ngIf="element.metrics===true" class="progress-bar" [ngStyle]="{'background-color':'green', 'width': '100%'}"> </div>
+          </div>
+      </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="_id">
@@ -82,8 +94,13 @@
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;" matRipple class="element-row" [class.expanded]="expandedElement == row"
-      (click)="expandedElement = row"></mat-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;" 
+    matRipple class="element-row" 
+    [class.expanded]="expandedElement == row"
+      (click)="expandedElement = row">
+    </mat-row>
+
+
     <mat-row *matRowDef="let row; columns: ['expandedDetail']; when: isExpansionDetailRow" [@detailExpand]="row.element == expandedElement ? 'expanded' : 'collapsed'"
       style="overflow: hidden">
     </mat-row>

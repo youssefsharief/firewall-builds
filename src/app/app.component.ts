@@ -23,14 +23,19 @@ export class AppComponent implements OnInit {
     dataSource;
     ngOnInit() {
         this.dataSource = new MatTableDataSource();
-        this.dataSource.data = payload;
+        const rows = [];
+        payload.forEach(element => rows.push(element, {detailRow: true, element}));
+        this.dataSource.data = rows;
     }
 
     isNumber(x) {
         return Number.isSafeInteger(x);
     }
 
-    isExpansionDetailRow = (_, row: any) => row.hasOwnProperty('detailRow');
+    isExpansionDetailRow = (_, row: any) =>{
+        const x = row.hasOwnProperty('detailRow');
+        return x;
+    } 
 }
 
 
@@ -52,7 +57,7 @@ export const payload = [
         'type': 'firewall',
         'timeStarted': '2016-04-06T03:14:24 -02:00',
         'owner': 'Alisa',
-        'name': 'estaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+        'name': 'estaaaaaaaaaaaaaaaa',
         'state': 'running',
         'metrics': 49,
         '_id': '5a60acebd428d4f8dfb69574'
