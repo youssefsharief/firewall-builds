@@ -45,9 +45,13 @@
       <mat-header-cell *matHeaderCellDef> metrics </mat-header-cell>
       
       <mat-cell *matCellDef="let element">
-          <ng-progress speed="100"></ng-progress>
-
+          <div class="progress-back">
+              <div *ngIf="isNumber(element.metrics)" class="progress-bar" [ngStyle]="{'background-color':'blue', 'width': element.metrics}"> </div>
+              <div *ngIf="element.metrics===true" class="progress-bar" [ngStyle]="{'background-color':'green', 'width': '100%'}"> </div>
+              <div *ngIf="element.metrics===false" class="progress-bar" [ngStyle]="{'background-color':'red', 'width': '100%'}"></div>
+          </div>
       </mat-cell>
+      
     </ng-container>
 
     <ng-container matColumnDef="build">

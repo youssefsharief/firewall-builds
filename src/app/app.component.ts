@@ -25,6 +25,11 @@ export class AppComponent implements OnInit {
         this.dataSource = new MatTableDataSource();
         this.dataSource.data = payload;
     }
+
+    isNumber(x) {
+        return Number.isSafeInteger(x);
+    }
+
     isExpansionDetailRow = (_, row: any) => row.hasOwnProperty('detailRow');
 }
 
