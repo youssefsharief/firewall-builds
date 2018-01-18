@@ -11,7 +11,7 @@ import 'rxjs/add/observable/of';
         trigger('detailExpand', [
             state('collapsed', style({ height: '0px', minHeight: '0', visibility: 'hidden' })),
             state('expanded', style({ height: '*', visibility: 'visible' })),
-            transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
+            transition('expanded <=> collapsed', animate('700ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
         ]),
     ],
     styleUrls: ['./app.component.scss']
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
     ngOnInit() {
         this.dataSource = new MatTableDataSource();
         const rows = [];
-        payload.forEach(element => rows.push(element, {detailRow: true, element}));
+        payload.forEach(element => rows.push(element, { detailRow: true, element }));
         this.dataSource.data = rows;
     }
 
@@ -32,10 +32,10 @@ export class AppComponent implements OnInit {
         return Number.isSafeInteger(x);
     }
 
-    isExpansionDetailRow = (_, row: any) =>{
+    isExpansionDetailRow = (_, row: any) => {
         const x = row.hasOwnProperty('detailRow');
         return x;
-    } 
+    }
 }
 
 
