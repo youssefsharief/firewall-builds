@@ -38,11 +38,16 @@ import {
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { AppComponent } from './app.component';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { ArrowComponent } from './arrow/arrow.component';
+import { BuildStaticComponent } from './build-static/build-static.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ArrowComponent,
+    BuildStaticComponent
   ],
   imports: [
     MatTableModule,
@@ -52,7 +57,8 @@ import { OverlayModule } from '@angular/cdk/overlay';
     NgProgressModule.forRoot(),
     CdkTableModule,
     OverlayModule,
-    BrowserModule
+    BrowserModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

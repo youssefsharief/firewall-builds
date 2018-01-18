@@ -1,0 +1,27 @@
+<div class='alert alert-success Item__box'>
+    <div class="col-xs-12">
+        <strong>{{title}}</strong>
+    </div>
+
+    <div class="col-xs-8 Item__unit-test-pie-chart">
+        <PieChart slices={slices} />
+    </div>
+
+    <div class="col-xs-4">
+        <p class="Item__unit-test-passed">
+            {{passed %}}
+        </p>
+        <p class="Item__unit-test-passed-text">
+            <small>test passed</small>
+        </p>
+    </div>
+    <div class="col-xs-12 Item__unit-test-progress-bar">
+        <ItemProgressBar [progress]="covered" active="false" />
+        <span class="Item__unit-test-progress-bar-text text-center">
+            <span class="text-dark-green">
+                <br/>
+                <small>code covered</small>
+            </span>
+        </span>
+    </div>
+</div>
