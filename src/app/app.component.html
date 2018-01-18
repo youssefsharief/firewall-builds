@@ -107,18 +107,3 @@
   </mat-table>
 </div>
 
-
-<div class="col-md-6">
-
-  <div class="col-md-6">
-    <canvas baseChart
-    [colors]="pieChartColors"
-                [data]="pieChartData"
-                chartType="pie"
-                (chartHover)="chartHovered($event)"
-                (chartClick)="chartClicked($event)"></canvas>
-  </div>
-
-
-<app-arrow direction="right" color="yellow" text="Maintainability"></app-arrow>
-<app-build-static></app-build-static>

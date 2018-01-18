@@ -20,28 +20,11 @@ import 'rxjs/add/observable/of';
 
 export class AppComponent implements OnInit {
 
-    pieChartData = [92, 18];
 
-    public pieChartColors: Array<any> = [
-        { // grey
-            backgroundColor: [ '#72AC4D', '#EB7D3B'],
-            borderColor: '#72AC4D',
-            pointBackgroundColor: '#72AC4D',
-            pointBorderColor: '#fff',
-        },
-
-    ];
 
     displayedColumns = ['type', 'timeStarted', 'owner', 'name', 'state', 'metrics', 'build', 'unitTest', 'functionalTest', '_id'];
     dataSource;
 
-    chartHovered(e) {
-        console.log('ssssss');
-    }
-
-    chartClicked(e) {
-        console.log('show modal');
-    }
 
     ngOnInit() {
         this.dataSource = new MatTableDataSource();
