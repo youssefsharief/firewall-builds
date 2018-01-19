@@ -38,15 +38,28 @@
 										<td class="cell100 column8">10</td>
 									</tr>
 
-									<tr class="row100 body">
-										<td class="cell100 column1">Mind & Body</td>
-										<td class="cell100 column2">Yoga</td>
-										<td class="cell100 column3">8:00 AM - 9:00 AM</td>
-										<td class="cell100 column4">Adam Stewart</td>
-										<td class="cell100 column5">15</td>
-										<td class="cell100 column6">15</td>
-										<td class="cell100 column7">15</td>
-										<td class="cell100 column8">15</td>
+									<tr class="row100 body" *ngFor="let element of data; let i = index">
+
+                                            <td class="cell100 column1">
+                                                    <a href="javascript:void(0);" *ngIf="element.type==='firewall'">
+                                                            <i class="fa fa-shield fa-2x text-success"> </i>
+                                                        </a>
+                                                        <a href="javascript:void(0);" *ngIf="element.type==='build'">
+                                                            <i class="fa fa-desktop fa-2x  text-default"> </i>
+                                                        </a>
+                                            </td>
+
+                                            <td class="cell100 column1">
+                                                   {{element.owner}}
+                                            </td>
+                                            <td class="cell100 column1">
+                                                    {{element.timeStarted}}
+                                             </td>
+                                             <td class="cell100 column1">
+                                                    {{element.state}}
+                                             </td>
+
+
 									</tr>							
 								</tbody>
 							</table>

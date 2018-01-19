@@ -21,39 +21,11 @@ import { DataService } from './shared/services/data.service';
 })
 
 
-export class AppComponent implements OnInit {
+export class AppComponent  {
 
 
-    constructor(
-        private dataService: DataService
-    ) {}
+  
 
-
-    data;
-
-
-    ngOnInit() {
-        this.dataService.dataSource().subscribe(
-            x => {
-                if (Array.isArray(x)) {
-                    this.data = x;
-                } else {
-                    let toBeChanged = this.data.find( item => item._id === x._id);
-                    toBeChanged = x;
-                }
-            }
-        );
-
-    }
-
-    isNumber(x) {
-        return Number.isSafeInteger(x);
-    }
-
-    isExpansionDetailRow = (_, row: any) => {
-        const x = row.hasOwnProperty('detailRow');
-        return x;
-    }
 }
 
 
