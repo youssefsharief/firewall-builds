@@ -34,23 +34,23 @@ tr {
 }
 
 tr.primary {
-    background: lighten($brand-primary, 45%);
+    background: linear-gradient(to right, lighten($brand-primary, 45%), white);
     color: $brand-primary;
 }
 
 tr.success {
-    background: lighten($brand-success, 50%);
+    background:  linear-gradient(to right, lighten($brand-success, 50%), white);
     color: $brand-success;
     border: 3px solid black
 }
 
 tr.grey {
-    background: lighten($brand-grey, 50%);
+    background:  linear-gradient(to right, lighten($brand-grey, 50%), white);
     color: $brand-grey;
 }
 
 tr.danger {
-    background: lighten($brand-danger, 40%);
+    background:  linear-gradient(to right, lighten($brand-danger, 40%), white);
     color: $brand-danger;
 }
 
