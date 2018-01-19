@@ -5,7 +5,7 @@ export const firstState = [
         type: 'build',
         'name': 'adipisicing',
         'state': 'pending',
-        '_id': '5a60aceb7c2ea1f5d9be231a'
+        '_id': '5a60aceb7c2ea1f5sd'
     },
 
     {
@@ -18,7 +18,7 @@ export const firstState = [
             phase: 'metrics',
             percentCompleted: 70
         },
-        '_id': '5a60aceb7c2ea1f5d9be231a'
+        '_id': '5a60aceb7c2ea1f5gh'
     },
 
     {
@@ -54,7 +54,7 @@ export const firstState = [
             countFailed: 32,
             percentCovered: 89
         },
-        '_id': '5a60aceb7c2ea1f5d9be231e'
+        '_id': '5a60aceb7c2ea1f5je'
     },
 
 
@@ -91,7 +91,7 @@ export const firstState = [
             countFailed: 32,
             percentCovered: 89
         },
-        '_id': '5a60aceb7c2ea1f5d9be231f'
+        '_id': '5a60aceb7c2ea1f5d9o1f'
     },
 
     {
@@ -112,7 +112,7 @@ export const firstState = [
                 value: 23,
             },
         },
-        '_id': '5a60aceb7c2ea1f5d9be231j'
+        '_id': '5a60aceb1f5d9be231j'
     },
 
 
@@ -149,7 +149,7 @@ export const firstState = [
             countFailed: 43,
             percentCovered: 87
         },
-        '_id': '5a60aceb7c2ea1f5d9be231w'
+        '_id': '5a60acb7c2ea1f5d9be231w'
     },
 
 ];

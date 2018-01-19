@@ -4,7 +4,6 @@ import { DataService } from '../shared/services/data.service';
 @Component({
     selector: 'app-table',
     templateUrl: 'table.component.html',
-    styleUrls: ['table.component.scss']
 })
 
 
@@ -15,7 +14,7 @@ export class TableComponent implements OnInit {
 
 
     data;
-
+    selected;
 
     ngOnInit() {
         this.dataService.dataSource().subscribe(
@@ -31,6 +30,10 @@ export class TableComponent implements OnInit {
 
     }
 
+    select(x) {
+        console.log(x);
+        this.selected = x;
+    }
     isNumber(x) {
         return Number.isSafeInteger(x);
     }

@@ -42,12 +42,14 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { DataService } from './shared/services/data.service';
 import { ColumnHeaderComponent } from './column-header/column-header.component';
 import { TableComponent } from './table/table.component';
+import { ItemRowComponent } from './item-row/item-row.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ColumnHeaderComponent,
-    TableComponent
+    TableComponent,
+    ItemRowComponent
   ],
   imports: [
     MatTableModule,

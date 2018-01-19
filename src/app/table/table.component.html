@@ -38,29 +38,11 @@
 										<td class="cell100 column8">10</td>
 									</tr>
 
-									<tr class="row100 body" *ngFor="let element of data; let i = index">
-
-                                            <td class="cell100 column1">
-                                                    <a href="javascript:void(0);" *ngIf="element.type==='firewall'">
-                                                            <i class="fa fa-shield fa-2x text-success"> </i>
-                                                        </a>
-                                                        <a href="javascript:void(0);" *ngIf="element.type==='build'">
-                                                            <i class="fa fa-desktop fa-2x  text-default"> </i>
-                                                        </a>
-                                            </td>
-
-                                            <td class="cell100 column1">
-                                                   {{element.owner}}
-                                            </td>
-                                            <td class="cell100 column1">
-                                                    {{element.timeStarted}}
-                                             </td>
-                                             <td class="cell100 column1">
-                                                    {{element.state}}
-                                             </td>
+									<tr app-item-row [ngClass]="{'row100 body' : true, 'slected-row': selected && element._id===selected._id}" 
+									*ngFor="let element of data; let i = index" (click)="select(element)" [element]="element">
 
 
-									</tr>							
+
 								</tbody>
 							</table>
 						</div>
