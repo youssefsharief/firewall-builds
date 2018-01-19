@@ -29,7 +29,6 @@ export class AppComponent implements OnInit {
     ) {}
 
 
-    displayedColumns = ['type', 'timeStarted', 'owner', 'name', 'state', 'metrics', 'build', 'unitTest', 'functionalTest'];
     data;
 
 
