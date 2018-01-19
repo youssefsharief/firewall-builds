@@ -1,0 +1,67 @@
+// .gi-2x{font-size: 2em;}
+// .gi-3x{font-size: 3em;}
+// .gi-4x{font-size: 4em;}
+// .gi-5x{font-size: 5em;}
+.arrows-wrapper {
+    padding: 4px;
+    width: 50px;
+    border: 2px solid;
+    width: 120px;
+    height: 120px;
+    margin-top: 5px;
+    font-size: 9px;
+}
+
+.arrows-wrapper p {
+    margin: 0 0 2px;
+    line-height: 10px;
+}
+
+.glyphicon {
+    font-size: 5em;
+    transform: scaleY(0.6)
+}
+
+.number1 {
+    position: relative;
+    bottom: 37px;
+    left: 15px;
+    color: white;
+    font-size: 12px;
+}
+
+.arrow {
+    margin-bottom:-25px;
+    float: left;
+    width: 50px;
+}
+
+.text-test {
+    position: relative;
+    bottom: 10px;
+    left: 11px;
+}
+
+.text-maintainability {
+    position: relative;
+    bottom: 10px;
+    right: 4px;
+}
+.text-security {
+    position: relative;
+    bottom: 9px;
+    left: 5px;
+}
+.text-workmanship {
+    position: relative;
+    bottom: 9px;
+    right: 3px;
+}
+
+.magnitude{
+    position: relative;
+    bottom: 40px;
+    left: 15px;
+    color: white;
+}
+// span.lower{ transform: scaleY(0.9); }

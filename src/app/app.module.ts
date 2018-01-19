@@ -10,13 +10,15 @@ import { TableComponent } from './table/table.component';
 import { ItemRowComponent } from './item-row/item-row.component';
 import { IconTypeComponent } from './icon-type/icon-type.component';
 import { StateColorMapperService } from './shared/services/state-color-mapper.service';
+import { MerticsBoxComponent } from './mertics-box/mertics-box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
     ItemRowComponent,
-    IconTypeComponent
+    IconTypeComponent,
+    MerticsBoxComponent
   ],
   imports: [
     BrowserAnimationsModule,
