@@ -4,7 +4,6 @@ import { StateColorMapperService } from '../shared/services/state-color-mapper.s
 @Component({
     selector: 'app-icon-type',
     templateUrl: 'icon-type.component.html',
-    styleUrls: ['icon-type.component.scss']
 })
 export class IconTypeComponent {
     @Input() type: string;
