@@ -5,7 +5,7 @@
 				<div class="table100 ver1 m-b-110">
 
 
-					<div class="table100 ver5 m-b-110">
+					<div class="table100 m-b-110">
 						<div class="table100-head">
 							<table>
 								<thead>
@@ -38,7 +38,7 @@
 										<td class="cell100 column8">10</td>
 									</tr>
 
-									<tr app-item-row [ngClass]="{'row100 body' : true, 'slected-row': selected && element._id===selected._id}" 
+									<tr app-item-row  class="{{themeColor(element.state)}}" [ngClass]="{'row100 body' : true, 'slected-row': selected && element._id===selected._id}" 
 									*ngFor="let element of data; let i = index" (click)="select(element)" [element]="element">
 
 

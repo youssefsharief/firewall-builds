@@ -42,12 +42,15 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { DataService } from './shared/services/data.service';
 import { TableComponent } from './table/table.component';
 import { ItemRowComponent } from './item-row/item-row.component';
+import { IconTypeComponent } from './icon-type/icon-type.component';
+import { StateColorMapperService } from './shared/services/state-color-mapper.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
-    ItemRowComponent
+    ItemRowComponent,
+    IconTypeComponent
   ],
   imports: [
     MatTableModule,
@@ -61,7 +64,8 @@ import { ItemRowComponent } from './item-row/item-row.component';
     ChartsModule
   ],
   providers: [
-    DataService
+    DataService,
+    StateColorMapperService
   ],
   bootstrap: [AppComponent]
 })

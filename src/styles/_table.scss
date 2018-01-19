@@ -1,13 +1,14 @@
-
 @font-face {
     font-family: Lato-Regular;
-    src: url('../assets/fonts/Lato/Lato-Regular.ttf'); 
-  }
-  
-  @font-face {
+    src: url('../assets/fonts/Lato/Lato-Regular.ttf');
+}
+
+@font-face {
     font-family: Lato-Bold;
-    src: url('../assets/fonts/Lato/Lato-Bold.ttf'); 
-  }
+    src: url('../assets/fonts/Lato/Lato-Bold.ttf');
+}
+
+
 /*//////////////////////////////////////////////////////////////////
   [ Table ]*/
 
@@ -44,6 +45,27 @@
 
 tr {
     vertical-align: top;
+}
+
+tr.primary {
+    background: lighten($brand-primary, 45%);
+    color: $brand-primary;
+}
+
+tr.success {
+    background: lighten($brand-success, 50%);
+    color: $brand-success;
+    border: 3px solid black
+}
+
+tr.grey {
+    background: lighten($brand-grey, 20%);
+    color: $brand-grey;
+}
+
+tr.danger {
+    background: lighten($brand-danger, 40%);
+    color: $brand-danger;
 }
 
 .table100 {
@@ -116,8 +138,6 @@ td {
     overflow: auto;
 }
 
-
-
 .table100 {
     margin-right: -30px;
 }
@@ -138,15 +158,14 @@ td {
 .table100 td {
     font-family: Lato-Regular;
     font-size: 15px;
-    color: #808080;
     line-height: 1.4;
-    background-color: #f7f7f7;
+    // background-color: #f7f7f7;
 }
 
 .table100 .table100-body tr {
     overflow: hidden;
     border-bottom: 10px solid #fff;
-    border-radius: 10px;
+    // border-radius: 10px;
 }
 
 .table100 .table100-body table {
@@ -163,14 +182,14 @@ td {
 
 .table100 .table100-body td:first-child {
     border-left-style: solid;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    // border-top-left-radius: 10px;
+    // border-bottom-left-radius: 10px;
 }
 
 .table100 .table100-body td:last-child {
     border-right-style: solid;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+    // border-bottom-right-radius: 10px;
+    // border-top-right-radius: 10px;
 }
 
 .table100 tr:hover td {
@@ -205,4 +224,3 @@ td {
 .table100 .ps__rail-y .ps__thumb-y::before {
     background-color: #cccccc;
 }
-

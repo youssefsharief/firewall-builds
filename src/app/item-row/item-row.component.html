@@ -1,28 +1,23 @@
 										
         <td class="cell100 column1">
-            <p>
-                <a href="javascript:void(0);" *ngIf="element.type==='firewall'">
-                        <i class="fa fa-shield fa-2x text-success"> </i>
-                    </a>
-                    <a href="javascript:void(0);" *ngIf="element.type==='build'">
-                        <i class="fa fa-desktop fa-2x  text-default"> </i>
-                    </a>
-                </p>
+                <app-icon-type [status]="element.state" [type]="element.type"></app-icon-type>
         </td>
 
-        <td class="cell100 column1">
+        <td class="cell100 column2">
             <p>
+                   
+
                     {{element.owner}}
             </p>
                
         </td>
-        <td class="cell100 column1">
+        <td class="cell100 column3">
             <p>
                     {{element.timeStarted}}
             </p>
                 
          </td>
-         <td class="cell100 column1">
+         <td class="cell100 column4">
              <p>
                     {{element.state}}
              </p>

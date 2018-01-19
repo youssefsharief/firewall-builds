@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/services/data.service';
+import { StateColorMapperService } from '../shared/services/state-color-mapper.service';
 
 @Component({
     selector: 'app-table',
@@ -9,7 +10,8 @@ import { DataService } from '../shared/services/data.service';
 
 export class TableComponent implements OnInit {
     constructor(
-        private dataService: DataService
+        private dataService: DataService,
+        private stateColorMapperService: StateColorMapperService
     ) {}
 
 
@@ -28,6 +30,10 @@ export class TableComponent implements OnInit {
             }
         );
 
+    }
+
+    themeColor(x) {
+        return this.stateColorMapperService.themeColor(x);
     }
 
     select(x) {
