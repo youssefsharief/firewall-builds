@@ -45,7 +45,7 @@ tr.success {
 }
 
 tr.grey {
-    background: lighten($brand-grey, 20%);
+    background: lighten($brand-grey, 50%);
     color: $brand-grey;
 }
 
@@ -141,7 +141,7 @@ td {
 
 .table100 td {
     font-family: Lato-Regular;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 1.4;
     // background-color: #f7f7f7;
 }
