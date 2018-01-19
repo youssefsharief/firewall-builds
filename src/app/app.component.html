@@ -1,109 +1,39 @@
-<div class="table-container mat-elevation-z8">
-  <mat-table #table [dataSource]="dataSource">
+<div class="container">
+  <h2>System Status</h2>
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
+  <div class="mock-table">
 
-    <!-- Position Column -->
-    <ng-container matColumnDef="type">
-      <mat-header-cell *matHeaderCellDef> Type </mat-header-cell>
-      <mat-cell *matCellDef="let element"> 
-          <a href="javascript:void(0);" *ngIf="element.type==='firewall'"> <i class="fa fa-shield fa-3x text-success"> </i> </a>
-          <a href="javascript:void(0);" *ngIf="element.type==='build'"> <i class="fa fa-desktop fa-3x  text-default"> </i> </a>
-         </mat-cell>
-    </ng-container>
+  <div *ngFor="let item of displayedColumns" class="column-header col-xs-1">
+    {{item}}
+  </div>
 
-    <ng-container matColumnDef="timeStarted">
-      <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.timeStarted}} </mat-cell>
-    </ng-container>
+  <ul>
 
 
-    <ng-container matColumnDef="owner">
-      <mat-header-cell *matHeaderCellDef> Owner </mat-header-cell>
-      <mat-cell *matCellDef="let element">
-         {{element.owner}}
-         
-        
-      </mat-cell>
-    </ng-container>
+
+    <li *ngFor="let element of data" class="row item-list">
+      <div class="col-xs-1 list-item-icon">
+        <a href="javascript:void(0);" *ngIf="element.type==='firewall'">
+          <i class="fa fa-shield fa-2x text-success"> </i>
+        </a>
+        <a href="javascript:void(0);" *ngIf="element.type==='build'">
+          <i class="fa fa-desktop fa-2x  text-default"> </i>
+        </a>
+      </div>
+
+      <div class="col-xs-3">
+        {{element.timeStarted}}
+      </div>
 
 
-    <ng-container matColumnDef="name">
-      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
-    </ng-container>
-
-    <!-- Name Column -->
-    <ng-container matColumnDef="state">
-      <mat-header-cell *matHeaderCellDef> state </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.state}} </mat-cell>
-    </ng-container>
-
-    <!-- Weight Column -->
-    <ng-container matColumnDef="metrics">
-      <mat-header-cell *matHeaderCellDef> metrics </mat-header-cell>
-      
-      <mat-cell *matCellDef="let element">
-          <div class="progress-back">
-              <div *ngIf="isNumber(element.metrics)" class="progress-bar" [ngStyle]="{'background-color':'blue', 'width': element.metrics}"> </div>
-              <div *ngIf="element.metrics===true" class="progress-bar" [ngStyle]="{'background-color':'green', 'width': '100%'}"> </div>
-              <div *ngIf="element.metrics===false" class="progress-bar" [ngStyle]="{'background-color':'red', 'width': '100%'}"></div>
-          </div>
-      </mat-cell>
-      
-    </ng-container>
-
-    <ng-container matColumnDef="build">
-      <mat-header-cell *matHeaderCellDef> build </mat-header-cell>
-      <mat-cell *matCellDef="let element">
-          <div class="progress-back">
-              <div *ngIf="element.metrics===true" class="progress-bar" [ngStyle]="{'background-color':'green', 'width': '100%'}"> </div>
-          </div>
-      </mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef="unitTest">
-      <mat-header-cell *matHeaderCellDef> unitTest </mat-header-cell>
-      <mat-cell *matCellDef="let element">
-          <div class="progress-back">
-              <div *ngIf="element.metrics===true" class="progress-bar" [ngStyle]="{'background-color':'green', 'width': '100%'}"> </div>
-          </div>
-      </mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef="functionalTest">
-      <mat-header-cell *matHeaderCellDef> functionalTest </mat-header-cell>
-      <mat-cell *matCellDef="let element">
-          <div class="progress-back">
-              <div *ngIf="element.metrics===true" class="progress-bar" [ngStyle]="{'background-color':'green', 'width': '100%'}"> </div>
-          </div>
-      </mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef="_id">
-      <mat-header-cell *matHeaderCellDef> _id </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element._id}} </mat-cell>
-    </ng-container>
-
-    <!-- Expanded Content Column - The detail row is made up of this one column -->
-    <ng-container matColumnDef="expandedDetail">
-      <mat-cell *matCellDef="let detail">
-        Details
-      </mat-cell>
-    </ng-container>
-
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;" 
-    matRipple class="element-row" 
-    [class.expanded]="expandedElement == row"
-      (click)="expandedElement = row">
-    </mat-row>
+      <div class="col-xs-3">
+        {{element.owner}}
+      </div>
 
 
-    <mat-row *matRowDef="let row; columns: ['expandedDetail']; when: isExpansionDetailRow" [@detailExpand]="row.element == expandedElement ? 'expanded' : 'collapsed'"
-      style="overflow: hidden">
-    </mat-row>
-  </mat-table>
+
+
+    </li>
+  </ul>
 </div>
-
+</div>

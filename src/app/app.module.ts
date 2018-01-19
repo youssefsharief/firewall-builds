@@ -39,6 +39,7 @@ import { NgProgressModule } from '@ngx-progressbar/core';
 import { AppComponent } from './app.component';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { DataService } from './shared/services/data.service';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,9 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     BrowserModule,
     ChartsModule
   ],
-  providers: [],
+  providers: [
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
