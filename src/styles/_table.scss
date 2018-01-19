@@ -128,9 +128,7 @@ td {
     margin-right: -30px;
 }
 
-.table100 .table100-head {
-    padding-right: 30px;
-}
+
 
 .table100 th {
     font-family: Lato-Bold;
@@ -209,8 +207,8 @@ td {
     overflow: hidden;
 }
 
-.table100 .table100-body {
-    padding-right: 30px;
+.table100 .table100-body , .table100 .table100-head {
+    padding: 10px;
 }
 
 .table100 .ps__rail-y {
