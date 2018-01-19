@@ -193,9 +193,23 @@ td {
 }
 
 .table100 tr:hover td {
-    background-color: #ebebeb;
     cursor: pointer;
 }
+
+.table100 tr:hover.success td {
+    color: lighten($brand-success, 10%);
+}
+.table100 tr:hover.danger td {
+    color: lighten($brand-danger, 20%);
+}
+.table100 tr:hover.primary td {
+    color: lighten($brand-primary, 20%);
+}
+.table100 tr:hover.grey td {
+    color: lighten($brand-grey, 10%);
+}
+
+
 
 .table100 .table100-head th {
     padding-top: 25px;
