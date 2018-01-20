@@ -1,19 +1,26 @@
-.box {
-    padding: 4px;
-    width: 50px;
-    border: 2px solid;
-    width: 120px;
-    height: 120px;
-    margin-top: 5px;
-    font-size: 9px;
+@import '../../../styles/color-variables';
+
+img {
+    width: 60px;
 }
 
-.box p {
-    margin: 0 0 2px;
-    line-height: 10px;
+.pc-title {
+    color: $brand-primary;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+
 }
 
-.fa-desktop{
-    width: 20px;
+.pc-row {
+    margin-top: 18px;
+}
+
+.date {
+    color: black;
     font-size: 10px;
+    position: relative;
+    top: 18px;
+    left: 24px;
 }

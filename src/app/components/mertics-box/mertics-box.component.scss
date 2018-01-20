@@ -9,17 +9,9 @@
     font-size: 3.5em;
 }
 
-.number1 {
-    position: relative;
-    bottom: 37px;
-    left: 15px;
-    color: white;
-    font-size: 12px;
-}
-
 .arrow-with-info {
     margin-bottom: -25px;
-    margin-left: 8px;
+    margin-left: 18px;
     float: left;
     width: 50px;
     .magnitude {
@@ -28,7 +20,7 @@
     }
     .text {
         position: relative;
-        font-size: 10px;
+        font-size: 11px;
         color: black;
     }
     &.up {

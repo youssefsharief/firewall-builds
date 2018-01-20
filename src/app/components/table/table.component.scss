@@ -1,13 +1,9 @@
 @import '../../../styles/color-variables';
 
 
-app-build-box {
-    float: left;
-    margin: 20px;
-    border-top: crimson;
-}
 
 .tabular {
+    font-size: 12px;
     padding: 7px;
     background: linear-gradient(to right, lighten($brand-grey, 40%), white);
 }
