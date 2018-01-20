@@ -34,7 +34,7 @@
     width: 50px;
     .magnitude {
         position: relative;
-        color: white;
+        
     }
     .text {
         position: relative;
@@ -45,24 +45,28 @@
         .magnitude {
             bottom: 59px;
             left: 19px;
+            color: white;
         }
     }
     &.left {
         .magnitude {
             bottom: 40px;
             left: 15px;
+            color: black;
         }
     }
     &.right {
         .magnitude {
             bottom: 51px;
             left: 25px;
+            color: black;
         }
     }
     &.down {
         .magnitude {
             bottom: 46px;
             left: 18px;
+            color: white;
         }
     }
     &.test {

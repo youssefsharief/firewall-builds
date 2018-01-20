@@ -26,6 +26,7 @@
     "@ngx-progressbar/core": "^4.0.0",
     "bootstrap-sass": "^3.3.7",
     "chart.js": "^2.7.1",
+    "chart.piecelabel.js": "^0.9.0",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
     "ng2-charts": "^1.6.0",

@@ -4,11 +4,11 @@
 
     <div class="row">
         <div class="col-xs-6">
-            <app-pie-chart></app-pie-chart>
+            <app-pie-chart [countPassed]="testsData.countPassed" [countFailed]="testsData.countFailed"></app-pie-chart>
         </div>
         <div class="col-xs-6">
             <div class="percent-passed">
-                <div class="{{themedClass()}} percent-number">
+                <div class="{{themedClass}} percent-number">
                     {{passedPercent}}%
                 </div>
                 <p> tests passed</p>
@@ -23,7 +23,7 @@
 
                 <div class="colored-bar" [ngStyle]="{'background': 'linear-gradient(to right, green, green ' + coveragePercent + '%, orange ' + coveragePercent + '%)'}">
                     <div class="percent-number text-danger">
-                            {{coveragePercent}}
+                            {{testsData.percentCovered}}%
                     </div>
                     <p>code covered</p>
                     

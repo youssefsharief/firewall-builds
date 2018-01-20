@@ -64,18 +64,17 @@
 				</div>
 
 				<div class="{{themeColor(element.state)}} derivative row" *ngIf="selected && element._id===selected._id" [@myAnimation]>
-					<app-mertics-box *ngIf="element.metrics" [metrics]="element.metrics" ></app-mertics-box>
+					<app-mertics-box *ngIf="element.metrics" [metrics]="element.metrics"></app-mertics-box>
 					<app-build-box *ngIf="element.buildDate" [date]="element.buildDate"></app-build-box>
-					<app-charts-box passedPercent="40" coveragePercent="60" title="Unit Test"></app-charts-box>
-					<app-charts-box passedPercent="40" coveragePercent="60" title="Functional Test"></app-charts-box>
+					<app-charts-box *ngIf="element.unitTests" [testsData]="element.unitTests" title="Unit Test"></app-charts-box>
+					<app-charts-box *ngIf="element.functionalTests" [testsData]="element.functionalTests" title="Functional Test"></app-charts-box>
 					<app-result-box></app-result-box>
 
 					<div *ngIf="element.state==='running'">
-							<img  width="150px" src="assets/loader-spinner.svg" alt="Loading">
-							Still Running. Please check again later
+						<img width="150px" src="assets/loader-spinner.svg" alt="Loading"> Still Running. Please check again later
 					</div>
-						
-						
+
+
 				</div>
 			</div>
 		</div>

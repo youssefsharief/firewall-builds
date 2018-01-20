@@ -25,7 +25,7 @@
 
       ],
       "scripts": [
-        
+          "../node_modules/build/Chart.PieceLabel.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
