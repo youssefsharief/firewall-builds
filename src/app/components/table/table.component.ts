@@ -1,20 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { StateColorMapperService } from '../../services/state-color-mapper.service';
+import { trigger, state, style, transition, animate } from '@angular/core';
 
 @Component({
     selector: 'app-table',
     templateUrl: 'table.component.html',
-    styleUrls: ['table.component.scss']
-
-})
+    styleUrls: ['table.component.scss'],
+    animations: [
+        trigger('myAnimation',
+            [transition(':enter',
+                [
+                    style({  opacity: 0 }),
+                    animate('300ms', style({ 'opacity': 1 }))
+                ]),
+            ])
+        ]
+    })
 
 
 export class TableComponent implements OnInit {
     constructor(
         private dataService: DataService,
         private stateColorMapperService: StateColorMapperService
-    ) {}
+    ) { }
 
 
     data;
@@ -26,7 +35,7 @@ export class TableComponent implements OnInit {
                 if (Array.isArray(x)) {
                     this.data = x;
                 } else {
-                    let toBeChanged = this.data.find( item => item._id === x._id);
+                    let toBeChanged = this.data.find(item => item._id === x._id);
                     toBeChanged = x;
                 }
             }

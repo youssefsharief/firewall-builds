@@ -62,7 +62,7 @@
 					</div>
 				</div>
 
-				<div class="{{themeColor(element.state)}} derivative row" *ngIf="selected && element._id===selected._id">
+				<div class="{{themeColor(element.state)}} derivative row"  *ngIf="selected && element._id===selected._id" [@myAnimation]>
 					<app-mertics-box></app-mertics-box>
 					<app-build-box></app-build-box>
 					<app-charts-box passedPercent="40" coveragePercent="60" title="Unit Test"></app-charts-box>
