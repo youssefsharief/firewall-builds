@@ -7,9 +7,17 @@
 }
 
 .glyphicon {
-   
-    font-size: 3.5em;
+    font-size: 5em;
 }
+
+.glyphicon-arrow-up, .glyphicon-arrow-down {
+    transform: scale(1.2, 0.7);
+}
+
+.glyphicon-arrow-right, .glyphicon-arrow-lfet {
+    transform: scale(0.7, 1.2);
+}
+
 .glyphicon-arrow-up{
     color: $brand-success;
 }
@@ -28,8 +36,9 @@
 
 
 .arrow-with-info {
-    margin-bottom: -25px;
-    margin-left: 18px;
+    margin-bottom: -29px;
+    margin-left: 7px;
+    margin-right: 21px;
     float: left;
     width: 50px;
     .magnitude {
@@ -43,51 +52,53 @@
     }
     &.up {
         .magnitude {
-            bottom: 59px;
-            left: 19px;
+            bottom: 45px;
+            left: 22px;
             color: white;
         }
     }
     &.left {
         .magnitude {
-            bottom: 40px;
-            left: 15px;
+            bottom: 50px;
+            left: 19px;
             color: black;
         }
     }
     &.right {
         .magnitude {
             bottom: 51px;
-            left: 25px;
+            left: 27px;
             color: black;
         }
     }
     &.down {
         .magnitude {
             bottom: 46px;
-            left: 18px;
+            left: 22px;
             color: white;
         }
     }
     &.test {
         .text {
-            bottom: 10px;
-            left: 11px;
+            bottom: 3px;
+            left: 17px;
         }
     }
     &.maintainability {
         .text {
-            bottom: 10px;
+            bottom: 3px;
             right: 4px;
         }
     }
     &.security {
+        margin-top: 10px;
         .text {
             bottom: 9px;
             left: 5px;
         }
     }
     &.workmanship {
+        margin-top: 10px;
         .text {
             bottom: 9px;
             right: 3px;
