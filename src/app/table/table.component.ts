@@ -5,6 +5,8 @@ import { StateColorMapperService } from '../shared/services/state-color-mapper.s
 @Component({
     selector: 'app-table',
     templateUrl: 'table.component.html',
+    styleUrls: ['table.component.scss']
+
 })
 
 

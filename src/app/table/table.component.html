@@ -1,50 +1,58 @@
-<div class="limiter ver1">
-	<div class="table100 m-b-30">
-		<div class="table100-head">
-			<table>
-				<thead>
-					<tr class="row100 head">
-						<th class="cell100 column1">Changelist / Build</th>
-						<th class="cell100 column2">Owner</th>
-						<th class="cell100 column3">Time Started</th>
-						<th class="cell100 column4">State</th>
-						<th class="cell100 column5">Metrics</th>
-						<th class="cell100 column6">Build</th>
-						<th class="cell100 column7">Unit Test</th>
-						<th class="cell100 column8">Functional Test</th>
+<div class="container">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Changelist / Build</th>
+				<th>Owner</th>
+				<th>Time Started</th>
+				<th>State</th>
+				<th>Metrics</th>
+				<th>Build</th>
+				<th>Unit Test</th>
+				<th>Functional Test</th>
 
-					</tr>
-				</thead>
-			</table>
-		</div>
+			</tr>
+		</thead>
+		<tbody>
+				<ng-template ngFor let-element [ngForOf]="data">
+				<tr app-item-row class="{{themeColor(element.state)}} original"  (click)="select(element)" [element]="element"></tr>	
 
-		<div class="table100-body js-pscroll">
-			<table>
-				<tbody>
-					<tr class="row100 body">
-						<td class="cell100 column1">Like a butterfly</td>
-						<td class="cell100 column2">Boxing</td>
-						<td class="cell100 column3">9:00 AM - 11:00 AM</td>
-						<td class="cell100 column4">Aaron Chapman</td>
-						<td class="cell100 column5">10</td>
-						<td class="cell100 column6">10</td>
-						<td class="cell100 column7">10</td>
-						<td class="cell100 column8">10</td>
+					<tr class="{{themeColor(element.state)}} derivative" *ngIf="selected && element._id===selected._id">
+						<td colspan="8">
+								<app-mertics-box></app-mertics-box>
+								<app-build-box></app-build-box>
+						</td>
 					</tr>
 
-					<tr app-item-row class="{{themeColor(element.state)}}" [ngClass]="{'row100 body' : true, 'slected-row': selected && element._id===selected._id}"
-					 *ngFor="let element of data; let i = index" (click)="select(element)" [element]="element">
+			</ng-template>
+		</tbody>
+	</table>
+
+</div>
 
 
 
-				</tbody>
-			</table>
-		</div>
-	</div>
 
-	<div>Icons made by
-		<a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>
-		from
-		<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
-		<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
-	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Icons made by
+	<a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>
+	from
+	<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
+	<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+</div>
