@@ -7,13 +7,15 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
-$brand-success:         rgb(23, 169, 37) !default;  // 17a925
+$brand-primary:         #5F9CD3 !default; // #337ab7
+$brand-success:         #558039 !default;  // 73AC4D
+$brand-success-light:         rgb(145, 179, 149) !default;  // 17a925
+
 $brand-info:            rgb(107,0,232) !default;
 $brand-warning:         rgb(232, 124,4) !default;
-$brand-danger:          rgba(255,0,0,0.92) !default;  // ff0000
-$brand-grey:            rgb(128, 128, 128) !default;  // ff0000
-
+$brand-danger:          rgb(191,7,19) !default;  // BF0713
+$brand-grey:            #B3B3B3 !default;  // ff0000
+$brand-yellow:          #FED770 !default;
 // grey A6A6A6
 
 

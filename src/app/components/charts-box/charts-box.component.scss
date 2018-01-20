@@ -1,13 +1,23 @@
-
-.percent-passed{
+.percent-passed {
     margin-top: 25px;
     .percent-number {
-        font-size:30px;
+        font-size: 30px;
     }
-    p{
+    p {
         font-size: 10px;
-        color:black;
+        color: black;
         vertical-align: bottom;
-
     }
+}
+
+.colored-bar {
+    // background: linear-gradient(to right, green, green 33.33%, white 33.33%, white 66.66%, #ed2939 66.66%);
+    width: 150px;
+    margin: auto;
+    margin-top:25px;
+    height: 22px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

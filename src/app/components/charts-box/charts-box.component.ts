@@ -6,13 +6,13 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['charts-box.component.scss']
 })
 export class ChartsBoxComponent {
-    @Input() percentageMagnitude: number;
-
+    @Input() passedPercent: number;
+    coveragePercent = 70;
 
     public themedClass() {
-        if (this.percentageMagnitude < 50) {
+        if (this.passedPercent < 50) {
             return 'text-danger';
-        } else if (this.percentageMagnitude < 70) {
+        } else if (this.passedPercent < 70) {
             return 'text-warn';
         } else {
             return 'text-success';
