@@ -11,13 +11,26 @@
 }
 
 .colored-bar {
-    // background: linear-gradient(to right, green, green 33.33%, white 33.33%, white 66.66%, #ed2939 66.66%);
-    width: 150px;
+    width: 147px;
     margin: auto;
-    margin-top: 25px;
-    height: 22px;
-    font-size: 14px;
+    margin-top: 22px;
+    height: 30px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    .data {
+        margin-left: 55px;
+    }
+    .percent-number {
+        font-size: 12px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+    p {
+        position: relative;
+        top: 14px;
+        right: 43px;
+        color: black;
+        font-size: 10px;
+    }
 }

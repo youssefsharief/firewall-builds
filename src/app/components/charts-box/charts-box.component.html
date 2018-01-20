@@ -19,18 +19,22 @@
 
 
     <div class="row">
-            <div class="col-xs-12">
+        <div class="col-xs-12">
 
-                <div class="colored-bar" [ngStyle]="{'background': 'linear-gradient(to right, green, green ' + coveragePercent + '%, orange ' + coveragePercent + '%)'}">
+            <div class="colored-bar" [ngStyle]="{'background': 'linear-gradient(to right, rgba(85, 127, 57, 0.30), rgba(85, 127, 57, 0.30) ' + testsData.percentCovered + '%, rgba(231, 125, 4, 0.46) ' + testsData.percentCovered + '%)'}">
+
+                <div class="data">
                     <div class="percent-number text-danger">
-                            {{testsData.percentCovered}}%
+                        {{testsData.percentCovered}}%
                     </div>
-                    <p>code covered</p>
-                    
                 </div>
 
+                <p>code covered</p>
 
-            </div>   
+            </div>
+
+
         </div>
+    </div>
 
 </app-box-layout>

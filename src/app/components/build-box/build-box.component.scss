@@ -5,16 +5,20 @@ img {
 }
 
 .pc-title {
-    color: $brand-primary;
-    font-weight: bold;
-    font-size: 12px;
-    text-align: center;
+    color: darken($brand-primary, 20%);
+    color: #2c69a0;
+    font-weight: 700;
+    font-size: 10px;
     margin-top: 15px;
-
+    position: relative;
+    left: 17px;
+    bottom: 9px;
 }
 
 .pc-row {
-    margin-top: 18px;
+    margin-top: 21px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .date {
@@ -22,4 +26,12 @@ img {
     font-size: 10px;
     margin-top: 18px;
     text-align: center;
+}
+
+.pic-text-wrapper{
+    width: 50px;
+    display: inline-block;
+    &.release{
+        margin-left: 24px;
+    }
 }
