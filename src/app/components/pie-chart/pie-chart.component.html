@@ -1,9 +1,4 @@
-<div class="col-md-6">
-        <canvas baseChart
-        [colors]="pieChartColors"
-                    [data]="pieChartData"
-                    chartType="pie"
-                    (chartHover)="chartHovered($event)"
-                    (chartClick)="chartClicked($event)"></canvas>
-      </div>
-    
+<div class="chart-container">
+      <canvas baseChart  [colors]="pieChartColors" [data]="pieChartData" chartType="pie" (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+</div>

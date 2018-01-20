@@ -12,6 +12,8 @@ import { BuildBoxComponent } from './components/build-box/build-box.component';
 import { BoxLayoutComponent } from './components/box-layout/box-layout.component';
 import { StateColorMapperService } from './services/state-color-mapper.service';
 import { DataService } from './services/data.service';
+import { ChartsBoxComponent } from './components/charts-box/charts-box.component';
+import { PieChartComponent } from './components/pie-chart/pie-chart.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { DataService } from './services/data.service';
     IconTypeComponent,
     MerticsBoxComponent,
     BuildBoxComponent,
-    BoxLayoutComponent
+    BoxLayoutComponent,
+    ChartsBoxComponent,
+    PieChartComponent
   ],
   imports: [
     BrowserAnimationsModule,
