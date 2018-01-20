@@ -1,12 +1,4 @@
-.arrows-wrapper {
-    padding: 4px;
-    width: 50px;
-    border: 2px solid;
-    width: 120px;
-    height: 120px;
-    margin-top: 5px;
-    font-size: 9px;
-}
+
 
 .arrows-wrapper p {
     margin: 0 0 2px;
@@ -14,8 +6,7 @@
 }
 
 .glyphicon {
-    font-size: 5em;
-    transform: scaleY(0.6)
+    font-size: 3.5em;
 }
 
 .number1 {
@@ -26,38 +17,68 @@
     font-size: 12px;
 }
 
-.arrow {
-    margin-bottom:-25px;
+.arrow-with-info {
+    margin-bottom: -25px;
+    margin-left: 8px;
     float: left;
     width: 50px;
+    .magnitude {
+        position: relative;
+        color: white;
+    }
+    .text {
+        position: relative;
+        font-size: 10px;
+        color: black;
+    }
+    &.up {
+        .magnitude {
+            bottom: 59px;
+            left: 19px;
+        }
+    }
+    &.left {
+        .magnitude {
+            bottom: 40px;
+            left: 15px;
+        }
+    }
+    &.right {
+        .magnitude {
+            bottom: 51px;
+            left: 25px;
+        }
+    }
+    &.down {
+        .magnitude {
+            bottom: 46px;
+            left: 18px;
+        }
+    }
+    &.test {
+        .text {
+            bottom: 10px;
+            left: 11px;
+        }
+    }
+    &.maintainability {
+        .text {
+            bottom: 10px;
+            right: 4px;
+        }
+    }
+    &.security {
+        .text {
+            bottom: 9px;
+            left: 5px;
+        }
+    }
+    &.workmanship {
+        .text {
+            bottom: 9px;
+            right: 3px;
+        }
+    }
 }
 
-.text-test {
-    position: relative;
-    bottom: 10px;
-    left: 11px;
-}
-
-.text-maintainability {
-    position: relative;
-    bottom: 10px;
-    right: 4px;
-}
-.text-security {
-    position: relative;
-    bottom: 9px;
-    left: 5px;
-}
-.text-workmanship {
-    position: relative;
-    bottom: 9px;
-    right: 3px;
-}
-
-.magnitude{
-    position: relative;
-    bottom: 40px;
-    left: 15px;
-    color: white;
-}
 // span.lower{ transform: scaleY(0.9); }

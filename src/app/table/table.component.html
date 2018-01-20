@@ -1,32 +1,76 @@
 <div class="container">
-	<!-- <table class="table">
-		<thead>
-			<tr>
-				<th>Changelist / Build</th>
-				<th>Owner</th>
-				<th>Time Started</th>
-				<th>State</th>
-				<th>Metrics</th>
-				<th>Build</th>
-				<th>Unit Test</th>
-				<th>Functional Test</th>
 
-			</tr>
-		</thead>
-		<tbody> -->
-			
-				<ng-template ngFor let-element [ngForOf]="data">
-				<div app-item-row class="{{themeColor(element.state)}} original"  (click)="select(element)" [element]="element"></div>	
+	<br>
+	<br>
+	<br>
+	<br>
 
-					<div class="{{themeColor(element.state)}} derivative" *ngIf="selected && element._id===selected._id">
-								<app-mertics-box></app-mertics-box>
-								<app-build-box></app-build-box>
+	<div class="tabular">
+		<div class="table-heading">
+			<div class="row">
+				<div class="cell col-xs-2"> Changelist / Build </div>
+				<div class="cell col-xs-2"> Owner </div>
+				<div class="cell col-xs-3"> Time Started </div>
+				<div class="cell col-xs-1"> State </div>
+				<div class="cell col-xs-1"> Metrics </div>
+				<div class="cell col-xs-1"> Build </div>
+				<div class="cell col-xs-1"> Unit Test </div>
+				<div class="cell col-xs-1"> Functional Test</div>
+			</div>
+
+		</div>
+
+		<div class="table-body">
+			<div *ngFor="let element of data" class="element-wrapper {{themeColor(element.state)}}">
+
+				<div class="original row" (click)="select(element)">
+
+
+					<div class="col-xs-2">
+						<app-icon-type [status]="element.state" [type]="element.type"></app-icon-type>
 					</div>
 
-			</ng-template>
-		<!-- </tbody>
-	</table> -->
 
+
+					<div class="col-xs-2"> {{element.owner}}
+					</div>
+
+					<div class="col-xs-3">
+						{{element.timeStarted}}
+					</div>
+
+
+					<div class="col-xs-1">
+						{{element.state}}
+					</div>
+
+
+					<div class="col-xs-1">
+						{{element.state}}
+					</div>
+
+					<div class="col-xs-1">
+						{{element.state}}
+					</div>
+
+					<div class="col-xs-1">
+						{{element.state}}
+					</div>
+
+					<div class="col-xs-1">
+						{{element.state}}
+					</div>
+
+
+				</div>
+
+				<div class="{{themeColor(element.state)}} derivative row" *ngIf="selected && element._id===selected._id">
+					<app-mertics-box></app-mertics-box>
+					<app-build-box></app-build-box>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 

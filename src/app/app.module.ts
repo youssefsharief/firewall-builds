@@ -12,6 +12,7 @@ import { IconTypeComponent } from './icon-type/icon-type.component';
 import { StateColorMapperService } from './shared/services/state-color-mapper.service';
 import { MerticsBoxComponent } from './mertics-box/mertics-box.component';
 import { BuildBoxComponent } from './build-box/build-box.component';
+import { BoxLayoutComponent } from './box-layout/box-layout.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BuildBoxComponent } from './build-box/build-box.component';
     ItemRowComponent,
     IconTypeComponent,
     MerticsBoxComponent,
-    BuildBoxComponent
+    BuildBoxComponent,
+    BoxLayoutComponent
   ],
   imports: [
     BrowserAnimationsModule,
