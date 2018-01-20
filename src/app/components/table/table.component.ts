@@ -11,15 +11,16 @@ import { trigger, state, style, transition, animate } from '@angular/core';
         trigger('myAnimation',
             [transition(':enter',
                 [
-                    style({  opacity: 0 }),
+                    style({ opacity: 0 }),
                     animate('300ms', style({ 'opacity': 1 }))
                 ]),
             ])
-        ]
-    })
+    ]
+})
 
 
 export class TableComponent implements OnInit {
+
     constructor(
         private dataService: DataService,
         private stateColorMapperService: StateColorMapperService
@@ -43,14 +44,28 @@ export class TableComponent implements OnInit {
 
     }
 
+
+    cursorStyle(element) {
+        if (!(element.state === 'pending') && !this.isOpened(element)) {
+            return { cursor: 'pointer' };
+        }
+    }
+
+    isOpened(element) {
+        return this.selected && element._id === this.selected._id;
+    }
+
+
     themeColor(x) {
         return this.stateColorMapperService.themeColor(x);
     }
 
     select(x) {
-        console.log(x);
-        this.selected = x;
+        if (this.cursorStyle(x)) {
+            this.selected = x;
+        }
     }
+
     isNumber(x) {
         return Number.isSafeInteger(x);
     }

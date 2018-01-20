@@ -21,7 +21,8 @@
 		</div>
 
 		<div class="table-body">
-			<div *ngFor="let element of data" [class.opened]="selected && element._id===selected._id" class="element-wrapper {{themeColor(element.state)}}">
+			<div *ngFor="let element of data" [class.opened]="isOpened(element)" class="element-wrapper {{themeColor(element.state)}}"
+			       [ngStyle]="cursorStyle(element)">
 
 				<div class="original row" (click)="select(element)">
 
@@ -63,7 +64,7 @@
 				</div>
 
 				<div class="{{themeColor(element.state)}} derivative row"  *ngIf="selected && element._id===selected._id" [@myAnimation]>
-					<app-mertics-box></app-mertics-box>
+					<app-mertics-box [metrics]="element.metrics" *ngIf="element.metrics"></app-mertics-box>
 					<app-build-box></app-build-box>
 					<app-charts-box passedPercent="40" coveragePercent="60" title="Unit Test"></app-charts-box>
 					<app-charts-box passedPercent="40" coveragePercent="60" title="Functional Test"></app-charts-box>

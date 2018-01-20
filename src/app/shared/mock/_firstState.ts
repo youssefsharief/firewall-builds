@@ -27,20 +27,22 @@ export const firstState = [
         owner: 'Mcbride',
         'name': 'adipisicing',
         'state': 'rejected',
-        'metrics': {
+        metrics: {
             test: {
                 value: 77,
-                isPositive: true
+                isPositive: true,
             },
             maintainability: {
                 value: 32,
-                isPositive: true
+                isPositive: true,
             },
             security: {
                 value: 18,
+                isPositive: true,
             },
             workmanship: {
                 value: 45,
+                isPositive: true,
             },
         },
         buildDate: '2014-12-20T01:52:46 -02:00',
@@ -64,20 +66,22 @@ export const firstState = [
         owner: 'ER',
         'name': 'rfgre',
         'state': 'complete',
-        'metrics': {
+        metrics: {
             test: {
                 value: 80,
-                isPositive: true
+                isPositive: true,
             },
             maintainability: {
                 value: 87,
-                isPositive: true
+                isPositive: true,
             },
             security: {
                 value: 90,
+                isPositive: true,
             },
             workmanship: {
                 value: 97,
+                isPositive: true,
             },
         },
         buildDate: '2014-12-20T01:52:46 -02:00',
@@ -100,16 +104,18 @@ export const firstState = [
         owner: 'Mcbride',
         'name': 'adipisicing',
         'state': 'rejected',
-        'metrics': {
+        metrics: {
             maintainability: {
                 value: 5,
-                isPositive: true
+                isPositive: true,
             },
             security: {
                 value: 31,
+                isPositive: true,
             },
             workmanship: {
                 value: 23,
+                isPositive: true,
             },
         },
         '_id': '5a60aceb1f5d9be231j'
@@ -122,20 +128,22 @@ export const firstState = [
         owner: 'ER',
         'name': 'rfgre',
         'state': 'accepted',
-        'metrics': {
+        metrics: {
             test: {
                 value: 80,
-                isPositive: true
+                isPositive: true,
             },
             maintainability: {
                 value: 87,
-                isPositive: true
+                isPositive: true,
             },
             security: {
                 value: 90,
+                isPositive: true,
             },
             workmanship: {
                 value: 97,
+                isPositive: true,
             },
         },
         buildDate: '2014-12-20T01:52:46 -02:00',

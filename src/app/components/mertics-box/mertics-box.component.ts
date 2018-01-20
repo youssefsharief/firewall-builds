@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-mertics-box',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
     styleUrls: ['mertics-box.component.scss']
 })
 export class MerticsBoxComponent {
+    @Input() metrics;
 
+    ngOnInit() {
+        console.log(this.metrics)
+    }
 }
