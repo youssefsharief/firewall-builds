@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../shared/services/data.service';
-import { StateColorMapperService } from '../shared/services/state-color-mapper.service';
+import { DataService } from '../../services/data.service';
+import { StateColorMapperService } from '../../services/state-color-mapper.service';
 
 @Component({
     selector: 'app-table',

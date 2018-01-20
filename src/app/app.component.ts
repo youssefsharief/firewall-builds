@@ -3,7 +3,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/observable/concat';
-import { DataService } from './shared/services/data.service';
+import { DataService } from './services/data.service';
 
 
 @Component({

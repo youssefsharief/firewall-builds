@@ -1,8 +1,8 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { firstState } from '../mock.ts/_firstState';
-import { firstChange, secondChange, thirdChange } from '../mock.ts/changes';
+import { firstState } from '../shared/mock/_firstState';
+import { firstChange, secondChange, thirdChange } from '../shared/mock/changes';
 
 @Injectable()
 
