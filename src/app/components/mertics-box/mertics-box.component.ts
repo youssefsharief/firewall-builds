@@ -8,7 +8,4 @@ import { Component, Input } from '@angular/core';
 export class MerticsBoxComponent {
     @Input() metrics;
 
-    ngOnInit() {
-        console.log(this.metrics)
-    }
 }

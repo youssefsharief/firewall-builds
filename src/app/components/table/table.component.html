@@ -22,7 +22,7 @@
 
 		<div class="table-body">
 			<div *ngFor="let element of data" [class.opened]="isOpened(element)" class="element-wrapper {{themeColor(element.state)}}"
-			       [ngStyle]="cursorStyle(element)">
+			 [ngStyle]="cursorStyle(element)">
 
 				<div class="original row" (click)="select(element)">
 
@@ -63,41 +63,22 @@
 					</div>
 				</div>
 
-				<div class="{{themeColor(element.state)}} derivative row"  *ngIf="selected && element._id===selected._id" [@myAnimation]>
+				<div class="{{themeColor(element.state)}} derivative row" *ngIf="selected && element._id===selected._id" [@myAnimation]>
 					<app-mertics-box [metrics]="element.metrics" *ngIf="element.metrics"></app-mertics-box>
 					<app-build-box></app-build-box>
 					<app-charts-box passedPercent="40" coveragePercent="60" title="Unit Test"></app-charts-box>
 					<app-charts-box passedPercent="40" coveragePercent="60" title="Functional Test"></app-charts-box>
 					<app-result-box></app-result-box>
+
+						<img *ngIf="element.state==='running'" width="15px" src="assets/loader-spinner.svg" alt="Loading">
 				</div>
 			</div>
 		</div>
 	</div>
 	<div>Icons made by
-			<a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>
-			from
-			<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
-			<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
-		</div>
+		<a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>
+		from
+		<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
+		<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+	</div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,4 +1,14 @@
+@import '../../../styles/color-variables';
+
 div {
+    &.success{
+        border-color: $brand-success;
+        color: $brand-success;
+    }
+    &.failed{
+        border-color: $brand-danger;
+        color: $brand-danger;
+    }
     padding: 4px;
     border: 2px solid;
     width: 170px;

@@ -1,4 +1,6 @@
-<div>
+<div class="{{isFailing? 'failed' : success}}">
     <p class="title">{{title}}</p>
     <ng-content></ng-content>
 </div>
+
+<!-- [ngStyle]="borderColor" -->

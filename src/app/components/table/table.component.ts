@@ -34,6 +34,7 @@ export class TableComponent implements OnInit {
         this.dataService.dataSource().subscribe(
             x => {
                 if (Array.isArray(x)) {
+                    this.checkFailurePointIfExists(x);
                     this.data = x;
                 } else {
                     let toBeChanged = this.data.find(item => item._id === x._id);
@@ -44,6 +45,19 @@ export class TableComponent implements OnInit {
 
     }
 
+    checkFailurePointIfExists(x) {
+        x.forEach(process => {
+            if (process.metrics) {
+                Object.keys(process.metrics).forEach(metric => {
+                    if (!process.metrics[metric].isPositive) {
+                        process.metrics.failed = true;
+                        console.log('lolo');
+                        return;
+                    }
+                });
+            }
+        });
+    }
 
     cursorStyle(element) {
         if (!(element.state === 'pending') && !this.isOpened(element)) {
