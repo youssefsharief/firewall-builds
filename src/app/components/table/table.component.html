@@ -70,8 +70,12 @@
 					<app-charts-box passedPercent="40" coveragePercent="60" title="Functional Test"></app-charts-box>
 					<app-result-box></app-result-box>
 
-						<img *ngIf="element.state==='running'" width="150px" src="assets/loader-spinner.svg" alt="Loading">
-						Still Running. Please check again later
+					<div *ngIf="element.state==='running'">
+							<img  width="150px" src="assets/loader-spinner.svg" alt="Loading">
+							Still Running. Please check again later
+					</div>
+						
+						
 				</div>
 			</div>
 		</div>
