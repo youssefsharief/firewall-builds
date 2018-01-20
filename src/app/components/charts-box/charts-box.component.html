@@ -1,20 +1,20 @@
 <app-box-layout title="Unit Tests">
 
-    
+
 
     <div class="row">
         <div class="col-xs-6">
-                <app-pie-chart></app-pie-chart>
+            <app-pie-chart></app-pie-chart>
         </div>
         <div class="col-xs-6">
-                <div class="percent-passed">
-                        <div class="danger percent-number">
-                            73%
-                        </div>
-                        <p> tests passed</p>
-                    </div>
+            <div class="percent-passed">
+                <div class="{{themedClass()}} percent-number">
+                    {{percentageMagnitude}}%
+                </div>
+                <p> tests passed</p>
+            </div>
         </div>
-        
+
     </div>
-    
+
 </app-box-layout>
