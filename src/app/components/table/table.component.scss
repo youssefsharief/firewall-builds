@@ -1,31 +1,26 @@
 @import '../../../styles/color-variables';
-
-
-
 .tabular {
     font-size: 12px;
     padding: 7px;
-    background: linear-gradient(to right, lighten($brand-grey, 40%), white);
-    
+    background: linear-gradient(to right, lighten($brand-grey, 23%), white);
 }
 
-.page-container{
+.page-container {
     margin: auto;
     min-width: 1000px;
     max-width: 1000px;
 }
+
 .element-wrapper {
     margin-bottom: 7px;
     padding: 8px;
     border-style: solid;
-    &.closed {
-        border-width: 1px 0px 1px 1px;
-    }
+    border-width: 1.5px 0px 1.5px 1.5px;
     &.opened {
-        border-width: 1px 1px 1px 1px;
+        border-right-width: 1.5px;
     }
     &.primary {
-        background: linear-gradient(to right, lighten($brand-primary, 45%), white);
+        background: linear-gradient(to right, lighten($brand-primary, 32%), white);
         color: $brand-primary;
         border-color: $brand-primary;
         &:hover {
@@ -49,7 +44,7 @@
         }
     }
     &.danger {
-        background: linear-gradient(to right, lighten($brand-danger, 40%), white);
+        background: linear-gradient(to right, lighten($brand-danger, 50%), white);
         color: $brand-danger;
         border-color: $brand-danger;
         &:hover {
@@ -58,11 +53,8 @@
     }
 }
 
-
-
 tr:hover {
     td {
         cursor: pointer;
     }
 }
-

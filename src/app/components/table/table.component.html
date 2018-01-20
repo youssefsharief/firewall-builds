@@ -21,7 +21,7 @@
 		</div>
 
 		<div class="table-body">
-			<div *ngFor="let element of data" class="element-wrapper {{themeColor(element.state)}}">
+			<div *ngFor="let element of data" [class.opened]="selected && element._id===selected._id" class="element-wrapper {{themeColor(element.state)}}">
 
 				<div class="original row" (click)="select(element)">
 
