@@ -2,7 +2,7 @@
 .tabular {
     font-size: 12px;
     padding: 7px;
-    background: linear-gradient(to right, lighten($brand-grey, 23%), white);
+    background: linear-gradient(to right, lighten($brand-grey, 27%), white);
 }
 
 .page-container {
@@ -15,12 +15,12 @@
     margin-bottom: 7px;
     padding: 8px;
     border-style: solid;
-    border-width: 1.5px 0px 1.5px 1.5px;
+    border-width: 1px 0px 1px 1px;
     &.opened {
-        border-right-width: 1.5px;
+        border-right-width: 1px;
     }
     &.primary {
-        background: linear-gradient(to right, lighten($brand-primary, 32%), white);
+        background: linear-gradient(to right, lighten($brand-primary, 37%), white);
         color: $brand-primary;
         border-color: $brand-primary;
         &:hover {
@@ -28,7 +28,7 @@
         }
     }
     &.success {
-        background: linear-gradient(to right, lighten($brand-success, 50%), white);
+        background: linear-gradient(to right, lighten($brand-success, 60%), white);
         color: $brand-success;
         border-color: $brand-success;
         &:hover {
@@ -36,7 +36,7 @@
         }
     }
     &.grey {
-        background: linear-gradient(to right, lighten($brand-grey, 50%), white);
+        background: linear-gradient(to right, lighten($brand-grey, 27%), white);
         color: $brand-grey;
         border-color: $brand-grey;
         &:hover {
@@ -44,7 +44,7 @@
         }
     }
     &.danger {
-        background: linear-gradient(to right, lighten($brand-danger, 50%), white);
+        background: linear-gradient(to right, lighten($brand-danger, 60%), white);
         color: $brand-danger;
         border-color: $brand-danger;
         &:hover {
