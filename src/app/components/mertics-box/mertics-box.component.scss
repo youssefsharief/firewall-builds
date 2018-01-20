@@ -1,4 +1,5 @@
 
+@import '../../../styles/color-variables';
 
 .arrows-wrapper p {
     margin: 0 0 2px;
@@ -6,8 +7,25 @@
 }
 
 .glyphicon {
+   
     font-size: 3.5em;
 }
+.glyphicon-arrow-up{
+    color: $brand-success;
+}
+
+.glyphicon-arrow-down{
+    color:  $brand-danger;
+}
+
+.glyphicon-arrow-right{
+    color:  $brand-yellow;
+}
+
+.glyphicon-arrow-left{
+    color:  $brand-warning;
+}
+
 
 .arrow-with-info {
     margin-bottom: -25px;

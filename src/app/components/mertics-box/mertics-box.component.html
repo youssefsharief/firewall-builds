@@ -1,15 +1,15 @@
     <app-box-layout title="Metrics" [isFailing]="metrics.failed">
 
         <div class="arrow-with-info test up" [ngClass]="{'arrow-with-info test': true, 'down': !metrics.test.isPositive, 'up': metrics.test.isPositive}">
-            <span [ngClass]="{'glyphicon': true, 'glyphicon-arrow-up': !metrics.test.isPositive, 'glyphicon-arrow-up': metrics.test.isPositive}"></span>
+            <span [ngClass]="{'glyphicon': true, 'glyphicon-arrow-down': !metrics.test.isPositive, 'glyphicon-arrow-up': metrics.test.isPositive}"></span>
             <div class="text">Test</div>
             <span class="magnitude">{{metrics.test.value}}</span>
         </div>
 
         <div [ngClass]="{'arrow-with-info maintainability': true, 'down': !metrics.maintainability.isPositive, 'up': metrics.maintainability.isPositive}">
-            <span [ngClass]="{'glyphicon': true, 'glyphicon-arrow-up': !metrics.maintainability.isPositive, 'glyphicon-arrow-up': metrics.maintainability.isPositive}"></span>
-            <div class="text">{{metrics.maintainability.value}}</div>
-            <span class="magnitude">65</span>
+            <span [ngClass]="{'glyphicon': true, 'glyphicon-arrow-down': !metrics.maintainability.isPositive, 'glyphicon-arrow-up': metrics.maintainability.isPositive}"></span>
+            <div class="text">Maintainability</div>
+            <span class="magnitude">{{metrics.maintainability.value}}</span>
         </div>
 
         <div [ngClass]="{'arrow-with-info security': true, 'left': !metrics.security.isPositive, 'right': metrics.security.isPositive}">
