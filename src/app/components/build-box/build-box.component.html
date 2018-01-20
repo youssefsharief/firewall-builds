@@ -1,4 +1,4 @@
-<app-box-layout title="Build">
+<app-box-layout title="Build" [isFailing]="!date">
 
     <div class="row pc-row">
         <div class="col-xs-6">
@@ -12,7 +12,7 @@
         </div>
     </div>
     <p class="date">
-            10:46 am - 23/12/2017
+            {{date}}
     </p>
 
 </app-box-layout>

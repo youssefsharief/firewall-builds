@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-build-box',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
     styleUrls: ['build-box.component.scss']
 })
 export class BuildBoxComponent {
-
+    @Input() date: string;
 }
