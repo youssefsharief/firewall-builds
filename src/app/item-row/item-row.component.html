@@ -1,57 +1,38 @@
-										
-        <td>
-            <div>
-                    <app-icon-type [status]="element.state" [type]="element.type"></app-icon-type>
 
-            </div>
-               
-        </td>
-
-        <td>
-            <p>
-                   
-
-                    {{element.owner}}
-                   
-            </p>
-               
-        </td>
-        <td>
-            <p>
-                    {{element.timeStarted}}
-            </p>
-                
-         </td>
-         <td>
-             <p>
-                    {{element.state}}
-             </p>
-                
-         </td>
-         <td>
-            <p>
-                   {{element.state}}
-            </p>
-               
-        </td>
-        <td>
-            <p>
-                   {{element.state}}
-            </p>
-               
-        </td>
-        <td>
-            <p>
-                   {{element.state}}
-            </p>
-               
-        </td>
-        <td>
-            <p>
-                   {{element.state}}
-            </p>
-               
-        </td>
-         
+    <div class="row">
+        <div class="col-md-2">
+            <app-icon-type [status]="element.state" [type]="element.type"></app-icon-type>
+        </div>
 
 
+
+        <div class="col-md-2"> {{element.owner}}
+        </div>
+
+        <div class="col-md-3">
+            {{element.timeStarted}}
+        </div>
+
+
+        <div class="col-md-1">
+            {{element.state}}
+        </div>
+
+
+        <div class="col-md-1">
+            {{element.state}}
+        </div>
+
+        <div class="col-md-1">
+            {{element.state}}
+        </div>
+
+        <div class="col-md-1">
+            {{element.state}}
+        </div>
+
+        <div class="col-md-1">
+            {{element.state}}
+        </div>
+
+    </div>

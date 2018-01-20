@@ -1,5 +1,5 @@
 <div class="container">
-	<table class="table">
+	<!-- <table class="table">
 		<thead>
 			<tr>
 				<th>Changelist / Build</th>
@@ -13,20 +13,19 @@
 
 			</tr>
 		</thead>
-		<tbody>
+		<tbody> -->
+			
 				<ng-template ngFor let-element [ngForOf]="data">
-				<tr app-item-row class="{{themeColor(element.state)}} original"  (click)="select(element)" [element]="element"></tr>	
+				<div app-item-row class="{{themeColor(element.state)}} original"  (click)="select(element)" [element]="element"></div>	
 
-					<tr class="{{themeColor(element.state)}} derivative" *ngIf="selected && element._id===selected._id">
-						<td colspan="8">
+					<div class="{{themeColor(element.state)}} derivative" *ngIf="selected && element._id===selected._id">
 								<app-mertics-box></app-mertics-box>
 								<app-build-box></app-build-box>
-						</td>
-					</tr>
+					</div>
 
 			</ng-template>
-		</tbody>
-	</table>
+		<!-- </tbody>
+	</table> -->
 
 </div>
 
