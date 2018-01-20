@@ -14,6 +14,7 @@ import { StateColorMapperService } from './services/state-color-mapper.service';
 import { DataService } from './services/data.service';
 import { ChartsBoxComponent } from './components/charts-box/charts-box.component';
 import { PieChartComponent } from './components/pie-chart/pie-chart.component';
+import { ResultBoxComponent } from './components/result-box/result-box.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PieChartComponent } from './components/pie-chart/pie-chart.component';
     BuildBoxComponent,
     BoxLayoutComponent,
     ChartsBoxComponent,
-    PieChartComponent
+    PieChartComponent,
+    ResultBoxComponent
   ],
   imports: [
     BrowserAnimationsModule,

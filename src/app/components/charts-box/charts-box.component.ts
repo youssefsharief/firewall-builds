@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ChartsBoxComponent {
     @Input() passedPercent: number;
+    @Input() title: string;
     coveragePercent = 70;
 
     public themedClass() {
