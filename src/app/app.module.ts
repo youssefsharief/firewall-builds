@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { DataService } from './shared/services/data.service';
 import { TableComponent } from './table/table.component';
-import { ItemRowComponent } from './item-row/item-row.component';
 import { IconTypeComponent } from './icon-type/icon-type.component';
 import { StateColorMapperService } from './shared/services/state-color-mapper.service';
 import { MerticsBoxComponent } from './mertics-box/mertics-box.component';
@@ -18,7 +17,6 @@ import { BoxLayoutComponent } from './box-layout/box-layout.component';
   declarations: [
     AppComponent,
     TableComponent,
-    ItemRowComponent,
     IconTypeComponent,
     MerticsBoxComponent,
     BuildBoxComponent,
