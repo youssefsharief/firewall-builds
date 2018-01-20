@@ -28,7 +28,7 @@ export class PieChartComponent implements OnInit {
     // }
 
 
-    @ViewChild('donut') donut: ElementRef;
+    @ViewChild('pie') pie: ElementRef;
     @Input() countPassed: number;
     @Input() countFailed: number;
 
@@ -36,7 +36,7 @@ export class PieChartComponent implements OnInit {
     ) {   }
 
     ngOnInit() {
-        const donutCtx = this.donut.nativeElement.getContext('2d');
+        const donutCtx = this.pie.nativeElement.getContext('2d');
 
         const data = {
             labels: [
@@ -56,6 +56,9 @@ export class PieChartComponent implements OnInit {
                 'type': 'pie',
                 'data': data,
                 'options': {
+                    legend: {
+                        display: false
+                     },
                     'cutoutPercentage': 50,
                     'animation': {
                         'animateScale': true,

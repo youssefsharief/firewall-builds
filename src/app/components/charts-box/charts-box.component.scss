@@ -1,12 +1,12 @@
 .percent-passed {
     margin-top: 25px;
     .percent-number {
-        font-size: 30px;
+        font-size: 26px;
     }
     p {
         font-size: 10px;
         color: black;
-        vertical-align: bottom;
+        margin-top: -7px;
     }
 }
 
@@ -14,7 +14,7 @@
     // background: linear-gradient(to right, green, green 33.33%, white 33.33%, white 66.66%, #ed2939 66.66%);
     width: 150px;
     margin: auto;
-    margin-top:25px;
+    margin-top: 25px;
     height: 22px;
     font-size: 14px;
     display: flex;
