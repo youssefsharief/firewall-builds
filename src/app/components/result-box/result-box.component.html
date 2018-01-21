@@ -1,18 +1,45 @@
 <div class="result-box-wrapper">
-    <p>Result</p>
+    <p>Result:</p>
     <div [ngClass]="ngClass">
-        <p *ngIf="process.state==='rejected'" >Change Rejceted</p>
-        <p *ngIf="process.state==='accepted' || process.state==='complete'">Change Accepted</p>
-        <p class="huge"  >
+        <p *ngIf="process.state==='rejected'">Change Rejceted</p>
+        <p *ngIf="process.state==='accepted'">Change Accepted</p>
+        <p class="huge">
             <span *ngIf="metricsFailed "> Metrics Reduction </span>
             <span *ngIf="buildFailed "> Type Build Failure </span>
             <span *ngIf="unitTestsFailed "> Unit Tests Rejection </span>
             <span *ngIf="functionalTestsFailed "> Functional Tests Rejection </span>
             <span *ngIf="process.state==='accepted' "> Auto-Merged </span>
+            <span *ngIf="process.state==='complete' "> Complete </span>
         </p>
     </div>
-    <button class="btn btn-primary">
+
+    <button class="btn btn-primary" *ngIf="process.state==='accepted' ">
         <i class="icon-search" aria-hidden="true"></i>
         Merged Build
     </button>
+
+    <button class="btn btn-primary" *ngIf="process.state==='rejected' ">
+        Find Issues
+    </button>
+
+
+    
+    <div>
+        <button class="btn btn-primary" *ngIf="process.state==='complete' ">
+            Deploy
+        </button>
+        <span class="success">to</span>
+
+        <div class="form-group">
+            <select class="form-control">
+                <option>Production</option>
+                <option>Development</option>
+                <option>Staging</option>
+                <option>Testing</option>
+            </select>
+        </div>
+
+
+    </div>
+
 </div>

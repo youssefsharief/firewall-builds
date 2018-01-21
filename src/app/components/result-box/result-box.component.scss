@@ -1,12 +1,9 @@
-
 @import '../../../styles/color-variables';
-
-.huge{
-    font-size: 20px;
-
+.huge {
+    font-size: 19px;
 }
 
-.result-box-wrapper{
+.result-box-wrapper {
     text-align: center;
     font-size: 12px;
     padding: 4px;
@@ -22,10 +19,21 @@
     color: $brand-yellow;
 }
 
+.success {
+    color: $brand-success;
+}
+
 .danger {
     color: $brand-danger;
 }
 
-.btn{
+.btn {
     border-radius: 0px;
+}
+
+select.form-control {
+    border-radius: 0px;
+    border: 1px solid $brand-primary;
+    padding: 0px 2px;
+    height: 23px;
 }

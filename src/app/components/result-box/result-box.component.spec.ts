@@ -3,7 +3,7 @@ import { By } from '@angular/platform-browser';
 import { AppModule } from '../../app.module';
 import { ResultBoxComponent } from './result-box.component';
 
-fdescribe('ResultBoxComponent', () => {
+describe('ResultBoxComponent', () => {
 
     let fixture: ComponentFixture<ResultBoxComponent>;
 
@@ -58,7 +58,7 @@ fdescribe('ResultBoxComponent', () => {
         expect(fixture.nativeElement.querySelector('.danger')).toBeTruthy();
     }));
 
-    fit(`should should show rejection in functional tests`, async(() => {
+    it(`should should show rejection in functional tests`, async(() => {
         fixture.componentInstance.process = {
             state: 'rejected',
             metrics: {  failed: false    },
@@ -70,7 +70,20 @@ fdescribe('ResultBoxComponent', () => {
         expect(fixture.nativeElement.querySelector('.danger')).toBeTruthy();
     }));
 
-    fit(`should should acceptance for complete status`, async(() => {
+    it(`should show change acceptance for accepted status`, async(() => {
+        fixture.componentInstance.process = {
+            state: 'accepted',
+            metrics: {  failed: false    },
+            build: {  failed: false    },
+            unitTests: {  failed: false    },
+            functionalTests: {  failed: false    }
+        };
+        fixture.detectChanges();
+        expect(fixture.nativeElement.querySelector('.yellow')).toBeTruthy();
+    }));
+
+
+    it(`should show completeness for complete status`, async(() => {
         fixture.componentInstance.process = {
             state: 'complete',
             metrics: {  failed: false    },
@@ -79,7 +92,7 @@ fdescribe('ResultBoxComponent', () => {
             functionalTests: {  failed: false    }
         };
         fixture.detectChanges();
-        expect(fixture.nativeElement.querySelector('.yellow')).toBeTruthy();
+        expect(fixture.nativeElement.querySelector('.success')).toBeTruthy();
     }));
 
 });

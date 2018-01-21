@@ -20,8 +20,9 @@ export class ResultBoxComponent implements OnInit {
 
     private setNgClass() {
         this.ngClass = {
-            'yellow': this.process.state === 'complete' || this.process.state === 'accepted',
-            'danger': this.process.state === 'rejected'
+            'yellow': this.process.state === 'accepted',
+            'danger': this.process.state === 'rejected',
+            'success':  this.process.state === 'complete'
         };
     }
 
