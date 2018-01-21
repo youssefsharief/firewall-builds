@@ -15,6 +15,7 @@ import { DataService } from './services/data.service';
 import { ChartsBoxComponent } from './components/charts-box/charts-box.component';
 import { PieChartComponent } from './components/pie-chart/pie-chart.component';
 import { ResultBoxComponent } from './components/result-box/result-box.component';
+import { BuildTypeComponent } from './components/build-type/build-type.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ResultBoxComponent } from './components/result-box/result-box.component
     BoxLayoutComponent,
     ChartsBoxComponent,
     PieChartComponent,
-    ResultBoxComponent
+    ResultBoxComponent,
+    BuildTypeComponent
   ],
   imports: [
     BrowserAnimationsModule,

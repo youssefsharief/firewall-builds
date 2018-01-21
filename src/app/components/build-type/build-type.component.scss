@@ -1,0 +1,35 @@
+@import '../../../styles/color-variables';
+img {
+    width: 65px;
+}
+
+img.grayscale {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    filter: gray;
+}
+
+.pc-title {
+    color: darken($brand-primary, 20%);
+    font-weight: 700;
+    font-size: 10px;
+    margin-top: 15px;
+    position: relative;
+    left: 17px;
+    bottom: 9px;
+}
+
+.grey {
+    color: $brand-grey;
+}
+
+.pic-text-wrapper {
+    width: 66px;
+    display: block;
+    float: left;
+    margin-left: 5px;
+    margin-top: 30px;
+    margin-right: 5px;
+}
+

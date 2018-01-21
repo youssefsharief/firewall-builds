@@ -1,18 +1,7 @@
-<app-box-layout title="Build" [isFailing]="!date">
-
-    <div class="pc-row">
-        <div class="pic-text-wrapper">
-            <img src="assets/computer-640.png" alt="Debug">
-            <p class="pc-title">Debug</p>
-        </div>
-
-        <div class="pic-text-wrapper release">
-            <img src="assets/computer-640.png" alt="Release">
-            <p class="pc-title">Release</p>
-        </div>
+<app-box-layout title="Build" [isFailing]="isFailing">
+    <app-build-type type="Debug" [failed]="build.didDebugFailed"></app-build-type>
+    <app-build-type type="Release" [failed]="build.didReleaseFailed"></app-build-type>
+    <div class="date">
+        {{build.date}}
     </div>
-    <p class="date">
-            {{date}}
-    </p>
-
 </app-box-layout>
