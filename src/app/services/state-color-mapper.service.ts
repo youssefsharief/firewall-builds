@@ -1,11 +1,8 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-
 export class StateColorMapperService {
-
-
-    themeColor(x) {
+    public themeColor(x) {
         switch (x) {
             case 'running': return 'primary';
             case 'complete': return 'success';

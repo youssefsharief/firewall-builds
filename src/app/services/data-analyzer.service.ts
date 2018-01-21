@@ -29,6 +29,7 @@ export class DataAnalyzerService {
                 return metrics;
             }
         });
+        return metrics;
     }
 
     private checkIfBuildFailed(build) {
@@ -36,6 +37,7 @@ export class DataAnalyzerService {
              build.failed = true;
              return build;
         }
+        return build;
     }
 
     private checkIfTestsFailed(testsData) {
@@ -45,6 +47,7 @@ export class DataAnalyzerService {
             testsData.failed = true;
             return testsData;
         }
+        return testsData;
     }
 
 

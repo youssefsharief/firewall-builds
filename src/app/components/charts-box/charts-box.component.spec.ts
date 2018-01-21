@@ -35,7 +35,7 @@ describe('ChartsBoxComponent', () => {
     }));
 
 
-    fit('should render coverage bar', async(() => {
+    it('should render coverage bar', async(() => {
         fixture.componentInstance.testsData = {
             failed: false,
             countPassed: 56,
@@ -47,7 +47,7 @@ describe('ChartsBoxComponent', () => {
     }));
 
 
-    fit('should render passed tests', async(() => {
+    it('should render passed tests', async(() => {
         fixture.componentInstance.testsData = {
             failed: false,
             countPassed: 56,
@@ -60,7 +60,7 @@ describe('ChartsBoxComponent', () => {
         expect(fixture.nativeElement.querySelector('div.text-success')).toBeTruthy();
     }));
 
-    fit('should render failed tests', async(() => {
+    it('should render failed tests', async(() => {
         fixture.componentInstance.testsData = {
             failed: true,
             countPassed: 5,
