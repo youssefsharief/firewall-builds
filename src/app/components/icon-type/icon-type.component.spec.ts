@@ -3,7 +3,7 @@ import { By } from '@angular/platform-browser';
 import { IconTypeComponent } from './icon-type.component';
 import { StateColorMapperService } from '../../services/state-color-mapper.service';
 
-fdescribe('IconTypeComponent', () => {
+describe('IconTypeComponent', () => {
 
 
     let fixture: ComponentFixture<IconTypeComponent>;
@@ -50,7 +50,7 @@ fdescribe('IconTypeComponent', () => {
     }));
 
 
-    it('should render red build icon', async(() => {
+    fit('should render red build icon', async(() => {
         fixture.componentInstance.type = 'build';
         stateColorMapperService.themeColor = () => 'danger';
         fixture.detectChanges();
