@@ -15,29 +15,31 @@ import { ChartsBoxComponent } from './components/charts-box/charts-box.component
 import { PieChartComponent } from './components/pie-chart/pie-chart.component';
 import { ResultBoxComponent } from './components/result-box/result-box.component';
 import { BuildTypeComponent } from './components/build-type/build-type.component';
+import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TableComponent,
-    IconTypeComponent,
-    MerticsBoxComponent,
-    BuildBoxComponent,
-    BoxLayoutComponent,
-    ChartsBoxComponent,
-    PieChartComponent,
-    ResultBoxComponent,
-    BuildTypeComponent
-  ],
-  imports: [
-    BrowserAnimationsModule,
-    BrowserModule,
-    ChartsModule
-  ],
-  providers: [
-    DataService,
-    StateColorMapperService
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        TableComponent,
+        IconTypeComponent,
+        MerticsBoxComponent,
+        BuildBoxComponent,
+        BoxLayoutComponent,
+        ChartsBoxComponent,
+        PieChartComponent,
+        ResultBoxComponent,
+        BuildTypeComponent,
+        ProgressBarComponent
+    ],
+    imports: [
+        BrowserAnimationsModule,
+        BrowserModule,
+        ChartsModule
+    ],
+    providers: [
+        DataService,
+        StateColorMapperService
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

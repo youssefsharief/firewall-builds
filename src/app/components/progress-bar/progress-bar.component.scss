@@ -1,9 +1,12 @@
-// component css goes here
-.mat-progress-bar-buffer{
-    background: grey;
+@import '../../../styles/color-variables';
+
+
+.progress{
+    margin-bottom: 0;
+    border-radius: 0;
+    height: 27px;
 }
 
-mat-progress-bar{
-    height: 40px;
-    border: 2px solid darkgray;
+.progress-bar{
+    background-color: $brand-primary;
 }
