@@ -3,11 +3,13 @@ import { By } from '@angular/platform-browser';
 import { IconTypeComponent } from './icon-type.component';
 import { StateColorMapperService } from '../../services/state-color-mapper.service';
 
+
 describe('IconTypeComponent', () => {
 
 
     let fixture: ComponentFixture<IconTypeComponent>;
     let stateColorMapperService: StateColorMapperService;
+
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [
@@ -33,41 +35,40 @@ describe('IconTypeComponent', () => {
         fixture.componentInstance.type = 'firewall';
         stateColorMapperService.themeColor = () => 'danger';
         fixture.detectChanges();
-        expect(fixture.debugElement.query(By.css('img[src="assets/brickwall-danger.svg"]'))).toBeTruthy();
-        expect(fixture.debugElement.query(By.css('img[src="assets/brickwall-success.svg"]'))).toBeFalsy();
-        expect(fixture.debugElement.query(By.css('img[src="assets/pc-computer-with-monitor-danger.svg"]'))).toBeFalsy();
-        expect(fixture.debugElement.query(By.css('img[src="assets/pc-computer-with-monitor-danger.svg"]'))).toBeFalsy();
+        expect(fixture.nativeElement.querySelector('img[src="assets/brickwall-danger.svg"]')).toBeTruthy();
+        expect(fixture.nativeElement.querySelector('img[src="assets/brickwall-success.svg"]')).toBeFalsy();
+        expect(fixture.nativeElement.querySelector('img[src="assets/pc-computer-with-monitor-danger.svg"]')).toBeFalsy();
+        expect(fixture.nativeElement.querySelector('img[src="assets/pc-computer-with-monitor-danger.svg"]')).toBeFalsy();
     }));
 
     it('should render green firewall icon', async(() => {
         fixture.componentInstance.type = 'firewall';
         stateColorMapperService.themeColor = () => 'success';
         fixture.detectChanges();
-        expect(fixture.debugElement.query(By.css('img[src="assets/brickwall-danger.svg"]'))).toBeFalsy();
-        expect(fixture.debugElement.query(By.css('img[src="assets/brickwall-success.svg"]'))).toBeTruthy();
-        expect(fixture.debugElement.query(By.css('img[src="assets/pc-computer-with-monitor-danger.svg"]'))).toBeFalsy();
-        expect(fixture.debugElement.query(By.css('img[src="assets/pc-computer-with-monitor-danger.svg"]'))).toBeFalsy();
+        expect(fixture.nativeElement.querySelector('img[src="assets/brickwall-danger.svg"]')).toBeFalsy();
+        expect(fixture.nativeElement.querySelector('img[src="assets/brickwall-success.svg"]')).toBeTruthy();
+        expect(fixture.nativeElement.querySelector('img[src="assets/pc-computer-with-monitor-danger.svg"]')).toBeFalsy();
+        expect(fixture.nativeElement.querySelector('img[src="assets/pc-computer-with-monitor-danger.svg"]')).toBeFalsy();
     }));
 
 
-    fit('should render red build icon', async(() => {
+    it('should render red build icon', async(() => {
         fixture.componentInstance.type = 'build';
         stateColorMapperService.themeColor = () => 'danger';
         fixture.detectChanges();
-        expect(fixture.debugElement.query(By.css('img[src="assets/pc-computer-with-monitor-danger.svg"]'))).toBeTruthy();
-        expect(fixture.debugElement.query(By.css('img[src="assets/brickwall-success.svg"]'))).toBeFalsy();
-        expect(fixture.debugElement.query(By.css('img[src="assets/pc-computer-with-monitor-danger.svg"]'))).toBeFalsy();
-        expect(fixture.debugElement.query(By.css('img[src="assets/pc-computer-with-monitor-danger.svg"]'))).toBeFalsy();
+        expect(fixture.nativeElement.querySelector('img[src="assets/pc-computer-with-monitor-success.svg"]')).toBeFalsy();
+        expect(fixture.nativeElement.querySelector('img[src="assets/brickwall-success.svg"]')).toBeFalsy();
+        expect(fixture.nativeElement.querySelector('img[src="assets/pc-computer-with-monitor-danger.svg"]')).toBeTruthy();
     }));
 
     it('should render green build icon', async(() => {
         fixture.componentInstance.type = 'build';
         stateColorMapperService.themeColor = () => 'success';
         fixture.detectChanges();
-        expect(fixture.debugElement.query(By.css('img[src="assets/pc-computer-with-monitor-danger.svg"]'))).toBeFalsy();
-        expect(fixture.debugElement.query(By.css('img[src="assets/brickwall-success.svg"]'))).toBeTruthy();
-        expect(fixture.debugElement.query(By.css('img[src="assets/pc-computer-with-monitor-danger.svg"]'))).toBeFalsy();
-        expect(fixture.debugElement.query(By.css('img[src="assets/pc-computer-with-monitor-danger.svg"]'))).toBeFalsy();
+        expect(fixture.nativeElement.querySelector('img[src="assets/pc-computer-with-monitor-danger.svg"]')).toBeFalsy();
+        expect(fixture.nativeElement.querySelector('img[src="assets/brickwall-success.svg"]')).toBeFalsy();
+        expect(fixture.nativeElement.querySelector('img[src="assets/pc-computer-with-monitor-danger.svg"]')).toBeFalsy();
+        expect(fixture.nativeElement.querySelector('img[src="assets/pc-computer-with-monitor-success.svg"]')).toBeTruthy();
     }));
 
 });
