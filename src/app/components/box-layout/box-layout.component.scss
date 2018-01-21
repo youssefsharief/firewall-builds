@@ -6,7 +6,7 @@ div {
         color: $brand-success;
         box-shadow: 3px 3px 5px grey;
     }
-    &.failed{
+    &.danger{
         border-color: $brand-danger;
         color: $brand-danger;
     }

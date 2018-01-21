@@ -34,6 +34,16 @@ describe('BuildBoxComponent', () => {
         expect(fixture.nativeElement.querySelector('.pic-text-wrapper')).toBeTruthy();
     }));
 
+    it(`should not grey out successfull builds`, async(() => {
+        fixture.componentInstance.build = {
+            didDebugFailed: false,
+            didReleaseFailed: false,
+            date: '2014-12-20T01:52:46 -02:00',
+        };
+        fixture.detectChanges();
+        expect(fixture.nativeElement.querySelector('.grayscale')).toBeFalsy();
+    }));
+
 
     it(`should render if all builds failed`, async(() => {
         fixture.componentInstance.build = {
@@ -44,9 +54,35 @@ describe('BuildBoxComponent', () => {
         };
         fixture.detectChanges();
         expect(fixture.nativeElement.querySelector('p.title')).toBeTruthy();
-        expect(fixture.nativeElement.querySelector('.failed')).toBeTruthy();
+        expect(fixture.nativeElement.querySelector('.danger')).toBeTruthy();
         expect(fixture.nativeElement.querySelector('.success')).toBeFalsy();
         expect(fixture.nativeElement.querySelector('.pic-text-wrapper')).toBeTruthy();
+    }));
+
+
+    it(`should grey out failed build icon`, async(() => {
+        fixture.componentInstance.build = {
+            failed: true,
+            didDebugFailed: false,
+            didReleaseFailed: true,
+            date: '2014-12-20T01:52:46 -02:00',
+        };
+        fixture.detectChanges();
+        expect(fixture.nativeElement.querySelector('.danger')).toBeTruthy();
+        expect(fixture.nativeElement.querySelector('.success')).toBeFalsy();
+        expect(fixture.nativeElement.querySelector('.pic-text-wrapper')).toBeTruthy();
+        expect(fixture.nativeElement.querySelector('.grayscale')).toBeTruthy();
+    }));
+
+    it(`should grey out both builds if both failed`, async(() => {
+        fixture.componentInstance.build = {
+            failed: true,
+            didDebugFailed: true,
+            didReleaseFailed: true,
+            date: '2014-12-20T01:52:46 -02:00',
+        };
+        fixture.detectChanges();
+        expect(fixture.nativeElement.querySelectorAll('.grayscale').length).toBe(2);
     }));
 
 });
