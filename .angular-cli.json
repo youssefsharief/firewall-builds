@@ -20,8 +20,7 @@
       "prefix": "app",
       "styles": [
         "styles/main.scss",
-        "../node_modules/font-awesome/css/font-awesome.css"  
-
+        "assets/fontello-1f2b28be/css/fontello.css"
 
       ],
       "scripts": [

@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { NgProgressModule } from '@ngx-progressbar/core';
 import { AppComponent } from './app.component';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { TableComponent } from './components/table/table.component';
@@ -32,7 +31,6 @@ import { BuildTypeComponent } from './components/build-type/build-type.component
   ],
   imports: [
     BrowserAnimationsModule,
-    NgProgressModule.forRoot(),
     BrowserModule,
     ChartsModule
   ],

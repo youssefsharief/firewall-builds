@@ -68,7 +68,7 @@
 					<app-build-box *ngIf="element.build" [build]="element.build"></app-build-box>
 					<app-charts-box *ngIf="element.unitTests" [testsData]="element.unitTests" title="Unit Test"></app-charts-box>
 					<app-charts-box *ngIf="element.functionalTests" [testsData]="element.functionalTests" title="Functional Test"></app-charts-box>
-					<app-result-box *ngIf="!element.state==='running'"></app-result-box>
+					<app-result-box ></app-result-box>
 
 					<div class="spinner-container" *ngIf="element.state==='running'">
 						<img width="150px" src="assets/loader-spinner.svg" alt="Loading"> Still Running. Please check again later
