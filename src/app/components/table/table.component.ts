@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { StateColorMapperService } from '../../services/state-color-mapper.service';
 import { trigger, state, style, transition, animate } from '@angular/core';
+import { DataAnalyzerService } from '../../services/data-analyzer.service';
 
 @Component({
     selector: 'app-table',
@@ -23,7 +24,8 @@ export class TableComponent implements OnInit {
 
     constructor(
         private dataService: DataService,
-        private stateColorMapperService: StateColorMapperService
+        private stateColorMapperService: StateColorMapperService,
+        private dataAnalyzerService: DataAnalyzerService
     ) { }
 
 
@@ -31,56 +33,41 @@ export class TableComponent implements OnInit {
     selected;
 
     ngOnInit() {
+        this.subscribeToDataSource();
+    }
+
+    private subscribeToDataSource() {
         this.dataService.dataSource().subscribe(
             x => {
                 if (Array.isArray(x)) {
-                    this.checkFailurePointIfExists(x);
-                    this.data = x;
+                    this.data = this.dataAnalyzerService.analyzeData(x);
                 } else {
                     let toBeChanged = this.data.find(item => item._id === x._id);
                     toBeChanged = x;
                 }
             }
         );
-
     }
 
-    checkFailurePointIfExists(x) {
-        x.forEach(process => {
-            if (process.metrics) {
-                Object.keys(process.metrics).forEach(metric => {
-                    if (!process.metrics[metric].isPositive) {
-                        process.metrics.failed = true;
-                        console.log('lolo');
-                        return;
-                    }
-                });
-            }
-        });
-    }
-
-    cursorStyle(element) {
+    public cursorStyle(element) {
         if (!(element.state === 'pending') && !this.isOpened(element)) {
             return { cursor: 'pointer' };
         }
     }
 
-    isOpened(element) {
+    public isOpened(element) {
         return this.selected && element._id === this.selected._id;
     }
 
 
-    themeColor(x) {
+    public themeColor(x) {
         return this.stateColorMapperService.themeColor(x);
     }
 
-    select(x) {
+    public select(x) {
         if (this.cursorStyle(x)) {
             this.selected = x;
         }
     }
 
-    isNumber(x) {
-        return Number.isSafeInteger(x);
-    }
 }

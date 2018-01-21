@@ -16,6 +16,7 @@ import { PieChartComponent } from './components/pie-chart/pie-chart.component';
 import { ResultBoxComponent } from './components/result-box/result-box.component';
 import { BuildTypeComponent } from './components/build-type/build-type.component';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
+import { DataAnalyzerService } from './services/data-analyzer.service';
 
 @NgModule({
     declarations: [
@@ -38,7 +39,8 @@ import { ProgressBarComponent } from './components/progress-bar/progress-bar.com
     ],
     providers: [
         DataService,
-        StateColorMapperService
+        StateColorMapperService,
+        DataAnalyzerService
     ],
     bootstrap: [AppComponent]
 })

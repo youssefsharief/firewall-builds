@@ -15,13 +15,6 @@ export class StateColorMapperService {
         }
     }
 
-
-
-
-
-
-
-
 }
 
 
