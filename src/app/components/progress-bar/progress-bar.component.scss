@@ -9,4 +9,13 @@
 
 .progress-bar{
     background-color: $brand-primary;
+    width: 100%;
+}
+
+.danger{
+    background: $brand-danger;
+}
+
+.success{
+    background: $brand-success;
 }

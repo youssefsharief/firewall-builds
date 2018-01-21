@@ -1,40 +1,40 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-
 export class DataAnalyzerService {
 
-
     public analyzeData(processes) {
-        processes.forEach(process => {
+        return processes.map(process => {
             if (process.metrics) {
-                this.checkIfMetricsFailed(process);
+                process.metrics = this.checkIfMetricsFailed(process.metrics);
             }
             if (process.build) {
-                this.checkIfBuildFailed(process);
+                process.build = this.checkIfBuildFailed(process.build);
             }
             if (process.unitTests) {
-                this.checkIfTestsFailed(process.unitTests);
+                process.unitTests = this.checkIfTestsFailed(process.unitTests);
             }
             if (process.functionalTests) {
-                this.checkIfTestsFailed(process.functionalTests);
+                process.functionalTests = this.checkIfTestsFailed(process.functionalTests);
             }
-            return processes;
+            return process;
         });
     }
 
 
-    private checkIfMetricsFailed(process) {
-        Object.keys(process.metrics).forEach(metric => {
-            if (!process.metrics[metric].isPositive) {
-                return process.metrics.failed = true;
+    private checkIfMetricsFailed(metrics) {
+        Object.keys(metrics).forEach(metric => {
+            if (!metrics[metric].isPositive) {
+                metrics.failed = true;
+                return metrics;
             }
         });
     }
 
-    private checkIfBuildFailed(process) {
-        if (process.build.didDebugFailed || process.build.didReleaseFailed) {
-            return process.build.failed = true;
+    private checkIfBuildFailed(build) {
+        if (build.didDebugFailed || build.didReleaseFailed) {
+             build.failed = true;
+             return build;
         }
     }
 
@@ -42,7 +42,8 @@ export class DataAnalyzerService {
         const passedPercent = Math.round(testsData.countPassed /
             (testsData.countPassed + testsData.countFailed) * 100);
         if (passedPercent < 50) {
-            return testsData.failed = true;
+            testsData.failed = true;
+            return testsData;
         }
     }
 
