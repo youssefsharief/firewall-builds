@@ -7,6 +7,13 @@ export const firstState = [
         'state': 'pending',
         '_id': '5a60aceb7c2ea1f5sd'
     },
+    {
+        type: 'firewall',
+        'name': 'adipisicing',
+        'state': 'pending',
+        'owner': 'oooo',
+        '_id': '5a60aceb7c2ea43d'
+    },
 
     {
         type: 'firewall',
@@ -151,7 +158,6 @@ export const firstState = [
     {
         type: 'build',
         timeStarted: '2014-12-20T01:52:46 -02:00',
-        owner: 'ER',
         'name': 'rfgre',
         'state': 'complete',
         metrics: {

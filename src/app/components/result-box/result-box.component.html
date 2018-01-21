@@ -1,12 +1,18 @@
-
 <div class="result-box-wrapper">
-<p>Result</p>
-
-<div class="text-danger">
-    <p>Change Rejceted</p>
-    <p class="huge">Metrics Reduction</p>
-</div>
-<button class="btn btn-primary">
+    <p>Result</p>
+    <div [ngClass]="ngClass">
+        <p *ngIf="process.state==='rejected'" >Change Rejceted</p>
+        <p *ngIf="process.state==='accepted' || process.state==='complete'">Change Accepted</p>
+        <p class="huge"  >
+            <span *ngIf="metricsFailed "> Metrics Reduction </span>
+            <span *ngIf="buildFailed "> Type Build Failure </span>
+            <span *ngIf="unitTestsFailed "> Unit Tests Rejection </span>
+            <span *ngIf="functionalTestsFailed "> Functional Tests Rejection </span>
+            <span *ngIf="process.state==='accepted' "> Auto-Merged </span>
+        </p>
+    </div>
+    <button class="btn btn-primary">
         <i class="icon-search" aria-hidden="true"></i>
-        Merged Build</button>
+        Merged Build
+    </button>
 </div>

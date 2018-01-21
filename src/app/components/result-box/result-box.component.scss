@@ -1,3 +1,6 @@
+
+@import '../../../styles/color-variables';
+
 .huge{
     font-size: 20px;
 
@@ -13,7 +16,14 @@
     margin-left: 20px;
     margin-bottom: 15px;
     float: left
+}
 
+.yellow {
+    color: $brand-yellow;
+}
+
+.danger {
+    color: $brand-danger;
 }
 
 .btn{
