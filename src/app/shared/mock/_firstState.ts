@@ -21,8 +21,7 @@ export const firstState = [
         owner: 'Mcbride',
         'name': 'adipisicing',
         'state': 'running',
-        'runningState': {
-            phase: 'metrics',
+        'metrics': {
             percentCompleted: 70
         },
         '_id': '5a60aceb7c2ea1f5gh'
