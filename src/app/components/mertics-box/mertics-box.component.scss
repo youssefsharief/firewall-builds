@@ -42,7 +42,6 @@
     width: 50px;
     .magnitude {
         position: relative;
-        font-weight: bold;
     }
     .text {
         position: relative;
@@ -52,8 +51,8 @@
 }
 
 .magnitude {
-    bottom: 55px;
-    left: 26px;
+    bottom: 54px;
+    left: 27px;
 }
 .left .magnitude , .right .magnitude {
     color: black;
