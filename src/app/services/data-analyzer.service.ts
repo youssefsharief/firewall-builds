@@ -24,7 +24,7 @@ export class DataAnalyzerService {
 
     private checkIfMetricsFailed(metrics) {
         Object.keys(metrics).forEach(metric => {
-            if (!metrics[metric].isPositive) {
+            if (metrics[metric].isPositive === false) {
                 metrics.failed = true;
                 return metrics;
             }
@@ -34,8 +34,8 @@ export class DataAnalyzerService {
 
     private checkIfBuildFailed(build) {
         if (build.didDebugFailed || build.didReleaseFailed) {
-             build.failed = true;
-             return build;
+            build.failed = true;
+            return build;
         }
         return build;
     }

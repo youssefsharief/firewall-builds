@@ -19,16 +19,35 @@ describe('ProgressBarComponent', () => {
         expect(app).toBeTruthy();
     }));
 
-    it(`should have green progressBar if not failing`, async(() => {
-        fixture.componentInstance.didFail = false;
+    it(`should have gray bar if pending`, async(() => {
+        fixture.componentInstance.data = null;
         fixture.detectChanges();
-        expect(fixture.nativeElement.querySelector('.success')).toBeTruthy();
+        expect(fixture.nativeElement.querySelector('.progress-bar.gray')).toBeTruthy();
     }));
 
-    it(`should have red progressBar if failing`, async(() => {
-        fixture.componentInstance.didFail = true;
+    it(`should have red bar if failed`, async(() => {
+        fixture.componentInstance.data = { failed: true };
         fixture.detectChanges();
-        expect(fixture.nativeElement.querySelector('.danger')).toBeTruthy();
+        expect(fixture.nativeElement.querySelector('.progress-bar.danger')).toBeTruthy();
+    }));
+
+    it(`should have green bar if succeeded`, async(() => {
+        fixture.componentInstance.data = { anyData: 'exists' };
+        fixture.detectChanges();
+        expect(fixture.nativeElement.querySelector('.progress-bar.success')).toBeTruthy();
+    }));
+
+    it(`should have blue bar if still running`, async(() => {
+        fixture.componentInstance.data = { percentCompleted: 70 };
+        fixture.detectChanges();
+        expect(fixture.nativeElement.querySelector('.progress-bar.primary')).toBeTruthy();
+    }));
+
+    it(`should show bar width corresponding to the percentage completed`, async(() => {
+        fixture.componentInstance.data = { percentCompleted: 70 };
+        fixture.detectChanges();
+        expect(fixture.nativeElement.querySelector('.progress-bar.primary')).toBeTruthy();
+        expect(fixture.nativeElement.querySelector('.progress-bar.primary').style.width).toBe('70%');
     }));
 
 

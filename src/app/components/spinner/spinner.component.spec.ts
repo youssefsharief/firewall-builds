@@ -17,7 +17,7 @@ describe('SpinnerComponent', () => {
 
 
 
-    fit('should create the component', async(() => {
+    it('should create the component', async(() => {
         const app = fixture.debugElement.componentInstance;
         expect(app).toBeTruthy();
     }));

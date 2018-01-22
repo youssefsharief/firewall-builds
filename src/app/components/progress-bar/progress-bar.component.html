@@ -1,4 +1,4 @@
 <div class="progress">
     <div class="progress-bar" role="progressbar" 
-    [ngClass]="{'success': !didFail, 'danger': didFail}" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+    [ngClass]="ngClass" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{'width': width}"></div>
 </div>

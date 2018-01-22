@@ -24,7 +24,7 @@
 			<div *ngFor="let element of data" [class.opened]="isOpened(element)" class="element-wrapper {{themeColor(element.state)}}"
 			 [ngStyle]="cursorStyle(element)">
 
-				<div class="original row" (click)="select(element)">
+				<div class="item-row row" (click)="select(element)">
 
 
 					<div class="col-xs-2">
@@ -41,23 +41,23 @@
 					</div>
 
 					<div class="col-xs-1">
-						{{element.state}}
+						{{element.state | capitalizeFirst}}
 					</div>
 
 					<div class="col-xs-1">
-						<app-progress-bar [didFail]="element.metrics.failed" *ngIf="element.metrics && (!selected || element._id!==selected._id)"></app-progress-bar>
+						<app-progress-bar [data]="element.metrics" *ngIf="(!selected || element._id!==selected._id)"></app-progress-bar>
 					</div>
 
 					<div class="col-xs-1">
-						<app-progress-bar [didFail]="element.build.failed" *ngIf="element.build && (!selected || element._id!==selected._id)"></app-progress-bar>
+						<app-progress-bar [data]="element.build" *ngIf=" (!selected || element._id!==selected._id)"></app-progress-bar>
 					</div>
 
 					<div class="col-xs-1">
-						<app-progress-bar [didFail]="element.unitTests.failed" *ngIf="element.unitTests && (!selected || element._id!==selected._id)"></app-progress-bar>
+						<app-progress-bar [data]="element.unitTests" *ngIf=" (!selected || element._id!==selected._id)"></app-progress-bar>
 					</div>
 
 					<div class="col-xs-1">
-						<app-progress-bar [didFail]="element.functionalTests.failed" *ngIf="element.functionalTests && (!selected || element._id!==selected._id)"></app-progress-bar>
+						<app-progress-bar [data]="element.functionalTests" *ngIf=" (!selected || element._id!==selected._id)"></app-progress-bar>
 					</div>
 				</div>
 
