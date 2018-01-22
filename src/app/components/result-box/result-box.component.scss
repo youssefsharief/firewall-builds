@@ -1,6 +1,6 @@
 @import '../../../styles/color-variables';
 .huge {
-    font-size: 25px;
+    font-size: 26px;
     line-height: 130%;
 }
 
@@ -13,7 +13,7 @@
 }
 .result-box-wrapper {
     padding: 4px;
-    width: 170px;
+    width: 180px;
     height: 170px;
     margin-top: 5px;
     float: left;
@@ -21,8 +21,11 @@
     margin-left: 20px;
     margin-bottom: 15px;
     text-align: center;
-    font-size: 12px;
-    // position: relative;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .yellow {
@@ -39,17 +42,11 @@
 
 .btn {
     border-radius: 0px;
-    width: 122px;
-    font-size: 13px;
-    position: absolute;
-    bottom: 3px;
-
+    width: 144px;
+    padding-bottom: 2px;
+    border: 0.5px solid $brand-grey;
+    // font-size: 13px;
 }
-
-// .push-bottom {
-//     position: absolute;
-//     bottom: 0;
-// }
 
 select.form-control {
     border-radius: 0px;
