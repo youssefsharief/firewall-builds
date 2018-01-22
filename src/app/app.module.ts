@@ -18,6 +18,7 @@ import { BuildTypeComponent } from './components/build-type/build-type.component
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 import { DataAnalyzerService } from './services/data-analyzer.service';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { DataFormatterService } from './services/data-formatter.service';
 
 @NgModule({
     declarations: [
@@ -42,7 +43,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     providers: [
         DataService,
         StateColorMapperService,
-        DataAnalyzerService
+        DataAnalyzerService,
+        DataFormatterService
     ],
     bootstrap: [AppComponent]
 })
