@@ -5,11 +5,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve -sm -ec ",
-    "build": "ng build --prod",
+    "build": "ng build -w",
     "test": "ng test -sm=false",
     "coverage": "ng test -sm=false -cc",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "server": "http-server ./dist"
   },
   "private": true,
   "dependencies": {
@@ -28,8 +29,10 @@
     "chart.piecelabel.js": "^0.9.0",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
+    "http-server": "^0.11.1",
     "ng2-charts": "^1.6.0",
     "rxjs": "^5.5.2",
+    "web-animations-js": "^2.3.1",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {

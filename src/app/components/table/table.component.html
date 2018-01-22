@@ -45,7 +45,7 @@
 					</div>
 
 					<div class="col-xs-1">
-						<app-progress-bar [didFail]="element.metrics.failed" *ngIf="element.metrics && (!selected || element._id!==selected._id)" ></app-progress-bar>
+						<app-progress-bar [didFail]="element.metrics.failed" *ngIf="element.metrics && (!selected || element._id!==selected._id)"></app-progress-bar>
 					</div>
 
 					<div class="col-xs-1">
@@ -67,10 +67,7 @@
 					<app-charts-box *ngIf="element.unitTests" [testsData]="element.unitTests" title="Unit Test"></app-charts-box>
 					<app-charts-box *ngIf="element.functionalTests" [testsData]="element.functionalTests" title="Functional Test"></app-charts-box>
 					<app-result-box *ngIf="element.state !== 'running' " [process]="element"></app-result-box>
-
-					<div class="spinner-container" *ngIf="element.state==='running'">
-						<img width="150px" src="assets/loader-spinner.svg" alt="Loading"> Still Running. Please check again later
-					</div>
+					<app-spinner *ngIf="element.state==='running'"></app-spinner>
 
 
 				</div>

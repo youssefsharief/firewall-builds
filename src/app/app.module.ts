@@ -17,6 +17,7 @@ import { ResultBoxComponent } from './components/result-box/result-box.component
 import { BuildTypeComponent } from './components/build-type/build-type.component';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 import { DataAnalyzerService } from './services/data-analyzer.service';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
     declarations: [
@@ -30,7 +31,8 @@ import { DataAnalyzerService } from './services/data-analyzer.service';
         PieChartComponent,
         ResultBoxComponent,
         BuildTypeComponent,
-        ProgressBarComponent
+        ProgressBarComponent,
+        SpinnerComponent
     ],
     imports: [
         BrowserAnimationsModule,
