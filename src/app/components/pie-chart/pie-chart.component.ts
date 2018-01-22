@@ -26,7 +26,8 @@ export class PieChartComponent implements OnInit {
             datasets: [
                 {
                     'data': [this.countPassed, this.countFailed],
-                    'backgroundColor': ['#72AC4D', '#EB7D3B']
+                    'backgroundColor': ['#72AC4D', '#EB7D3B'],
+                    borderWidth: 1,
                 }]
         };
 
@@ -38,10 +39,16 @@ export class PieChartComponent implements OnInit {
                 options: {
                     legend: {
                         display: false
-                     },
+                    },
+                    tooltips: {
+                        enabled: false
+                    },
+
                     pieceLabel: {
                         // render 'label', 'value', 'percentage', 'image' or custom function, default is 'percentage'
                         render: 'value',
+                        fontColor: '#000',
+
                     }
                 }
 

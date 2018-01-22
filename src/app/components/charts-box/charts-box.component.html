@@ -17,7 +17,7 @@
             <div class="colored-bar" [ngStyle]="{'background': 'linear-gradient(to right, #C6DFB5, #C6DFB5 ' + testsData.percentCovered + '%, #F6CBAE ' + testsData.percentCovered + '%)'}">
 
                 <div class="data">
-                    <div [ngClass]="{ 'percent-number': true, 'danger':testsData.percentCovered<50, 'green-percent-number': testsData.percentCovered>=50 }">
+                    <div [ngClass]="{ 'percent-number': true, 'danger':testsData.percentCovered<50, 'success': testsData.percentCovered>=50 }">
                         {{testsData.percentCovered}}%
                     </div>
                 </div>
