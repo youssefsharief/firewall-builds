@@ -4,7 +4,7 @@
     <app-pie-chart [countPassed]="testsData.countPassed" [countFailed]="testsData.countFailed"></app-pie-chart>
     <div class="percent-passed">
         <div class="{{themedClass}} percent-number">
-            {{passedPercent}}%
+            {{passedPercent==100? 'OK' : passedPercent + '%'}}
         </div>
         <p> tests passed</p>
     </div>

@@ -2,20 +2,24 @@
 
 .percent-passed {
     margin-top: 25px;
+    margin-left: 90px;
     .percent-number {
-        font-size: 26px;
+        font-size: 33px;
+        // margin-left: 90px;
     }
     p {
         font-size: 10px;
         color: black;
         margin-top: -7px;
+        margin-left: 5px;
+        // margin-left: 96px;
     }
 }
 
 .colored-bar {
     width: 147px;
     margin: auto;
-    margin-top: 22px;
+    margin-top: 21px;
     height: 30px;
     display: flex;
     align-items: center;
