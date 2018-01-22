@@ -1,20 +1,14 @@
 <app-box-layout [title]="title" [isFailing]="testsData.failed">
 
 
-    <div class="row">
-        <div class="col-xs-6">
-            <app-pie-chart [countPassed]="testsData.countPassed" [countFailed]="testsData.countFailed"></app-pie-chart>
+    <app-pie-chart [countPassed]="testsData.countPassed" [countFailed]="testsData.countFailed"></app-pie-chart>
+    <div class="percent-passed">
+        <div class="{{themedClass}} percent-number">
+            {{passedPercent}}%
         </div>
-        <div class="col-xs-6">
-            <div class="percent-passed">
-                <div class="{{themedClass}} percent-number">
-                    {{passedPercent}}%
-                </div>
-                <p> tests passed</p>
-            </div>
-        </div>
-
+        <p> tests passed</p>
     </div>
+
 
 
     <div class="row">
@@ -23,7 +17,7 @@
             <div class="colored-bar" [ngStyle]="{'background': 'linear-gradient(to right, #C6DFB5, #C6DFB5 ' + testsData.percentCovered + '%, #F6CBAE ' + testsData.percentCovered + '%)'}">
 
                 <div class="data">
-                    <div [ngClass]="{ 'percent-number': true, 'danger':testsData.percentCovered<50, 'success': testsData.percentCovered>=50 }">
+                    <div [ngClass]="{ 'percent-number': true, 'danger':testsData.percentCovered<50, 'green-percent-number': testsData.percentCovered>=50 }">
                         {{testsData.percentCovered}}%
                     </div>
                 </div>

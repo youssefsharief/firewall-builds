@@ -5,7 +5,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve -sm -ec ",
-    "build": "ng build -w",
+    "build": "ng build --prod",
+    "build-dev": "ng build -w",
     "test": "ng test -sm=false",
     "coverage": "ng test -sm=false -cc",
     "lint": "ng lint",
@@ -30,7 +31,6 @@
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
     "http-server": "^0.11.1",
-    "ng2-charts": "^1.6.0",
     "rxjs": "^5.5.2",
     "web-animations-js": "^2.3.1",
     "zone.js": "^0.8.14"

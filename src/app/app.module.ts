@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { TableComponent } from './components/table/table.component';
 import { IconTypeComponent } from './components/icon-type/icon-type.component';
 import { MerticsBoxComponent } from './components/mertics-box/mertics-box.component';
@@ -39,7 +38,6 @@ import { CapitalizeFirstPipe } from './pipes/capitalize-first.pipe';
     imports: [
         BrowserAnimationsModule,
         BrowserModule,
-        ChartsModule
     ],
     providers: [
         DataService,

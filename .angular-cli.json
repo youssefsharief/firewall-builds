@@ -21,10 +21,8 @@
       "styles": [
         "styles/main.scss",
         "assets/fontello-1f2b28be/css/fontello.css"
-
       ],
       "scripts": [
-          "../node_modules/chart.pieceLabel.js/build/Chart.PieceLabel.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
