@@ -4,13 +4,11 @@ export const firstState = [
     {
         type: 'build',
         'name': 'adipisicing',
-        'state': 'pending',
         '_id': '5a60aceb7c2ea1f5sd'
     },
     {
         type: 'firewall',
         'name': 'adipisicing',
-        'state': 'pending',
         'owner': 'oooo',
         '_id': '5a60aceb7c2ea43d'
     },
@@ -20,10 +18,9 @@ export const firstState = [
         timeStarted: Date.now().toString(),
         owner: 'Mcbride',
         'name': 'adipisicing',
-        'state': 'running',
-        'metrics': {
-            percentCompleted: 70
-        },
+        isRunning: true,
+        phase: 'metrics',
+        percentCompleted: 70,
         '_id': '5a60aceb7c2ea1f5gh'
     },
 
@@ -32,7 +29,6 @@ export const firstState = [
         timeStarted: '2014-12-20T01:52:46 -02:00',
         owner: 'Mcbride',
         'name': 'adipisicing',
-        'state': 'rejected',
         metrics: {
             test: {
                 value: 77,
@@ -62,7 +58,7 @@ export const firstState = [
             percentCovered: 73
         },
         functionalTests: {
-            countPassed: 30,
+            countPassed: 70,
             countFailed: 32,
             percentCovered: 89
         },
@@ -74,7 +70,6 @@ export const firstState = [
         timeStarted: '2014-12-20T01:52:46 -02:00',
         owner: 'Youssef',
         'name': 'rtyjyh',
-        'state': 'rejected',
         metrics: {
             test: {
                 value: 77,
@@ -104,7 +99,7 @@ export const firstState = [
             percentCovered: 73
         },
         functionalTests: {
-            countPassed: 30,
+            countPassed: 70,
             countFailed: 32,
             percentCovered: 89
         },
@@ -116,7 +111,6 @@ export const firstState = [
         timeStarted: '2014-12-20T01:52:46 -02:00',
         owner: 'Youssef',
         'name': 'rtyjyh',
-        'state': 'rejected',
         metrics: {
             test: {
                 value: 77,
@@ -146,7 +140,7 @@ export const firstState = [
             percentCovered: 73
         },
         functionalTests: {
-            countPassed: 30,
+            countPassed: 70,
             countFailed: 32,
             percentCovered: 89
         },
@@ -158,7 +152,6 @@ export const firstState = [
         type: 'build',
         timeStarted: '2014-12-20T01:52:46 -02:00',
         'name': 'rfgre',
-        'state': 'complete',
         metrics: {
             test: {
                 value: 80,
@@ -188,7 +181,7 @@ export const firstState = [
             percentCovered: 73
         },
         functionalTests: {
-            countPassed: 30,
+            countPassed: 70,
             countFailed: 32,
             percentCovered: 89
         },
@@ -196,15 +189,59 @@ export const firstState = [
     },
 
     {
+        type: 'build',
+        timeStarted: '2014-12-20T01:52:46 -02:00',
+        'name': 'rfgre',
+        metrics: {
+            test: {
+                value: 80,
+                isPositive: true,
+            },
+            maintainability: {
+                value: 87,
+                isPositive: true,
+            },
+            security: {
+                value: 90,
+                isPositive: true,
+            },
+            workmanship: {
+                value: 97,
+                isPositive: true,
+            },
+        },
+        build: {
+            didDebugFailed: false,
+            didReleaseFailed: false,
+            date: '2014-12-20T01:52:46 -02:00',
+        },
+        unitTests: {
+            countPassed: 5000,
+            countFailed: 1,
+            percentCovered: 73
+        },
+        functionalTests: {
+            countPassed: 70,
+            countFailed: 32,
+            percentCovered: 89
+        },
+        '_id': '5a60acebs1f5d9o1f'
+    },
+
+
+    {
         type: 'firewall',
         timeStarted: '2014-12-20T01:52:46 -02:00',
         owner: 'Mcbride',
         'name': 'adipisicing',
-        'state': 'rejected',
         metrics: {
-            maintainability: {
-                value: 5,
+            test: {
+                value: 80,
                 isPositive: true,
+            },
+            maintainability: {
+                value: 50,
+                isPositive: false,
             },
             security: {
                 value: 31,
@@ -215,11 +252,6 @@ export const firstState = [
                 isPositive: true,
             },
         },
-        build: {
-            didDebugFailed: false,
-            didReleaseFailed: false,
-            date: '2014-12-20T01:52:46 -02:00',
-        },
         '_id': '5a60aceb1f5d9be231j'
     },
 
@@ -229,7 +261,6 @@ export const firstState = [
         timeStarted: '2014-12-20T01:52:46 -02:00',
         owner: 'ER',
         'name': 'rfgre',
-        'state': 'accepted',
         metrics: {
             test: {
                 value: 80,

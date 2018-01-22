@@ -7,16 +7,17 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProgressBarComponent implements OnInit {
     @Input() data;
+    @Input() percentCompleted: number;
     public ngClass;
     public width;
 
     ngOnInit() {
         this.ngClass = {
-            'success': this.data && !this.data.failed && !this.data.percentCompleted,
+            'primary': this.percentCompleted,
+            'success': this.data && !this.data.failed,
             'danger': this.data && this.data.failed,
-            'gray': !this.data,
-            'primary': this.data && this.data.percentCompleted
+            'gray': !this.data && !this.percentCompleted,
         };
-        this.width =  !this.data ? '0%' : this.data.percentCompleted ? `${this.data.percentCompleted}%` : '100%';
+        this.width =  this.percentCompleted ? `${this.percentCompleted}%` : this.data ? '100%' : '0%';
     }
 }

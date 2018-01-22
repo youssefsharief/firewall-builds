@@ -5,17 +5,36 @@ export class DataAnalyzerService {
 
     public analyzeData(processes) {
         return processes.map(process => {
-            if (process.metrics) {
-                process.metrics = this.checkIfMetricsFailed(process.metrics);
+
+            if (process.isRunning) {
+                process.state = 'running';
+                return process;
             }
-            if (process.build) {
-                process.build = this.checkIfBuildFailed(process.build);
+
+            if (!process.metrics) {
+                process.state = 'pending';
+                return process;
             }
-            if (process.unitTests) {
-                process.unitTests = this.checkIfTestsFailed(process.unitTests);
+            process.metrics = this.checkIfMetricsFailed(process.metrics);
+            if (!process.build) {
+                process.state = 'rejected';
+                return process;
             }
-            if (process.functionalTests) {
-                process.functionalTests = this.checkIfTestsFailed(process.functionalTests);
+            process.build = this.checkIfBuildFailed(process.build);
+            if (!process.unitTests) {
+                process.state = 'rejected';
+                return process;
+            }
+            process.unitTests = this.checkIfTestsFailed(process.unitTests);
+            if (!process.functionalTests) {
+                process.state = 'rejected';
+                return process;
+            }
+            process.functionalTests = this.checkIfTestsFailed(process.functionalTests);
+            if (process.metrics.failed || process.build.failed || process.unitTests.failed || process.functionalTests.failed) {
+                process.state = 'rejected';
+            } else {
+                process.state = process.type === 'firewall' ? 'accepted' : 'complete';
             }
             return process;
         });

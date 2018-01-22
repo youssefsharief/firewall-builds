@@ -43,31 +43,32 @@
 					<div class="col-xs-1">
 						{{element.state | capitalizeFirst}}
 					</div>
+					<ng-container *ngIf="(!selected || element._id!==selected._id)">
+						<div class="col-xs-1">
+							<app-progress-bar [data]="element.metrics" [percentCompleted]="element.phase==='metrics'?element.percentCompleted:null"></app-progress-bar>
+						</div>
 
-					<div class="col-xs-1">
-						<app-progress-bar [data]="element.metrics" *ngIf="(!selected || element._id!==selected._id)"></app-progress-bar>
-					</div>
+						<div class="col-xs-1">
+							<app-progress-bar [data]="element.build" [percentCompleted]="element.phase==='build'?element.percentCompleted:null"></app-progress-bar>
+						</div>
 
-					<div class="col-xs-1">
-						<app-progress-bar [data]="element.build" *ngIf=" (!selected || element._id!==selected._id)"></app-progress-bar>
-					</div>
+						<div class="col-xs-1">
+							<app-progress-bar [data]="element.unitTests" [percentCompleted]="element.phase==='unitTests'?element.percentCompleted:null"></app-progress-bar>
+						</div>
 
-					<div class="col-xs-1">
-						<app-progress-bar [data]="element.unitTests" *ngIf=" (!selected || element._id!==selected._id)"></app-progress-bar>
-					</div>
-
-					<div class="col-xs-1">
-						<app-progress-bar [data]="element.functionalTests" *ngIf=" (!selected || element._id!==selected._id)"></app-progress-bar>
-					</div>
+						<div class="col-xs-1">
+							<app-progress-bar [data]="element.functionalTests" [percentCompleted]="element.phase==='functionalTests'?element.percentCompleted:null"></app-progress-bar>
+						</div>
+					</ng-container>
 				</div>
 
 				<div class="{{themeColor(element.state)}} derivative row" *ngIf="selected && element._id===selected._id" [@myAnimation]>
-					<app-mertics-box *ngIf="element.state!=='running' && element.metrics" [metrics]="element.metrics"></app-mertics-box>
-					<app-build-box *ngIf="element.state!=='running' && element.build" [build]="element.build"></app-build-box>
-					<app-charts-box *ngIf="element.state!=='running' && element.unitTests" [testsData]="element.unitTests" title="Unit Test"></app-charts-box>
-					<app-charts-box *ngIf="element.state!=='running' && element.functionalTests" [testsData]="element.functionalTests" title="Functional Test"></app-charts-box>
-					<app-result-box *ngIf="element.state!=='running' && element.state !== 'running' " [process]="element"></app-result-box>
-					<app-spinner *ngIf="element.state==='running'"></app-spinner>
+					<app-mertics-box *ngIf="!element.isRunning && element.metrics" [metrics]="element.metrics"></app-mertics-box>
+					<app-build-box *ngIf="!element.isRunning && element.build" [build]="element.build"></app-build-box>
+					<app-charts-box *ngIf="!element.isRunning && element.unitTests" [testsData]="element.unitTests" title="Unit Test"></app-charts-box>
+					<app-charts-box *ngIf="!element.isRunning && element.functionalTests" [testsData]="element.functionalTests" title="Functional Test"></app-charts-box>
+					<app-result-box *ngIf="!element.isRunning && element.state !== 'running' " [process]="element"></app-result-box>
+					<app-spinner *ngIf="element.isRunning"></app-spinner>
 				</div>
 			</div>
 		</div>
