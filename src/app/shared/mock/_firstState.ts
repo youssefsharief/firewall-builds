@@ -163,7 +163,7 @@ export const firstState = [
         metrics: {
             test: {
                 value: 80,
-                isPositive: false,
+                isPositive: true,
             },
             maintainability: {
                 value: 87,

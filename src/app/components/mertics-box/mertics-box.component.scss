@@ -1,6 +1,4 @@
-
 @import '../../../styles/color-variables';
-
 .arrows-wrapper p {
     margin: 0 0 2px;
     line-height: 10px;
@@ -10,30 +8,31 @@
     font-size: 5em;
 }
 
-.glyphicon-arrow-up, .glyphicon-arrow-down {
+.glyphicon-arrow-up,
+.glyphicon-arrow-down {
     transform: scale(1.2, 0.7);
 }
 
-.glyphicon-arrow-right, .glyphicon-arrow-lfet {
+.glyphicon-arrow-right,
+.glyphicon-arrow-lfet {
     transform: scale(0.7, 1.2);
 }
 
-.glyphicon-arrow-up{
+.glyphicon-arrow-up {
     color: $brand-success;
 }
 
-.glyphicon-arrow-down{
-    color:  $brand-danger;
+.glyphicon-arrow-down {
+    color: $brand-danger;
 }
 
-.glyphicon-arrow-right{
-    color:  $brand-yellow;
+.glyphicon-arrow-right {
+    color: $brand-yellow;
 }
 
-.glyphicon-arrow-left{
-    color:  $brand-warning;
+.glyphicon-arrow-left {
+    color: $brand-warning;
 }
-
 
 .arrow-with-info {
     margin-bottom: -29px;
@@ -49,61 +48,34 @@
         position: relative;
         font-size: 11px;
         color: black;
-    }
-    &.up {
-        .magnitude {
-            bottom: 45px;
-            left: 22px;
-            color: white;
-        }
-    }
-    &.left {
-        .magnitude {
-            bottom: 50px;
-            left: 19px;
-            color: black;
-        }
-    }
-    &.right {
-        .magnitude {
-            bottom: 51px;
-            left: 27px;
-            color: black;
-        }
-    }
-    &.down {
-        .magnitude {
-            bottom: 46px;
-            left: 22px;
-            color: white;
-        }
-    }
-    &.test {
-        .text {
-            bottom: 3px;
-            left: 17px;
-        }
-    }
-    &.maintainability {
-        .text {
-            bottom: 3px;
-            right: 4px;
-        }
-    }
-    &.security {
-        margin-top: 10px;
-        .text {
-            bottom: 9px;
-            left: 5px;
-        }
-    }
-    &.workmanship {
-        margin-top: 10px;
-        .text {
-            bottom: 9px;
-            right: 3px;
-        }
-    }
+    } 
 }
 
-// span.lower{ transform: scaleY(0.9); }
+.magnitude {
+    bottom: 55px;
+    left: 26px;
+}
+.left .magnitude , .right .magnitude {
+    color: black;
+}
+.up .magnitude , .down .magnitude {
+    color: white;
+}
+
+.arrow-with-info.test .text,
+.arrow-with-info.maintainability .text {
+    bottom: 11px;
+}
+
+.arrow-with-info.test .text {
+    left: 22px;
+}
+
+.arrow-with-info.security .text {
+    left: 13px;
+}
+
+.arrow-with-info.workmanship .text,
+.arrow-with-info.security .text {
+    bottom: 4px;
+}

@@ -1,22 +1,32 @@
 @import '../../../styles/color-variables';
 .huge {
-    font-size: 19px;
+    font-size: 25px;
+    line-height: 130%;
 }
 
+.text-black{
+    color: black;
+    font-size: 13px;
+}
+.slim-text{
+    margin: 0;
+}
 .result-box-wrapper {
-    text-align: center;
-    font-size: 12px;
     padding: 4px;
-    width: 120px;
-    height: 120px;
+    width: 170px;
+    height: 170px;
+    margin-top: 5px;
+    float: left;
     margin-top: 10px;
     margin-left: 20px;
     margin-bottom: 15px;
-    float: left
+    text-align: center;
+    font-size: 12px;
+    // position: relative;
 }
 
 .yellow {
-    color: $brand-yellow;
+    color: $brand-yellow-text;
 }
 
 .success {
@@ -24,12 +34,19 @@
 }
 
 .danger {
-    color: $brand-danger;
+    color: darken($brand-danger, 2%);
 }
 
 .btn {
     border-radius: 0px;
+    width: 122px;
+    font-size: 13px;
 }
+
+// .push-bottom {
+//     position: absolute;
+//     bottom: 0;
+// }
 
 select.form-control {
     border-radius: 0px;

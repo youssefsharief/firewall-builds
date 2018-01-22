@@ -20,10 +20,10 @@
     <div class="row">
         <div class="col-xs-12">
 
-            <div class="colored-bar" [ngStyle]="{'background': 'linear-gradient(to right, rgba(85, 127, 57, 0.30), rgba(85, 127, 57, 0.30) ' + testsData.percentCovered + '%, rgba(231, 125, 4, 0.46) ' + testsData.percentCovered + '%)'}">
+            <div class="colored-bar" [ngStyle]="{'background': 'linear-gradient(to right, #C6DFB5, #C6DFB5 ' + testsData.percentCovered + '%, #F6CBAE ' + testsData.percentCovered + '%)'}">
 
                 <div class="data">
-                    <div class="percent-number text-danger">
+                    <div [ngClass]="{ 'percent-number': true, 'danger':testsData.percentCovered<50, 'success': testsData.percentCovered>=50 }">
                         {{testsData.percentCovered}}%
                     </div>
                 </div>

@@ -1,3 +1,5 @@
+@import '../../../styles/color-variables';
+
 .percent-passed {
     margin-top: 25px;
     .percent-number {
@@ -33,4 +35,12 @@
         color: black;
         font-size: 10px;
     }
+}
+
+.danger{
+    color: $brand-danger;
+}
+
+.success{
+    color: $brand-success;
 }

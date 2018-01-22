@@ -1,8 +1,8 @@
 <div class="result-box-wrapper">
-    <p>Result:</p>
+    <p class="text-black">Result:</p>
     <div [ngClass]="ngClass">
-        <p *ngIf="process.state==='rejected'">Change Rejceted</p>
-        <p *ngIf="process.state==='accepted'">Change Accepted</p>
+        <p *ngIf="process.state==='rejected'" class="slim-text">Change Rejceted</p>
+        <p *ngIf="process.state==='accepted'" class="slim-text">Change Accepted</p>
         <p class="huge">
             <span *ngIf="metricsFailed "> Metrics Reduction </span>
             <span *ngIf="buildFailed "> Type Build Failure </span>
@@ -24,8 +24,8 @@
 
 
     
-    <div>
-        <button class="btn btn-primary" *ngIf="process.state==='complete' ">
+    <div *ngIf="process.state==='complete' ">
+        <button class="btn btn-primary" >
             Deploy
         </button>
         <span class="success">to</span>
