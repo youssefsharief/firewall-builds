@@ -18,7 +18,7 @@ import { BuildTypeComponent } from './components/build-type/build-type.component
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 import { DataAnalyzerService } from './services/data-analyzer.service';
 import { SpinnerComponent } from './components/spinner/spinner.component';
-import { DataFormatterService } from './services/data-formatter.service';
+import { CapitalizeFirstPipe } from './pipes/capitalize-first.pipe';
 
 @NgModule({
     declarations: [
@@ -33,7 +33,8 @@ import { DataFormatterService } from './services/data-formatter.service';
         ResultBoxComponent,
         BuildTypeComponent,
         ProgressBarComponent,
-        SpinnerComponent
+        SpinnerComponent,
+        CapitalizeFirstPipe
     ],
     imports: [
         BrowserAnimationsModule,
@@ -44,7 +45,6 @@ import { DataFormatterService } from './services/data-formatter.service';
         DataService,
         StateColorMapperService,
         DataAnalyzerService,
-        DataFormatterService
     ],
     bootstrap: [AppComponent]
 })
