@@ -37,24 +37,43 @@ export class TableComponent implements OnInit {
     }
 
     private subscribeToDataSource() {
-        this.dataService.dataSource().subscribe(
-            x => {
-                if (Array.isArray(x)) {
-                    this.data = this.dataAnalyzerService.analyzeData(x);
-                } else {
-                    console.log(x);
-                    this.data = this.data.map(process => {
-                        if (x._id === process._id) {
-                            return this.dataAnalyzerService.analyzeData([x])[0];
-                        } else {
-                            return process;
-                        }
-                    });
-                }
-            }
-        );
+        this.dataService.dataSource().subscribe(x => this.checkDataTypeAndActAccordingly(x));
     }
 
+    private checkDataTypeAndActAccordingly(x) {
+        return Array.isArray(x) ? this.setListItemsFromApiPayload(x) : this.reflectChangeOnSingleItem(x);
+    }
+
+    private setListItemsFromApiPayload(x) {
+        this.data = this.dataAnalyzerService.analyzeData(x);
+    }
+
+    private reflectChangeOnSingleItem(x) {
+        this.data = this.data.map(process => {
+            if (x._id === process._id) {
+                const newData = this.dataAnalyzerService.analyzeData([x])[0];
+
+                return {
+                    name: process.name,
+                    location: process.location,
+                    timeStarted: process.timeStarted,
+                    _id: process._id,
+                    type: process.type,
+                    isRunning: newData.isRunning,
+                    state: newData.state,
+                    phase: newData.phase,
+                    percentCompleted: newData.percentCompleted,
+                    metrics: process.metrics ? process.metrics : newData.metrics,
+                    build: process.build ? process.build : newData.build,
+                    unitTests: process.unitTests ? process.unitTests : newData.unitTests,
+                    functionalTests: process.functionalTests ? process.functionalTests : newData.functionalTests,
+                };
+            } else {
+                return process;
+
+            }
+        });
+    }
     public cursorStyle(element) {
         if (!(element.state === 'pending') && !this.isOpened(element)) {
             return { cursor: 'pointer' };

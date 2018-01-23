@@ -6,10 +6,14 @@ export class DataAnalyzerService {
     public analyzeData(processes) {
         return processes.map(process => {
 
-            if (!process.metrics) {
+            if (!process.metrics && !process.build && !process.unitTests && !process.functionalTests) {
                 process.state = process.isRunning ? 'running' : 'pending';
                 return process;
-            } else {
+            }
+            if (!process.metrics) {
+                process.state = process.isRunning ? 'running' : 'rejected';
+                return process;
+            }else {
                 process.metrics = this.checkIfMetricsFailed(process.metrics);
             }
 

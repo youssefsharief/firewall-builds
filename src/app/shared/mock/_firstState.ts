@@ -1,23 +1,30 @@
 import { Observable } from 'rxjs/Observable';
+import * as faker from 'faker';
+
+const getFormattedDate = () => faker.date.recent(1).toLocaleString('en-US', {
+    year: 'numeric', month: '2-digit',
+    day: 'numeric', hour: '2-digit', minute: '2-digit'
+}).replace(/^0+/, '').replace(/,/, '\xa0\xa0').replace(/ AM/,'am').replace(/ PM/,'pm');
+
 
 export const firstState = [
     {
         type: 'build',
-        'name': 'adipisicing',
+        name: 'Tenrox-R3_1473',
         '_id': '5a60aceb7c2ea1f5sd'
     },
     {
         type: 'firewall',
-        'name': 'adipisicing',
+        name: 'adipisicing',
         'owner': 'oooo',
         '_id': '5a60aceb7c2ea43d'
     },
 
     {
         type: 'firewall',
-        timeStarted: '2014-12-20T01:52:46 -02:00',
+        timeStarted: getFormattedDate(),
         owner: 'Mcbride',
-        'name': 'adipisicing',
+        name: 'adipisicing',
         isRunning: true,
         phase: 'metrics',
         percentCompleted: 70,
@@ -26,9 +33,9 @@ export const firstState = [
 
     {
         type: 'firewall',
-        timeStarted: '2014-12-20T01:52:46 -02:00',
+        timeStarted: getFormattedDate(),
         owner: 'Mcbride',
-        'name': 'adipisicing',
+        name: 'adipisicing',
         metrics: {
             test: {
                 value: 77,
@@ -50,7 +57,7 @@ export const firstState = [
         build: {
             didDebugFailed: false,
             didReleaseFailed: false,
-            date: '2014-12-20T01:52:46 -02:00',
+            date: getFormattedDate(),
         },
         unitTests: {
             countPassed: 56,
@@ -67,9 +74,9 @@ export const firstState = [
 
     {
         type: 'firewall',
-        timeStarted: '2014-12-20T01:52:46 -02:00',
+        timeStarted: getFormattedDate(),
         owner: 'Youssef',
-        'name': 'rtyjyh',
+        name: 'rtyjyh',
         metrics: {
             test: {
                 value: 77,
@@ -91,7 +98,7 @@ export const firstState = [
         build: {
             didDebugFailed: true,
             didReleaseFailed: false,
-            date: '2014-12-20T01:52:46 -02:00',
+            date: getFormattedDate(),
         },
         unitTests: {
             countPassed: 56,
@@ -108,9 +115,9 @@ export const firstState = [
 
     {
         type: 'firewall',
-        timeStarted: '2014-12-20T01:52:46 -02:00',
+        timeStarted: getFormattedDate(),
         owner: 'Youssef',
-        'name': 'rtyjyh',
+        name: 'rtyjyh',
         metrics: {
             test: {
                 value: 77,
@@ -132,7 +139,7 @@ export const firstState = [
         build: {
             didDebugFailed: false,
             didReleaseFailed: true,
-            date: '2014-12-20T01:52:46 -02:00',
+            date: getFormattedDate(),
         },
         unitTests: {
             countPassed: 56,
@@ -150,8 +157,8 @@ export const firstState = [
 
     {
         type: 'build',
-        timeStarted: '2014-12-20T01:52:46 -02:00',
-        'name': 'rfgre',
+        name: 'Tenrox-G6-8468',
+        timeStarted: getFormattedDate(),
         metrics: {
             test: {
                 value: 80,
@@ -173,7 +180,7 @@ export const firstState = [
         build: {
             didDebugFailed: false,
             didReleaseFailed: false,
-            date: '2014-12-20T01:52:46 -02:00',
+            date: getFormattedDate(),
         },
         unitTests: {
             countPassed: 5000,
@@ -190,8 +197,8 @@ export const firstState = [
 
     {
         type: 'build',
-        timeStarted: '2014-12-20T01:52:46 -02:00',
-        'name': 'rfgre',
+        name: 'Tenrox-T7-8643',
+        timeStarted: getFormattedDate(),
         metrics: {
             test: {
                 value: 80,
@@ -213,7 +220,7 @@ export const firstState = [
         build: {
             didDebugFailed: false,
             didReleaseFailed: false,
-            date: '2014-12-20T01:52:46 -02:00',
+            date: getFormattedDate(),
         },
         unitTests: {
             countPassed: 5000,
@@ -231,9 +238,9 @@ export const firstState = [
 
     {
         type: 'firewall',
-        timeStarted: '2014-12-20T01:52:46 -02:00',
+        timeStarted: getFormattedDate(),
         owner: 'Mcbride',
-        'name': 'adipisicing',
+        name: 'adipisicing',
         metrics: {
             test: {
                 value: 80,
@@ -258,9 +265,9 @@ export const firstState = [
 
     {
         type: 'firewall',
-        timeStarted: '2014-12-20T01:52:46 -02:00',
+        timeStarted: getFormattedDate(),
         owner: 'ER',
-        'name': 'rfgre',
+        name: 'rfgre',
         metrics: {
             test: {
                 value: 80,
@@ -282,7 +289,7 @@ export const firstState = [
         build: {
             didDebugFailed: false,
             didReleaseFailed: false,
-            date: '2014-12-20T01:52:46 -02:00',
+            date: getFormattedDate(),
         },
         unitTests: {
             countPassed: 560,
