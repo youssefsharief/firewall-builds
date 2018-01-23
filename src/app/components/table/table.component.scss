@@ -7,12 +7,26 @@
 
 .page-container {
     margin: auto;
-    min-width: 1000px;
-    max-width: 1000px;
+    min-width: 1200px;
+    max-width: 1200px;
+}
+
+.cl{
+    width: 110px;
+    float: left;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    white-space: nowrap;
+    &.cl--xlg{
+        width: 183px
+    }
+    &.cl--lg{
+        width: 140px
+    }
 }
 
 .element-wrapper {
-    
     margin-bottom: 7px;
     padding: 3px;
     border-style: solid;
@@ -68,4 +82,13 @@ tr:hover {
 
 app-prpgrss-bar{
     width: 75px;
+}
+
+.changelist-build-container {
+    display: flex;
+    flex-direction: row;
+    app-icon-type{
+        margin-right: 20px;
+    }
+
 }

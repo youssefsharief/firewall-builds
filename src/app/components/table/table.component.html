@@ -8,14 +8,14 @@
 	<div class="tabular">
 		<div class="table-heading">
 			<div class="row">
-				<div class="cell col-xs-2"> Changelist / Build </div>
-				<div class="cell col-xs-2"> Owner </div>
-				<div class="cell col-xs-3"> Time Started </div>
-				<div class="cell col-xs-1"> State </div>
-				<div class="cell col-xs-1"> Metrics </div>
-				<div class="cell col-xs-1"> Build </div>
-				<div class="cell col-xs-1"> Unit Test </div>
-				<div class="cell col-xs-1"> Functional Test</div>
+				<div class="cl cl--lg"> Changelist / Build </div>
+				<div class="cl"> Owner </div>
+				<div class="cl cl--xlg"> Time Started </div>
+				<div class="cl"> State </div>
+				<div class="cl"> Metrics </div>
+				<div class="cl"> Build </div>
+				<div class="cl"> Unit Test </div>
+				<div class="cl"> Functional Test</div>
 			</div>
 
 		</div>
@@ -27,36 +27,39 @@
 				<div class="item-row row" (click)="select(element)">
 
 
-					<div class="col-xs-2">
-						<app-icon-type [status]="element.state" [type]="element.type"></app-icon-type>
+					<div class="cl cl--lg">
+						<div class="changelist-build-container">
+							<app-icon-type [status]="element.state" [type]="element.type"></app-icon-type>
+							<div class="name"> {{element.name}} </div>
+						</div>
 					</div>
 
 
 
-					<div class="col-xs-2"> {{element.owner}}
+					<div class="cl"> {{element.owner}}
 					</div>
 
-					<div class="col-xs-3">
+					<div class="cl cl--xlg">
 						{{element.timeStarted}}
 					</div>
 
-					<div class="col-xs-1">
+					<div class="cl">
 						{{element.state | capitalizeFirst}}
 					</div>
 					<ng-container *ngIf="(!selected || element._id!==selected._id)">
-						<div class="col-xs-1">
+						<div class="cl">
 							<app-progress-bar [data]="element.metrics" [percentCompleted]="element.phase==='metrics'?element.percentCompleted:null"></app-progress-bar>
 						</div>
 
-						<div class="col-xs-1">
+						<div class="cl">
 							<app-progress-bar [data]="element.build" [percentCompleted]="element.phase==='build'?element.percentCompleted:null"></app-progress-bar>
 						</div>
 
-						<div class="col-xs-1">
+						<div class="cl">
 							<app-progress-bar [data]="element.unitTests" [percentCompleted]="element.phase==='unitTests'?element.percentCompleted:null"></app-progress-bar>
 						</div>
 
-						<div class="col-xs-1">
+						<div class="cl">
 							<app-progress-bar [data]="element.functionalTests" [percentCompleted]="element.phase==='functionalTests'?element.percentCompleted:null"></app-progress-bar>
 						</div>
 					</ng-container>
