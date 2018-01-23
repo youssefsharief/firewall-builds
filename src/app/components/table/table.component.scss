@@ -1,5 +1,6 @@
 @import '../../../styles/color-variables';
 .tabular {
+    text-align: center;
     .table-heading {
         font-size: 15px;
     }
@@ -73,6 +74,7 @@
 .item-row{
     display: flex;
     line-height: 27px;
+    padding-right: 30px;
 }
 
 
