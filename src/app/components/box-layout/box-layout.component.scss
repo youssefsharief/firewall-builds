@@ -1,12 +1,11 @@
 @import '../../../styles/color-variables';
-
 div {
-    &.success{
+    &.success {
         border-color: $brand-success;
         color: $brand-success;
         box-shadow: 3px 3px 5px grey;
     }
-    &.danger{
+    &.danger {
         border-color: $brand-danger;
         color: $brand-danger;
     }
@@ -19,10 +18,11 @@ div {
     margin-top: 10px;
     margin-left: 20px;
     margin-bottom: 15px;
-    
 }
 
-
+.wrapper {
+    cursor: pointer;
+}
 
 .title {
     margin: 0px;
