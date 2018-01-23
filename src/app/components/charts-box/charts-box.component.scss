@@ -1,18 +1,21 @@
 @import '../../../styles/color-variables';
-
 .percent-passed {
     margin-top: 25px;
     margin-left: 90px;
     .percent-number {
         font-size: 33px;
-        // margin-left: 90px;
+        &.text-warn {
+            color: $brand-orange-brown;
+        }
+        &.text-success {
+            color: $brand-flashy-green;
+        }
     }
     p {
         font-size: 10px;
         color: black;
         margin-top: -7px;
-        margin-left: 5px;
-        // margin-left: 96px;
+        margin-left: 5px; // margin-left: 96px;
     }
 }
 
@@ -31,6 +34,12 @@
         font-size: 12px;
         font-weight: 800;
         margin-bottom: 10px;
+        &.danger {
+            color: $brand-light-brown;
+        }
+        &.success {
+            color: $brand-success;
+        }
     }
     p {
         position: relative;
@@ -41,26 +50,7 @@
     }
 }
 
-.danger{
-    color: $brand-danger;
-}
-
-.success{
-    color: $brand-success;
-}
-
 app-pie-chart {
     display: block;
-    // width: 400px;
     float: left;
 }
-
-
-.text-warn.percent-number{
-    color: #B78306
-}
-
-.text-success.percent-number{
-    color: #92BA27
-}
-
