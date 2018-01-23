@@ -1,6 +1,6 @@
 <app-box-layout title="Metrics" [isFailing]="metrics.failed">
 
-    <div class="arrow-with-info test up" [ngClass]="{'arrow-with-info test': true, 'down': !metrics.test.isPositive, 'up': metrics.test.isPositive}">
+    <div [ngClass]="{'arrow-with-info test': true, 'down': !metrics.test.isPositive, 'up': metrics.test.isPositive}">
         <span [ngClass]="{'glyphicon': true, 'glyphicon-arrow-down': !metrics.test.isPositive, 'glyphicon-arrow-up': metrics.test.isPositive}"></span>
         <div class="text">Test</div>
         <span class="magnitude">{{metrics.test.value}}</span>
