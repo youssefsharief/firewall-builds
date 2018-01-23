@@ -7,8 +7,8 @@
 
 	<div class="tabular">
 		<div class="table-heading">
-			<div class="row">
-				<div class="cl cl--lg"> Changelist / Build </div>
+			<div class="item-row">
+				<div class="cl cl--lg .push-left"> Changelist / Build </div>
 				<div class="cl"> Owner </div>
 				<div class="cl cl--xlg"> Time Started </div>
 				<div class="cl"> State </div>
@@ -24,10 +24,10 @@
 			<div *ngFor="let element of data" [class.opened]="isOpened(element)" class="element-wrapper {{themeColor(element.state)}}"
 			 [ngStyle]="cursorStyle(element)">
 
-				<div class="item-row row" (click)="select(element)">
+				<div class="item-row" (click)="select(element)">
 
 
-					<div class="cl cl--lg">
+					<div class="cl cl--lg push-left">
 						<div class="changelist-build-container">
 							<app-icon-type [status]="element.state" [type]="element.type"></app-icon-type>
 							<div class="name"> {{element.name}} </div>

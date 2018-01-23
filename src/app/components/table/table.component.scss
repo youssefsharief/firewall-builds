@@ -7,16 +7,14 @@
 
 .page-container {
     margin: auto;
-    min-width: 1200px;
-    max-width: 1200px;
+    min-width: 1000px;
+    max-width: 1000px;
 }
 
 .cl{
     width: 110px;
     float: left;
     min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
     white-space: nowrap;
     &.cl--xlg{
         width: 183px
@@ -28,7 +26,8 @@
 
 .element-wrapper {
     margin-bottom: 7px;
-    padding: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     border-style: solid;
     border-width: 1px 0px 1px 1px;
     &.opened {
@@ -69,6 +68,8 @@
 }
 
 .item-row{
+    display: flex;
+    flex-direction: row;
     line-height: 27px;
 }
 
@@ -91,4 +92,8 @@ app-prpgrss-bar{
         margin-right: 20px;
     }
 
+}
+
+.push-left {
+    padding-left: 3.5px;
 }
