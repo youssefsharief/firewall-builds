@@ -4,7 +4,7 @@
         <p *ngIf="process.state==='rejected'" class="slim-text">Change Rejceted</p>
         <p *ngIf="process.state==='accepted'" class="slim-text">Change Accepted</p>
         <p class="huge">
-            <span *ngIf="metricsFailed "> Metrics Reduction </span>
+            <span *ngIf="metricsFailed "> Metrics <br />Reduction </span>
             <span *ngIf="buildFailed "> Build Failure </span>
             <span *ngIf="unitTestsFailed "> Unit Tests Rejection </span>
             <span *ngIf="functionalTestsFailed "> Functional Tests Rejection </span>
