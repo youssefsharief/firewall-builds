@@ -38,13 +38,13 @@ describe('ProgressBarComponent', () => {
     }));
 
     it(`should have blue bar if still running`, async(() => {
-        fixture.componentInstance.data = { percentCompleted: 70 };
+        fixture.componentInstance.percentCompleted = 70;
         fixture.detectChanges();
         expect(fixture.nativeElement.querySelector('.progress-bar.primary')).toBeTruthy();
     }));
 
     it(`should show bar width corresponding to the percentage completed`, async(() => {
-        fixture.componentInstance.data = { percentCompleted: 70 };
+        fixture.componentInstance.percentCompleted = 70;
         fixture.detectChanges();
         expect(fixture.nativeElement.querySelector('.progress-bar.primary')).toBeTruthy();
         expect(fixture.nativeElement.querySelector('.progress-bar.primary').style.width).toBe('70%');
