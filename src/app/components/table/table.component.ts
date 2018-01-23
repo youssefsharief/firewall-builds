@@ -42,8 +42,14 @@ export class TableComponent implements OnInit {
                 if (Array.isArray(x)) {
                     this.data = this.dataAnalyzerService.analyzeData(x);
                 } else {
-                    let toBeChanged = this.data.find(item => item._id === x._id);
-                    toBeChanged = x;
+                    console.log(x);
+                    this.data = this.data.map(process => {
+                        if (x._id === process._id) {
+                            return this.dataAnalyzerService.analyzeData([x])[0];
+                        } else {
+                            return process;
+                        }
+                    });
                 }
             }
         );

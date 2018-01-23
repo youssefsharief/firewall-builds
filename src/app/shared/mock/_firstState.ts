@@ -15,7 +15,7 @@ export const firstState = [
 
     {
         type: 'firewall',
-        timeStarted: Date.now().toString(),
+        timeStarted: '2014-12-20T01:52:46 -02:00',
         owner: 'Mcbride',
         'name': 'adipisicing',
         isRunning: true,
