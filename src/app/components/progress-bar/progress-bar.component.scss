@@ -1,7 +1,6 @@
 @import '../../../styles/color-variables';
-
-
-.progress{
+.progress {
+    background: #D8D8D8;
     margin-bottom: 0;
     border-radius: 0;
     height: 27px;
@@ -9,19 +8,14 @@
     width: 48px;
 }
 
-.progress-bar{
+.progress-bar {
     background-color: $brand-primary;
-
 }
 
-.danger{
+.danger {
     background: $brand-danger;
 }
 
-.success{
+.success {
     background: $brand-success;
-}
-
-.gray{
-    background: $brand-grey;
 }
