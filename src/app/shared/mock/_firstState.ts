@@ -19,7 +19,7 @@ export const firstState = [
         type: 'firewall',
         timeStarted: formattedDateService.getDateThenTimeSpaced(),
         owner: 'Mcbride',
-        name: 'adipisicing',
+        name: 'a',
         isRunning: true,
         phase: 'metrics',
         percentCompleted: 70,
@@ -30,7 +30,7 @@ export const firstState = [
         type: 'firewall',
         timeStarted: formattedDateService.getDateThenTimeSpaced(),
         owner: 'Mcbride',
-        name: 'adipisicing',
+        name: 'b',
         isRunning: true,
         phase: 'metrics',
         percentCompleted: 40,
@@ -40,7 +40,7 @@ export const firstState = [
     {
         type: 'firewall',
         timeStarted: formattedDateService.getDateThenTimeSpaced(),
-        owner: 'Mcbride',
+        owner: 'c',
         name: 'adipisicing',
         metrics: {
             test: {
@@ -82,7 +82,7 @@ export const firstState = [
         type: 'firewall',
         timeStarted: formattedDateService.getDateThenTimeSpaced(),
         owner: 'Youssef',
-        name: 'rtyjyh',
+        name: 'd',
         metrics: {
             test: {
                 value: 77,
@@ -123,7 +123,7 @@ export const firstState = [
         type: 'firewall',
         timeStarted: formattedDateService.getDateThenTimeSpaced(),
         owner: 'Youssef',
-        name: 'rtyjyh',
+        name: 'e',
         metrics: {
             test: {
                 value: 77,
@@ -246,7 +246,7 @@ export const firstState = [
         type: 'firewall',
         timeStarted: formattedDateService.getDateThenTimeSpaced(),
         owner: 'Mcbride',
-        name: 'adipisicing',
+        name: 'f',
         metrics: {
             test: {
                 value: 80,
@@ -273,7 +273,7 @@ export const firstState = [
         type: 'firewall',
         timeStarted: formattedDateService.getDateThenTimeSpaced(),
         owner: 'ER',
-        name: 'rfgre',
+        name: 'g',
         metrics: {
             test: {
                 value: 80,
@@ -357,7 +357,7 @@ export const firstState = [
         type: 'firewall',
         timeStarted: formattedDateService.getDateThenTimeSpaced(),
         owner: 'ER',
-        name: 'rfgre',
+        name: 'H',
         metrics: {
             test: {
                 value: 80,

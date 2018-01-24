@@ -45,6 +45,7 @@ export class TableComponent implements OnInit {
 
                 return {
                     name: process.name,
+                    owner: process.owner,
                     location: process.location,
                     timeStarted: process.timeStarted,
                     _id: process._id,
