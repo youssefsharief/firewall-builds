@@ -33,6 +33,17 @@ export const firstState = [
         timeStarted: formattedDateService.getDateThenTimeSpaced(),
         owner: 'Mcbride',
         name: 'adipisicing',
+        isRunning: true,
+        phase: 'metrics',
+        percentCompleted: 40,
+        '_id': 'gfffferlewtik94568'
+    },
+
+    {
+        type: 'firewall',
+        timeStarted: formattedDateService.getDateThenTimeSpaced(),
+        owner: 'Mcbride',
+        name: 'adipisicing',
         metrics: {
             test: {
                 value: 77,

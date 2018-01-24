@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { AppComponent } from './app.component';
 import { TableComponent } from './components/table/table.component';
 import { IconTypeComponent } from './components/icon-type/icon-type.component';
@@ -20,9 +19,9 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { CapitalizeFirstPipe } from './pipes/capitalize-first.pipe';
 import { PopoverModule } from 'ngx-bootstrap/popover';
 import { TableHeadingComponent } from './components/table-heading/table-heading.component';
-import { TableListItemComponent } from './components/spinner/table-list-item/table-list-item.component';
 import { ExtendedTableListItemComponent } from './components/extended-table-list-item/extended-table-list-item.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { TableListItemComponent } from './components/table-list-item/table-list-item.component';
 
 @NgModule({
     declarations: [
