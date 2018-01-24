@@ -1,50 +1,11 @@
 
-<app-table-heading class="item-row table-heading"></app-table-heading>
+<app-table-heading class="item-row"></app-table-heading>
 
 <div class="table-body" *ngIf="data">
 	<div *ngFor="let element of data" [class.opened]="isOpened(element)" class="element-wrapper {{themeColor(element.state)}}"
 	 [ngStyle]="cursorStyle(element)">
 
-		<div class="item-row" (click)="select(element)">
-
-
-			<div class="cl cl--xlg push-left">
-				<div class="changelist-build-container">
-					<app-icon-type [status]="element.state" [type]="element.type"></app-icon-type>
-					<div class="name"> {{element.name}} </div>
-				</div>
-			</div>
-
-
-
-			<div class="cl"> {{element.owner}}
-			</div>
-
-			<div class="cl cl--xlg">
-				{{element.timeStarted}}
-			</div>
-
-			<div class="cl">
-				{{element.state | capitalizeFirst}}
-			</div>
-			<ng-container *ngIf="(!selected || element._id!==selected._id)">
-				<div class="cl">
-					<app-progress-bar [data]="element.metrics" [percentCompleted]="element.phase==='metrics'?element.percentCompleted:null"></app-progress-bar>
-				</div>
-
-				<div class="cl">
-					<app-progress-bar [data]="element.build" [percentCompleted]="element.phase==='build'?element.percentCompleted:null"></app-progress-bar>
-				</div>
-
-				<div class="cl">
-					<app-progress-bar [data]="element.unitTests" [percentCompleted]="element.phase==='unitTests'?element.percentCompleted:null"></app-progress-bar>
-				</div>
-
-				<div class="cl">
-					<app-progress-bar [data]="element.functionalTests" [percentCompleted]="element.phase==='functionalTests'?element.percentCompleted:null"></app-progress-bar>
-				</div>
-			</ng-container>
-		</div>
+		<app-table-list-item class="item-row" [selected]="selected" [element]="element" (click)="select(element)"></app-table-list-item>
 
 		<div class="{{themeColor(element.state)}} derivative row" *ngIf="selected && element._id===selected._id" [@myAnimation]>
 			<app-mertics-box class="box {{element.metrics.failed? 'danger' : 'success'}} wrapper" *ngIf="!element.isRunning && element.metrics"

@@ -1,7 +1,9 @@
 @import '../../../styles/color-variables';
 
 
-
+app-table-heading {
+    font-size: 15px;
+}
 
 .element-wrapper {
     margin-bottom: 7px;
@@ -58,16 +60,9 @@ tr:hover {
     }
 }
 
-app-prpgrss-bar {
-    width: 75px;
-}
 
-.changelist-build-container {
-    display: flex;
-    app-icon-type {
-        margin-right: 20px;
-    }
-}
+
+
 
 .push-left {
     padding-left: 3.5px;

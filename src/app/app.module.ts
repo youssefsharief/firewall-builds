@@ -20,6 +20,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { CapitalizeFirstPipe } from './pipes/capitalize-first.pipe';
 import { PopoverModule } from 'ngx-bootstrap/popover';
 import { TableHeadingComponent } from './components/table-heading/table-heading.component';
+import { TableListItemComponent } from './components/spinner/table-list-item/table-list-item.component';
 
 @NgModule({
     declarations: [
@@ -36,7 +37,8 @@ import { TableHeadingComponent } from './components/table-heading/table-heading.
         ProgressBarComponent,
         SpinnerComponent,
         CapitalizeFirstPipe,
-        TableHeadingComponent
+        TableHeadingComponent,
+        TableListItemComponent
     ],
     imports: [
         BrowserAnimationsModule,
