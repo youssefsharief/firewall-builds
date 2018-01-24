@@ -1,89 +1,75 @@
-<div class="page-container">
+<div class="item-row table-heading">
+	<div class="cl cl--xlg .push-left"> Changelist / Build </div>
+	<div class="cl"> Owner </div>
+	<div class="cl cl--xlg"> Time Started </div>
+	<div class="cl"> State </div>
+	<div class="cl"> Metrics </div>
+	<div class="cl"> Build </div>
+	<div class="cl"> Unit Test </div>
+	<div class="cl"> Functional Test</div>
+</div>
 
-	<br>
-	<br>
-	<br>
-	<br>
+<div class="table-body" *ngIf="data">
+	<div *ngFor="let element of data" [class.opened]="isOpened(element)" class="element-wrapper {{themeColor(element.state)}}"
+	 [ngStyle]="cursorStyle(element)">
 
-	<div class="tabular">
-			<div class="item-row table-heading">
-				<div class="cl cl--xlg .push-left"> Changelist / Build </div>
-				<div class="cl"> Owner </div>
-				<div class="cl cl--xlg"> Time Started </div>
-				<div class="cl"> State </div>
-				<div class="cl"> Metrics </div>
-				<div class="cl"> Build </div>
-				<div class="cl"> Unit Test </div>
-				<div class="cl"> Functional Test</div>
-			</div>
-
-		<div class="table-body" *ngIf="data">
-			<div *ngFor="let element of data" [class.opened]="isOpened(element)" class="element-wrapper {{themeColor(element.state)}}"
-			 [ngStyle]="cursorStyle(element)">
-
-				<div class="item-row" (click)="select(element)">
+		<div class="item-row" (click)="select(element)">
 
 
-					<div class="cl cl--xlg push-left">
-						<div class="changelist-build-container">
-							<app-icon-type [status]="element.state" [type]="element.type"></app-icon-type>
-							<div class="name"> {{element.name}} </div>
-						</div>
-					</div>
-
-
-
-					<div class="cl"> {{element.owner}}
-					</div>
-
-					<div class="cl cl--xlg">
-						{{element.timeStarted}}
-					</div>
-
-					<div class="cl">
-						{{element.state | capitalizeFirst}}
-					</div>
-					<ng-container *ngIf="(!selected || element._id!==selected._id)">
-						<div class="cl">
-							<app-progress-bar [data]="element.metrics" [percentCompleted]="element.phase==='metrics'?element.percentCompleted:null"></app-progress-bar>
-						</div>
-
-						<div class="cl">
-							<app-progress-bar [data]="element.build" [percentCompleted]="element.phase==='build'?element.percentCompleted:null"></app-progress-bar>
-						</div>
-
-						<div class="cl">
-							<app-progress-bar [data]="element.unitTests" [percentCompleted]="element.phase==='unitTests'?element.percentCompleted:null"></app-progress-bar>
-						</div>
-
-						<div class="cl">
-							<app-progress-bar [data]="element.functionalTests" [percentCompleted]="element.phase==='functionalTests'?element.percentCompleted:null"></app-progress-bar>
-						</div>
-					</ng-container>
-				</div>
-
-				<div class="{{themeColor(element.state)}} derivative row" *ngIf="selected && element._id===selected._id" [@myAnimation]>
-					<app-mertics-box class="box {{element.metrics.failed? 'danger' : 'success'}} wrapper"
-					 *ngIf="!element.isRunning && element.metrics" [metrics]="element.metrics" 
-					 [popover]="element.metrics | json" placement="top" [outsideClick]="true"></app-mertics-box>
-					 
-					<app-build-box class="box {{element.build.failed? 'danger' : 'success'}} wrapper"
-					 *ngIf="!element.isRunning && element.build" [build]="element.build"
-					   [popover]="element.build | json" placement="top" [outsideClick]="true"></app-build-box>
-
-					<app-charts-box class="box {{element.unitTests.failed? 'danger' : 'success'}} wrapper" 
-					*ngIf="!element.isRunning && element.unitTests"
-					 [testsData]="element.unitTests" title="Unit Test" [popover]="element.unitTests | json" placement="top" [outsideClick]="true"></app-charts-box>
-
-					<app-charts-box class="box {{element.functionalTests.failed? 'danger' : 'success'}} wrapper" 
-					*ngIf="!element.isRunning && element.functionalTests" 
-					[testsData]="element.functionalTests" title="Functional Test" [popover]="element.functionalTests | json" placement="top" [outsideClick]="true"></app-charts-box>
-
-					<app-result-box *ngIf="!element.isRunning && element.state !== 'running' " [process]="element"></app-result-box>
-					<app-spinner *ngIf="element.isRunning"></app-spinner>
+			<div class="cl cl--xlg push-left">
+				<div class="changelist-build-container">
+					<app-icon-type [status]="element.state" [type]="element.type"></app-icon-type>
+					<div class="name"> {{element.name}} </div>
 				</div>
 			</div>
+
+
+
+			<div class="cl"> {{element.owner}}
+			</div>
+
+			<div class="cl cl--xlg">
+				{{element.timeStarted}}
+			</div>
+
+			<div class="cl">
+				{{element.state | capitalizeFirst}}
+			</div>
+			<ng-container *ngIf="(!selected || element._id!==selected._id)">
+				<div class="cl">
+					<app-progress-bar [data]="element.metrics" [percentCompleted]="element.phase==='metrics'?element.percentCompleted:null"></app-progress-bar>
+				</div>
+
+				<div class="cl">
+					<app-progress-bar [data]="element.build" [percentCompleted]="element.phase==='build'?element.percentCompleted:null"></app-progress-bar>
+				</div>
+
+				<div class="cl">
+					<app-progress-bar [data]="element.unitTests" [percentCompleted]="element.phase==='unitTests'?element.percentCompleted:null"></app-progress-bar>
+				</div>
+
+				<div class="cl">
+					<app-progress-bar [data]="element.functionalTests" [percentCompleted]="element.phase==='functionalTests'?element.percentCompleted:null"></app-progress-bar>
+				</div>
+			</ng-container>
+		</div>
+
+		<div class="{{themeColor(element.state)}} derivative row" *ngIf="selected && element._id===selected._id" [@myAnimation]>
+			<app-mertics-box class="box {{element.metrics.failed? 'danger' : 'success'}} wrapper" *ngIf="!element.isRunning && element.metrics"
+			 [metrics]="element.metrics" [popover]="element.metrics | json" placement="top" [outsideClick]="true"></app-mertics-box>
+
+			<app-build-box class="box {{element.build.failed? 'danger' : 'success'}} wrapper" *ngIf="!element.isRunning && element.build"
+			 [build]="element.build" [popover]="element.build | json" placement="top" [outsideClick]="true"></app-build-box>
+
+			<app-charts-box class="box {{element.unitTests.failed? 'danger' : 'success'}} wrapper" *ngIf="!element.isRunning && element.unitTests"
+			 [testsData]="element.unitTests" title="Unit Test" [popover]="element.unitTests | json" placement="top" [outsideClick]="true"></app-charts-box>
+
+			<app-charts-box class="box {{element.functionalTests.failed? 'danger' : 'success'}} wrapper" *ngIf="!element.isRunning && element.functionalTests"
+			 [testsData]="element.functionalTests" title="Functional Test" [popover]="element.functionalTests | json" placement="top"
+			 [outsideClick]="true"></app-charts-box>
+
+			<app-result-box *ngIf="!element.isRunning && element.state !== 'running' " [process]="element"></app-result-box>
+			<app-spinner *ngIf="element.isRunning"></app-spinner>
 		</div>
 	</div>
-
 </div>

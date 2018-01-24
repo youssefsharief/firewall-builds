@@ -1,7 +1,23 @@
+@import '../styles/color-variables';
 .credit {
     position: fixed;
     bottom: 0;
     width: 100%;
     width: 100%;
     padding: 0px 0px 3px 6px;
+}
+
+.page-container {
+    margin: auto;
+    width: 1071px;
+}
+
+app-table {
+    text-align: center;
+    .table-heading {
+        font-size: 15px;
+    }
+    font-size: 12px;
+    padding: 7px;
+    background: linear-gradient(to right, lighten($brand-grey, 27%), white);
 }
