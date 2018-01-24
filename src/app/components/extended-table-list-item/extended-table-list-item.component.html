@@ -1,27 +1,25 @@
 <div [@myAnimation]>
 
-    <app-box-layout title="Metrics" *ngIf="!element.isRunning && element.metrics" [isFailing]="element.metrics.failed">
-        <app-mertics-box  [metrics]="element.metrics" [popover]="element.metrics | json"
-            placement="top" [outsideClick]="true"></app-mertics-box>
+    <app-box-layout title="Metrics" *ngIf="!element.isRunning && element.metrics" [isFailing]="element.metrics.failed" [popover]="element.metrics | json" placement="top" [outsideClick]="true">
+        <app-mertics-box [metrics]="element.metrics" ></app-mertics-box>
     </app-box-layout>
 
-    <app-box-layout title="Build" *ngIf="!element.isRunning && element.build" [isFailing]="element.build.failed">
-        <app-build-box  [build]="element.build" [popover]="element.build | json"
-            placement="top" [outsideClick]="true"></app-build-box>
-    </app-box-layout>
-
-
-    <app-box-layout title="Unit Tests" *ngIf="!element.isRunning && element.unitTests" [isFailing]="element.unitTests.failed">
-        <app-charts-box  [testsData]="element.unitTests" title="Unit Test"
-            [popover]="element.unitTests | json" placement="top" [outsideClick]="true"></app-charts-box>
+    <app-box-layout title="Build" *ngIf="!element.isRunning && element.build" [isFailing]="element.build.failed" [popover]="element.build | json" placement="top" [outsideClick]="true">
+        <app-build-box [build]="element.build" ></app-build-box>
     </app-box-layout>
 
 
-    <app-box-layout title="Functional Tests" *ngIf="!element.isRunning && element.functionalTests"  [isFailing]="element.functionalTests.failed">
-        <app-charts-box  [testsData]="element.functionalTests"
-            title="Functional Test" [popover]="element.functionalTests | json" placement="top" [outsideClick]="true"></app-charts-box>
+    <app-box-layout title="Unit Tests" *ngIf="!element.isRunning && element.unitTests" [isFailing]="element.unitTests.failed"
+        [popover]="element.unitTests | json" placement="top" [outsideClick]="true">
+        <app-charts-box [testsData]="element.unitTests" title="Unit Test" ></app-charts-box>
     </app-box-layout>
 
-    <app-result-box *ngIf="!element.isRunning && element.state !== 'running' " [process]="element"></app-result-box>
+
+    <app-box-layout title="Functional Tests" *ngIf="!element.isRunning && element.functionalTests" [isFailing]="element.functionalTests.failed"
+        [popover]="element.functionalTests | json" placement="top" [outsideClick]="true">
+        <app-charts-box [testsData]="element.functionalTests" title="Functional Test"></app-charts-box>
+    </app-box-layout>
+
+    <app-result-box *ngIf="!element.isRunning && element.state !== 'running' " class="push-right" [process]="element"></app-result-box>
     <app-spinner *ngIf="element.isRunning"></app-spinner>
 </div>
