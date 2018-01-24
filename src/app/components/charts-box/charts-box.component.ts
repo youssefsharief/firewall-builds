@@ -9,7 +9,6 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ChartsBoxComponent implements OnInit {
     public passedPercent: number;
     public themedClass: string;
-    @Input() title: string;
     @Input() testsData;
 
 

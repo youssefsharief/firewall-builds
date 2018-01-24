@@ -1,7 +1,5 @@
-<app-box-layout title="Build">
-    <app-build-type type="Debug" [failed]="build.didDebugFailed"></app-build-type>
-    <app-build-type type="Release" [failed]="build.didReleaseFailed"></app-build-type>
-    <div class="date">
-        {{build.date}}
-    </div>
-</app-box-layout>
+<app-build-type type="Debug" [failed]="build.didDebugFailed"></app-build-type>
+<app-build-type type="Release" [failed]="build.didReleaseFailed"></app-build-type>
+<div class="date">
+    {{build.date}}
+</div>
