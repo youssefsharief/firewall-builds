@@ -32,7 +32,7 @@ describe('BuildBoxComponent', () => {
             date: '2014-12-20T01:52:46 -02:00',
         };
         fixture.detectChanges();
-        expect(fixture.nativeElement.querySelector('.pic-text-wrapper')).toBeTruthy();
+        expect(fixture.nativeElement.querySelectorAll('app-build-type').length).toBe(2);
     }));
 
     it(`should not grey out successfull builds`, async(() => {
@@ -54,7 +54,7 @@ describe('BuildBoxComponent', () => {
             date: '2014-12-20T01:52:46 -02:00',
         };
         fixture.detectChanges();
-        expect(fixture.nativeElement.querySelector('.pic-text-wrapper')).toBeTruthy();
+        expect(fixture.nativeElement.querySelectorAll('app-build-type').length).toBe(2);
     }));
 
 
