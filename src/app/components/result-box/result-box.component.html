@@ -6,8 +6,8 @@
         <span *ngIf="metricsFailed "> Metrics
             <br />Reduction </span>
         <span *ngIf="buildFailed "> Build Failure </span>
-        <span *ngIf="unitTestsFailed "> Unit Tests Rejection </span>
-        <span *ngIf="functionalTestsFailed "> Functional Tests Rejection </span>
+        <span *ngIf="unitTestsFailed "> Tests Failed </span>
+        <span *ngIf="functionalTestsFailed "> Tests Failed </span>
         <span *ngIf="process.state==='accepted' "> Auto-Merged </span>
         <span *ngIf="process.state==='complete' "> Complete </span>
     </p>

@@ -4,8 +4,7 @@ import * as faker from 'faker';
 const getFormattedDate = () => faker.date.recent(1).toLocaleString('en-US', {
     year: 'numeric', month: '2-digit',
     day: 'numeric', hour: '2-digit', minute: '2-digit'
-}).replace(/^0+/, '').replace(/,/, '\xa0\xa0').replace(/ AM/,'am').replace(/ PM/,'pm');
-
+}).replace(/^0+/, '').replace(/,/, '\xa0\xa0').replace(/ AM/, 'am').replace(/ PM/, 'pm');
 
 export const firstState = [
     {
@@ -302,6 +301,90 @@ export const firstState = [
             percentCovered: 87
         },
         '_id': '5a60acb7c2ea1f5d9be231w'
+    },
+
+
+    {
+        type: 'firewall',
+        timeStarted: getFormattedDate(),
+        owner: 'ER',
+        name: 'rfgre',
+        metrics: {
+            test: {
+                value: 80,
+                isPositive: true,
+            },
+            maintainability: {
+                value: 87,
+                isPositive: true,
+            },
+            security: {
+                value: 90,
+                isPositive: true,
+            },
+            workmanship: {
+                value: 97,
+                isPositive: true,
+            },
+        },
+        build: {
+            didDebugFailed: false,
+            didReleaseFailed: false,
+            date: getFormattedDate(),
+        },
+        unitTests: {
+            countPassed: 40,
+            countFailed: 60,
+            percentCovered: 90
+        },
+        functionalTests: {
+            countPassed: 540,
+            countFailed: 43,
+            percentCovered: 87
+        },
+        '_id': '5a60acb7c2ea1f5d9beyt'
+    },
+
+
+    {
+        type: 'firewall',
+        timeStarted: getFormattedDate(),
+        owner: 'ER',
+        name: 'rfgre',
+        metrics: {
+            test: {
+                value: 80,
+                isPositive: true,
+            },
+            maintainability: {
+                value: 87,
+                isPositive: true,
+            },
+            security: {
+                value: 90,
+                isPositive: true,
+            },
+            workmanship: {
+                value: 97,
+                isPositive: true,
+            },
+        },
+        build: {
+            didDebugFailed: false,
+            didReleaseFailed: false,
+            date: getFormattedDate(),
+        },
+        unitTests: {
+            countPassed: 400,
+            countFailed: 60,
+            percentCovered: 90
+        },
+        functionalTests: {
+            countPassed: 43,
+            countFailed: 46,
+            percentCovered: 40
+        },
+        '_id': '5a60acb7c2eajgeyt'
     },
 
 ];
