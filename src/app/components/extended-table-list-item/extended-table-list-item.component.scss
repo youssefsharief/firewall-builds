@@ -26,3 +26,11 @@ app-box-layout {
     margin-bottom: 15px;
     cursor: pointer;
 }
+
+app-build-box{
+    display: flex;
+    flex-direction: column;
+    height: 77%;
+    justify-content: space-between;
+    margin-top: 20px;
+}

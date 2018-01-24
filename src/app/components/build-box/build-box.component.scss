@@ -1,7 +1,13 @@
-
 .date {
     color: black;
     font-size: 10px;
-    margin-top: 125px;
-    text-align: center;
+}
+
+app-build-type {
+    width: 66px;
+}
+
+.flex-row{
+    display: flex;
+    justify-content: space-around;
 }

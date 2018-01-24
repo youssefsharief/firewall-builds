@@ -1,5 +1,7 @@
-<app-build-type type="Debug" [failed]="build.didDebugFailed"></app-build-type>
-<app-build-type type="Release" [failed]="build.didReleaseFailed"></app-build-type>
+<div class="flex-row">
+    <app-build-type type="Debug" [failed]="build.didDebugFailed"></app-build-type>
+    <app-build-type type="Release" [failed]="build.didReleaseFailed"></app-build-type>
+</div>
 <div class="date">
     {{build.date}}
 </div>
