@@ -55,8 +55,6 @@ describe('ChartsBoxComponent', () => {
             percentCovered: 73
         };
         fixture.detectChanges();
-        expect(fixture.nativeElement.querySelector('div.success')).toBeTruthy();
-        expect(fixture.nativeElement.querySelector('div.danger')).toBeFalsy();
         expect(fixture.nativeElement.querySelector('div.text-success')).toBeTruthy();
     }));
 
@@ -68,7 +66,6 @@ describe('ChartsBoxComponent', () => {
             percentCovered: 73
         };
         fixture.detectChanges();
-        expect(fixture.nativeElement.querySelector('div.danger')).toBeTruthy();
         expect(fixture.nativeElement.querySelector('div.text-success')).toBeFalsy();
     }));
 

@@ -32,9 +32,6 @@ describe('BuildBoxComponent', () => {
             date: '2014-12-20T01:52:46 -02:00',
         };
         fixture.detectChanges();
-        expect(fixture.nativeElement.querySelector('p.title')).toBeTruthy();
-        expect(fixture.nativeElement.querySelector('.success')).toBeTruthy();
-        expect(fixture.nativeElement.querySelector('.danger')).toBeFalsy();
         expect(fixture.nativeElement.querySelector('.pic-text-wrapper')).toBeTruthy();
     }));
 
@@ -57,9 +54,6 @@ describe('BuildBoxComponent', () => {
             date: '2014-12-20T01:52:46 -02:00',
         };
         fixture.detectChanges();
-        expect(fixture.nativeElement.querySelector('p.title')).toBeTruthy();
-        expect(fixture.nativeElement.querySelector('.danger')).toBeTruthy();
-        expect(fixture.nativeElement.querySelector('.success')).toBeFalsy();
         expect(fixture.nativeElement.querySelector('.pic-text-wrapper')).toBeTruthy();
     }));
 

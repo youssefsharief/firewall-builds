@@ -6,7 +6,7 @@ import { AppModule } from '../../app.module';
 describe('MerticsBoxComponent', () => {
 
     let fixture: ComponentFixture<MerticsBoxComponent>;
-    
+
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [
@@ -43,7 +43,6 @@ describe('MerticsBoxComponent', () => {
         };
         fixture.detectChanges();
 
-        expect(fixture.nativeElement.querySelector('p.title')).toBeTruthy();
         expect(fixture.nativeElement.querySelector('.arrow-with-info.test.down')).toBeTruthy();
         expect(fixture.nativeElement.querySelector('.arrow-with-info.test.up')).toBeFalsy();
         expect(fixture.nativeElement.querySelector('.arrow-with-info.maintainability.up')).toBeTruthy();
