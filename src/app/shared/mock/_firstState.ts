@@ -1,11 +1,9 @@
 import { Observable } from 'rxjs/Observable';
 import * as faker from 'faker';
+import * as moment from 'moment';
+import { FormattedDateService } from '../../services/formatted-date.service';
 
-const getFormattedDate = () => faker.date.recent(1).toLocaleString('en-US', {
-    year: 'numeric', month: '2-digit',
-    day: 'numeric', hour: '2-digit', minute: '2-digit'
-}).replace(/^0+/, '').replace(/,/, '\xa0\xa0').replace(/ AM/, 'am').replace(/ PM/, 'pm');
-
+const formattedDateService = new FormattedDateService();
 export const firstState = [
     {
         type: 'build',
@@ -21,7 +19,7 @@ export const firstState = [
 
     {
         type: 'firewall',
-        timeStarted: getFormattedDate(),
+        timeStarted: formattedDateService.getDateThenTimeSpaced(),
         owner: 'Mcbride',
         name: 'adipisicing',
         isRunning: true,
@@ -32,7 +30,7 @@ export const firstState = [
 
     {
         type: 'firewall',
-        timeStarted: getFormattedDate(),
+        timeStarted: formattedDateService.getDateThenTimeSpaced(),
         owner: 'Mcbride',
         name: 'adipisicing',
         metrics: {
@@ -56,7 +54,7 @@ export const firstState = [
         build: {
             didDebugFailed: false,
             didReleaseFailed: false,
-            date: getFormattedDate(),
+            date: formattedDateService.getTimeThenDashThenDate(),
         },
         unitTests: {
             countPassed: 56,
@@ -73,7 +71,7 @@ export const firstState = [
 
     {
         type: 'firewall',
-        timeStarted: getFormattedDate(),
+        timeStarted: formattedDateService.getDateThenTimeSpaced(),
         owner: 'Youssef',
         name: 'rtyjyh',
         metrics: {
@@ -97,7 +95,7 @@ export const firstState = [
         build: {
             didDebugFailed: true,
             didReleaseFailed: false,
-            date: getFormattedDate(),
+            date: formattedDateService.getTimeThenDashThenDate(),
         },
         unitTests: {
             countPassed: 56,
@@ -114,7 +112,7 @@ export const firstState = [
 
     {
         type: 'firewall',
-        timeStarted: getFormattedDate(),
+        timeStarted: formattedDateService.getDateThenTimeSpaced(),
         owner: 'Youssef',
         name: 'rtyjyh',
         metrics: {
@@ -138,7 +136,7 @@ export const firstState = [
         build: {
             didDebugFailed: false,
             didReleaseFailed: true,
-            date: getFormattedDate(),
+            date: formattedDateService.getTimeThenDashThenDate(),
         },
         unitTests: {
             countPassed: 56,
@@ -157,7 +155,7 @@ export const firstState = [
     {
         type: 'build',
         name: 'Tenrox-G6-8468',
-        timeStarted: getFormattedDate(),
+        timeStarted: formattedDateService.getDateThenTimeSpaced(),
         metrics: {
             test: {
                 value: 80,
@@ -179,7 +177,7 @@ export const firstState = [
         build: {
             didDebugFailed: false,
             didReleaseFailed: false,
-            date: getFormattedDate(),
+            date: formattedDateService.getTimeThenDashThenDate(),
         },
         unitTests: {
             countPassed: 5000,
@@ -197,7 +195,7 @@ export const firstState = [
     {
         type: 'build',
         name: 'Tenrox-T7-8643',
-        timeStarted: getFormattedDate(),
+        timeStarted: formattedDateService.getDateThenTimeSpaced(),
         metrics: {
             test: {
                 value: 80,
@@ -219,7 +217,7 @@ export const firstState = [
         build: {
             didDebugFailed: false,
             didReleaseFailed: false,
-            date: getFormattedDate(),
+            date: formattedDateService.getTimeThenDashThenDate(),
         },
         unitTests: {
             countPassed: 5000,
@@ -237,7 +235,7 @@ export const firstState = [
 
     {
         type: 'firewall',
-        timeStarted: getFormattedDate(),
+        timeStarted: formattedDateService.getDateThenTimeSpaced(),
         owner: 'Mcbride',
         name: 'adipisicing',
         metrics: {
@@ -264,7 +262,7 @@ export const firstState = [
 
     {
         type: 'firewall',
-        timeStarted: getFormattedDate(),
+        timeStarted: formattedDateService.getDateThenTimeSpaced(),
         owner: 'ER',
         name: 'rfgre',
         metrics: {
@@ -288,7 +286,7 @@ export const firstState = [
         build: {
             didDebugFailed: false,
             didReleaseFailed: false,
-            date: getFormattedDate(),
+            date: formattedDateService.getTimeThenDashThenDate(),
         },
         unitTests: {
             countPassed: 560,
@@ -306,7 +304,7 @@ export const firstState = [
 
     {
         type: 'firewall',
-        timeStarted: getFormattedDate(),
+        timeStarted: formattedDateService.getDateThenTimeSpaced(),
         owner: 'ER',
         name: 'rfgre',
         metrics: {
@@ -330,7 +328,7 @@ export const firstState = [
         build: {
             didDebugFailed: false,
             didReleaseFailed: false,
-            date: getFormattedDate(),
+            date: formattedDateService.getTimeThenDashThenDate(),
         },
         unitTests: {
             countPassed: 40,
@@ -348,7 +346,7 @@ export const firstState = [
 
     {
         type: 'firewall',
-        timeStarted: getFormattedDate(),
+        timeStarted: formattedDateService.getDateThenTimeSpaced(),
         owner: 'ER',
         name: 'rfgre',
         metrics: {
@@ -372,7 +370,7 @@ export const firstState = [
         build: {
             didDebugFailed: false,
             didReleaseFailed: false,
-            date: getFormattedDate(),
+            date: formattedDateService.getTimeThenDashThenDate(),
         },
         unitTests: {
             countPassed: 400,
