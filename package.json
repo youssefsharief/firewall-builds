@@ -7,8 +7,8 @@
     "start": "ng serve -sm -ec ",
     "build": "ng build --prod",
     "build-dev": "ng build -w",
-    "test": "ng test -sm=false",
-    "coverage": "ng test -sm=false -cc",
+    "test": "ng test -sm=false --env=test",
+    "coverage": "ng test -sm=false -cc --env=test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "server": "http-server ./dist"

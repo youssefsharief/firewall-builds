@@ -1,6 +1,7 @@
 import * as Chart from 'chart.js';
 import { ViewChild, Component, ElementRef, OnInit, Input } from '@angular/core';
 import 'chart.piecelabel.js';
+import { environment } from '../../../environments/environment';
 @Component({
     selector: 'app-pie-chart',
     templateUrl: 'pie-chart.component.html',
@@ -17,7 +18,6 @@ export class PieChartComponent implements OnInit {
 
     ngOnInit() {
         const donutCtx = this.pie.nativeElement.getContext('2d');
-
         const data = {
             labels: [
                 'Value A',
@@ -31,29 +31,29 @@ export class PieChartComponent implements OnInit {
                 }]
         };
 
-        const chart = new Chart(
-            donutCtx,
-            {
-                'type': 'pie',
-                'data': data,
-                options: {
-                    legend: {
-                        display: false
-                    },
-                    tooltips: {
-                        enabled: false
-                    },
 
-                    pieceLabel: {
-                        // render 'label', 'value', 'percentage', 'image' or custom function, default is 'percentage'
-                        render: 'value',
-                        fontColor: '#000',
-
-                    }
+        const options = {
+            'type': 'pie',
+            'data': data,
+            options: {
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    enabled: false
+                },
+                animation: false,
+                pieceLabel: {
+                    // render 'label', 'value', 'percentage', 'image' or custom function, default is 'percentage'
+                    render: 'value',
+                    fontColor: '#000',
                 }
-
             }
-        );
+        };
+        if (environment.isAnimationEnabled) {
+            delete options.options.animation;
+        }
+        const chart = new Chart(donutCtx, options);
     }
 
 }
