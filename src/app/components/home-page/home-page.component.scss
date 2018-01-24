@@ -8,14 +8,15 @@
 }
 
 .page-container {
-    margin: auto;
     margin-top: 40px;
-    width: 1071px;
 }
 
 app-table {
+    width: 1071px;
+    display: block;
     text-align: center;
     font-size: 12px;
     padding: 7px;
-    background: linear-gradient(to right, lighten($brand-grey, 27%), white);
+    margin: auto;
+    background: linear-gradient(to right, $grey-table-back-color, white);
 }

@@ -31,7 +31,7 @@ app-table-heading {
         }
     }
     &.grey {
-        background: linear-gradient(to right, lighten($brand-grey, 27%), white 50%, white 50%);
+        background: linear-gradient(to right, lighten($brand-grey, 23%), white 50%, white 50%);
         color: $text-grey;
         border-color: $brand-grey;
         &:hover {
