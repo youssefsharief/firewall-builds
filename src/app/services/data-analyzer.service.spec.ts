@@ -20,14 +20,14 @@ describe('DataAnalyzerService', () => {
     });
 
     it('should set rejected state if metrics are failing', () => {
-        expect(result[3].state).toBe('rejected');
-        expect(result[3].metrics.failed).toBe(true);
+        expect(result[4].state).toBe('rejected');
+        expect(result[4].metrics.failed).toBe(true);
     });
 
 
     it('should set rejected state if build is failing', () => {
-        expect(result[4].state).toBe('rejected');
-        expect(result[4].build.failed).toBe(true);
+        expect(result[5].state).toBe('rejected');
+        expect(result[5].build.failed).toBe(true);
     });
 
 
