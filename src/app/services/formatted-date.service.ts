@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import * as moment from 'moment';
+import * as moment from 'moment-mini';
 import * as faker from 'faker';
 
 

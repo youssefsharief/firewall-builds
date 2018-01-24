@@ -1,6 +1,4 @@
 import { Observable } from 'rxjs/Observable';
-import * as faker from 'faker';
-import * as moment from 'moment';
 import { FormattedDateService } from '../../services/formatted-date.service';
 
 const formattedDateService = new FormattedDateService();
