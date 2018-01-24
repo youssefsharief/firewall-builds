@@ -18,6 +18,7 @@ import { ProgressBarComponent } from './components/progress-bar/progress-bar.com
 import { DataAnalyzerService } from './services/data-analyzer.service';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { CapitalizeFirstPipe } from './pipes/capitalize-first.pipe';
+import { PopoverModule } from 'ngx-bootstrap/popover';
 
 @NgModule({
     declarations: [
@@ -38,6 +39,7 @@ import { CapitalizeFirstPipe } from './pipes/capitalize-first.pipe';
     imports: [
         BrowserAnimationsModule,
         BrowserModule,
+        PopoverModule.forRoot()
     ],
     providers: [
         DataService,
