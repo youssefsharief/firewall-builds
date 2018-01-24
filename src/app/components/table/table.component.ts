@@ -1,22 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { StateColorMapperService } from '../../services/state-color-mapper.service';
-import { trigger, state, style, transition, animate } from '@angular/core';
 import { DataAnalyzerService } from '../../services/data-analyzer.service';
 
 @Component({
     selector: 'app-table',
     templateUrl: 'table.component.html',
     styleUrls: ['table.component.scss'],
-    animations: [
-        trigger('myAnimation',
-            [transition(':enter',
-                [
-                    style({ opacity: 0 }),
-                    animate('300ms', style({ 'opacity': 1 }))
-                ]),
-            ])
-    ]
 })
 
 

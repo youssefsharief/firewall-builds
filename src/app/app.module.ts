@@ -21,6 +21,7 @@ import { CapitalizeFirstPipe } from './pipes/capitalize-first.pipe';
 import { PopoverModule } from 'ngx-bootstrap/popover';
 import { TableHeadingComponent } from './components/table-heading/table-heading.component';
 import { TableListItemComponent } from './components/spinner/table-list-item/table-list-item.component';
+import { ExtendedTableListItemComponent } from './components/extended-table-list-item/extended-table-list-item.component';
 
 @NgModule({
     declarations: [
@@ -38,7 +39,8 @@ import { TableListItemComponent } from './components/spinner/table-list-item/tab
         SpinnerComponent,
         CapitalizeFirstPipe,
         TableHeadingComponent,
-        TableListItemComponent
+        TableListItemComponent,
+        ExtendedTableListItemComponent
     ],
     imports: [
         BrowserAnimationsModule,

@@ -1,0 +1,17 @@
+<div [@myAnimation]>
+    <app-mertics-box class="box {{element.metrics.failed? 'danger' : 'success'}}" *ngIf="!element.isRunning && element.metrics"
+        [metrics]="element.metrics" [popover]="element.metrics | json" placement="top" [outsideClick]="true"></app-mertics-box>
+
+    <app-build-box class="box {{element.build.failed? 'danger' : 'success'}}" *ngIf="!element.isRunning && element.build" [build]="element.build"
+        [popover]="element.build | json" placement="top" [outsideClick]="true"></app-build-box>
+
+    <app-charts-box class="box {{element.unitTests.failed? 'danger' : 'success'}}" *ngIf="!element.isRunning && element.unitTests"
+        [testsData]="element.unitTests" title="Unit Test" [popover]="element.unitTests | json" placement="top" [outsideClick]="true"></app-charts-box>
+
+    <app-charts-box class="box {{element.functionalTests.failed? 'danger' : 'success'}}" *ngIf="!element.isRunning && element.functionalTests"
+        [testsData]="element.functionalTests" title="Functional Test" [popover]="element.functionalTests | json" placement="top"
+        [outsideClick]="true"></app-charts-box>
+
+    <app-result-box *ngIf="!element.isRunning && element.state !== 'running' " [process]="element"></app-result-box>
+    <app-spinner *ngIf="element.isRunning"></app-spinner>
+</div>
