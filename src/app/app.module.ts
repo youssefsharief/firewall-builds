@@ -19,6 +19,7 @@ import { DataAnalyzerService } from './services/data-analyzer.service';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { CapitalizeFirstPipe } from './pipes/capitalize-first.pipe';
 import { PopoverModule } from 'ngx-bootstrap/popover';
+import { TableHeadingComponent } from './components/table-heading/table-heading.component';
 
 @NgModule({
     declarations: [
@@ -34,7 +35,8 @@ import { PopoverModule } from 'ngx-bootstrap/popover';
         BuildTypeComponent,
         ProgressBarComponent,
         SpinnerComponent,
-        CapitalizeFirstPipe
+        CapitalizeFirstPipe,
+        TableHeadingComponent
     ],
     imports: [
         BrowserAnimationsModule,

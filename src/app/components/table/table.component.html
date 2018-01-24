@@ -1,13 +1,5 @@
-<div class="item-row table-heading">
-	<div class="cl cl--xlg .push-left"> Changelist / Build </div>
-	<div class="cl"> Owner </div>
-	<div class="cl cl--xlg"> Time Started </div>
-	<div class="cl"> State </div>
-	<div class="cl"> Metrics </div>
-	<div class="cl"> Build </div>
-	<div class="cl"> Unit Test </div>
-	<div class="cl"> Functional Test</div>
-</div>
+
+<app-table-heading class="item-row table-heading"></app-table-heading>
 
 <div class="table-body" *ngIf="data">
 	<div *ngFor="let element of data" [class.opened]="isOpened(element)" class="element-wrapper {{themeColor(element.state)}}"

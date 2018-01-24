@@ -1,18 +1,7 @@
 @import '../../../styles/color-variables';
 
 
-.cl {
-    width: 110px;
-    float: left;
-    min-height: 1px;
-    white-space: nowrap;
-    &.cl--xlg {
-        width: 183px
-    }
-    &.cl--lg {
-        width: 140px
-    }
-}
+
 
 .element-wrapper {
     margin-bottom: 7px;
