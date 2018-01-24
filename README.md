@@ -135,7 +135,4 @@ Production Preparation
  * Ahead of time compilation is already used by angular-cli for faster page loading speed 
 
 
-Video 
-set proper names for the api mock
-
 
