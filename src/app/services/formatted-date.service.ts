@@ -11,10 +11,10 @@ import * as faker from 'faker';
 export class FormattedDateService {
 
     getDateThenTimeSpaced() {
-        return moment(faker.date.recent(1)).format('M/D/YYYY      \xa0\xa0\xa0  hh:mma');
+        return moment(faker.date.recent(1)).format('M/D/YYYY      \xa0\xa0\xa0  h:mma');
     }
     getTimeThenDashThenDate() {
-        return moment(faker.date.recent(1)).format('hh:mma - M/D/YYYY');
+        return moment(faker.date.recent(1)).format('h:mma - M/D/YYYY');
     }
 
 
