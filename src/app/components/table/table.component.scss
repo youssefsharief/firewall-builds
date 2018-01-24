@@ -14,15 +14,15 @@
     width: 1071px;
 }
 
-.cl{
+.cl {
     width: 110px;
     float: left;
     min-height: 1px;
     white-space: nowrap;
-    &.cl--xlg{
+    &.cl--xlg {
         width: 183px
     }
-    &.cl--lg{
+    &.cl--lg {
         width: 140px
     }
 }
@@ -37,7 +37,7 @@
         border-right-width: 1px;
     }
     &.primary {
-        background: linear-gradient(to right, lighten($brand-primary, 37%), white 50%,  white 50%);
+        background: linear-gradient(to right, lighten($brand-primary, 37%), white 50%, white 50%);
         color: $brand-primary;
         border-color: $brand-primary;
         &:hover {
@@ -45,7 +45,7 @@
         }
     }
     &.success {
-        background: linear-gradient(to right, lighten($brand-success, 60%), white 50%,  white 50%);
+        background: linear-gradient(to right, lighten($brand-success, 60%), white 50%, white 50%);
         color: $brand-success;
         border-color: $brand-success;
         &:hover {
@@ -53,7 +53,7 @@
         }
     }
     &.grey {
-        background: linear-gradient(to right, lighten($brand-grey, 27%), white 50%,  white 50%);
+        background: linear-gradient(to right, lighten($brand-grey, 27%), white 50%, white 50%);
         color: $text-grey;
         border-color: $brand-grey;
         &:hover {
@@ -61,7 +61,7 @@
         }
     }
     &.danger {
-        background: linear-gradient(to right, lighten($brand-danger, 60%), white 50%,  white 50%);
+        background: linear-gradient(to right, lighten($brand-danger, 60%), white 50%, white 50%);
         color: $brand-danger;
         border-color: $brand-danger;
         &:hover {
@@ -70,12 +70,11 @@
     }
 }
 
-.item-row{
+.item-row {
     display: flex;
     line-height: 27px;
     padding-right: 30px;
 }
-
 
 tr:hover {
     td {
@@ -83,19 +82,39 @@ tr:hover {
     }
 }
 
-
-app-prpgrss-bar{
+app-prpgrss-bar {
     width: 75px;
 }
 
 .changelist-build-container {
     display: flex;
-    app-icon-type{
+    app-icon-type {
         margin-right: 20px;
     }
-
 }
 
 .push-left {
     padding-left: 3.5px;
+}
+
+.box {
+    padding: 4px;
+    border: 2px solid;
+    width: 170px;
+    height: 170px;
+    margin-top: 5px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    &.success {
+        border-color: $brand-success;
+        color: $brand-success;
+        box-shadow: 3px 3px 5px grey;
+    }
+    &.danger {
+        border-color: $brand-danger;
+        color: $brand-danger;
+    }
+    cursor: pointer;
 }
